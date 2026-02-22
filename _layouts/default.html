@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% seo %}
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/assets/css/fontello.css">
+    <link rel="stylesheet" href="/assets/css/style-responsive.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style type="text/css">
+        .top-color,
+        .widget_tag_cloud .tagcloud a:hover,
+        .top-line,
+        .nav-line {
+            background-color: #45b0ee;
+        }
+
+        #side-bar .widget_recent_entries li:hover,
+        #side-bar .widget_nav_menu div>ul>li:hover,
+        #side-bar .widget_categories li:hover,
+        #side-bar .widget_recent_comments li:hover,
+        #side-bar .widget_meta li:hover,
+        #side-bar .widget_pages li:hover,
+        #side-bar .widget_archive li:hover,
+        #bl_side_posts>ul li:hover,
+        #bl_side_comments>ul li:hover {
+            border-left: 3px solid #45b0ee;
+        }
+
+        .site-footer #footer-body .widget_nav_menu a:hover,
+        .site-footer #footer-body .widget_archive a:hover,
+        .site-footer #footer-body .widget_tag_cloud a:hover,
+        .site-footer #footer-body .widget_recent_entries a:hover,
+        .site-footer #footer-body .widget_meta a:hover,
+        .site-footer #footer-body .widget_categories a:hover,
+        .site-footer #footer-body .widget_pages a:hover,
+        #bl_side_tags .bl_tab_tag:hover {
+            background-color: #45b0ee;
+        }
+
+        .dropdown-menu {
+            border-top: 2px solid #45b0ee;
+        }
+
+        .bl_tabs ul li .tab_text a span,
+        a {
+            color: #45b0ee;
+        }
+
+        .entry-title a {
+            color: #333333;
+        }
+
+        .entry-content p,
+        .entry-content ul li,
+        .entry-content p,
+        .entry-content ol li {
+            color: #333333;
+        }
+
+        #masthead .top-banner,
+        #masthead .brand h1,
+        #masthead .brand small {
+            color: #FFFFFF;
+        }
+
+        #masthead .top-banner .top-banner-social a {
+            color: #FFFFFF;
+        }
+
+        header#masthead,
+        .navbar-inverse .navbar-inner,
+        .dropdown-menu,
+        .widget-head {
+            background: #FAFAFA;
+        }
+
+        #masthead .top-banner {
+            background: #2B333E;
+        }
+
+        .navbar-inverse .nav li.dropdown.open>.dropdown-toggle,
+        .navbar-inverse .nav li.dropdown.active>.dropdown-toggle,
+        .navbar-inverse .nav li.dropdown.open.active>.dropdown-toggle,
+        div.navbar-inverse .nav-collapse .nav>li>a,
+        .navbar-inverse .nav-collapse .dropdown-menu a,
+        #masthead .bluth-navigation.shrunk .mini-logo h1,
+        #masthead .bluth-navigation.shrunk .mini-logo img,
+        #masthead .searchform input,
+        .widget-head,
+        .widget-head a,
+        .navbar .brand,
+        #masthead .searchform a {
+            color: #777777;
+        }
+
+        .widget-head {
+            background: #FFFFFF;
+            color: #333333;
+        }
+
+        footer.site-footer {
+            background: #333333;
+        }
+
+        #footer-body h3 {
+            color: #FFFFFF;
+        }
+
+        #footer-body>div ul li a,
+        footer.site-footer>* {
+            color: #FFFFFF;
+        }
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Merriweather:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="home blog" style="background-color: #f4f5f7;">
+    <div id="page" class="site">
+        <header id="masthead" role="banner" class="header_normal">
+            <div class="row-fluid top-banner">
+                <div class="container">
+                    <div class="banner-overlay"></div>
+                    <a class="brand brand-text" href="/" title="{{ site.name }}" rel="home">
+                        <h1>{{ site.name }}<small>{{ site.description }}</small></h1>
+                    </a>
+                    <div class="top-banner-social pull-right">
+                        <a target="_blank" href="#"><i class="icon-facebook-1"></i></a>
+                        <a target="_blank" href="https://twitter.com/{{site.twitter_username}}"><i
+                                class="icon-twitter-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-gplus-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+                        <a target="_blank" href="/feed.xml"><i class="icon-rss-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clean-navigation"
+                style="background: #ffffff; border-bottom: 1px solid #e1e4e8; padding: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                <div class="container" style="display: flex; align-items: center; justify-content: flex-start;">
+                    <nav class="clean-nav">
+                        <ul
+                            style="list-style: none; margin: 0; padding: 0; display: flex; gap: 30px; align-items: center;">
+                            <li><a href="/"
+                                    style="text-decoration: none; color: #555; font-weight: 600; font-family: 'Lato', sans-serif; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px;">Home</a>
+                            </li>
+                            <li><a href="/about/"
+                                    style="text-decoration: none; color: #555; font-weight: 600; font-family: 'Lato', sans-serif; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px;">About</a>
+                            </li>
+                            <li class="dropdown" style="position: relative;">
+                                <a href="/blog/" class="dropdown-toggle" data-toggle="dropdown"
+                                    style="text-decoration: none; color: #555; font-weight: 600; font-family: 'Lato', sans-serif; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px;">Blog
+                                    <b class="caret" style="margin-top: 8px; margin-left: 2px;"></b></a>
+                                <ul class="dropdown-menu dropdown-menu-clean"
+                                    style="display: none; position: absolute; top: calc(100% + 5px); left: 0; background: #fff; padding: 12px 0; margin: 0; list-style: none; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-radius: 6px; min-width: 180px; z-index: 1000; border: 1px solid #eee;">
+                                    <li><a href="#"
+                                            style="display: block; padding: 10px 20px; color: #555; text-decoration: none; font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 500;">Latest
+                                            Posts</a></li>
+                                    <li><a href="#"
+                                            style="display: block; padding: 10px 20px; color: #555; text-decoration: none; font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 500;">Categories</a>
+                                    </li>
+                                    <li><a href="#"
+                                            style="display: block; padding: 10px 20px; color: #555; text-decoration: none; font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 500;">Archives</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <style>
+                .clean-nav li.dropdown:hover .dropdown-menu-clean {
+                    display: block !important;
+                }
+
+                .dropdown-menu-clean li a:hover {
+                    background: #f8f9fa;
+                    color: #45b0ee !important;
+                }
+
+                .clean-nav ul li>a:hover {
+                    color: #45b0ee !important;
+                }
+            </style>
+        </header><!-- #masthead .site-header -->
+        <div id="main" class="container content">
+            {{ content }}
+        </div><!-- #main -->
+        <footer id="colophon" class="site-footer" role="contentinfo">
+            <div class="container">
+                <div class="row-fluid" id="footer-body">
+                </div>
+            </div>
+            <div class="row-fluid" id="footer-bottom">
+                &copy; {{ site.time | date: '%Y' }} {{ site.name }}
+            </div>
+        </footer>
+    </div><!-- #page -->
+    <link rel="stylesheet" href="/assets/css/prettify/prettify.css">
+    <script src="/assets/js/prettify/prettify.js"></script>
+    <script type="text/javascript">
+        !function ($) {
+            $(function () {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+</body>
+
+</html>

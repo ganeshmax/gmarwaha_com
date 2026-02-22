@@ -1,0 +1,47 @@
+---
+layout: default
+title: Blog
+---
+<div id="primary" class="row right_side">
+    <div id="content" class="span8" role="main">
+        <div id="main_columns" class="columns">
+            {% for post in site.posts %}
+            <article class="post type-post status-publish format-standard hentry">
+                <div class="post-title box">
+                    <h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                    <div class="post-meta">
+                        <ul>
+                            <li><time class="entry-date updated" datetime="{{ post.date | date_to_xmlschema }}">{{
+                                    post.date | date: "%d. %b. %Y" }}</time></li>
+                            <li class="divider">/</li>
+                            <li>
+                                {% for tag in post.tags %}
+                                <a href="/tags/{{ tag }}" title="View all posts in {{ tag }}">{{ tag }}</a>{% if
+                                forloop.last == false %}, {% endif %}
+                                {% endfor %}
+                            </li>
+                            <li class="divider">/</li>
+                            <li><a href="{{ post.url }}#comments">0 Comments</a></li>
+                        </ul>
+                    </div>
+                    <div class="post-format-badge post-format-standard">
+                        <i class="icon-picture-1"></i>
+                    </div>
+                </div>
+                <!-- Assuming no featured image for now -->
+                <div class="entry-container noimg">
+                    <div class="entry-content">
+                        <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+                        <a href="{{ post.url }}" class="more-link">Continue reading <span
+                                class="meta-nav">&rarr;</span></a>
+                        <footer class="entry-meta clearfix">
+                        </footer>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div><!-- .columns -->
+    </div><!-- #content -->
+
+    {% include sidebar.html %}
+</div>

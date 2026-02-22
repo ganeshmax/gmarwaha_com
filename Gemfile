@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'jekyll', '~> 3.9.3'
+gem 'jekyll-feed', '~> 0.15.1'
+gem 'jekyll-seo-tag', '~> 2.7.1'
+gem 'webrick', '~> 1.7'
+gem 'ffi', '1.15.5'
+gem 'http_parser.rb', '~> 0.6.0'
+gem 'eventmachine', '~> 1.2.7'
+gem 'kramdown-parser-gfm', '~> 1.1'

@@ -1,0 +1,12 @@
+name: Ganesh Marwaha
+description: Software Engineer. Tinkerer.
+baseurl: ""
+url: "https://gmarwaha.com"
+twitter_username: ganeshmax
+github_username:  gmarwaha
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-seo-tag

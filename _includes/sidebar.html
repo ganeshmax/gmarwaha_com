@@ -1,0 +1,179 @@
+<aside id="side-bar" class="span4 widget-area modern-sidebar">
+    <div class="widget modern-profile">
+        <div class="profile-header"></div>
+        <div class="profile-body">
+            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?d=mp&f=y" alt="Ganesh Marwaha"
+                class="profile-avatar">
+            <h3 class="profile-name">Ganesh Marwaha</h3>
+            <p class="profile-bio">Software Engineer & Head of Engineering for Virtusa. Passionate about Digital
+                Transformation, Microservices, and Developer Experiences.</p>
+            <div class="profile-socials">
+                <a target="_blank" href="https://twitter.com/{{site.twitter_username}}"><i
+                        class="icon-twitter-1"></i></a>
+                <a target="_blank" href="https://github.com/{{site.github_username}}"><i class="icon-github"></i></a>
+                <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget modern-ad">
+        <h3 class="modern-widget-title">Advertisement</h3>
+        <div class="ad-placeholder">
+            <span>Ad Space</span>
+        </div>
+    </div>
+
+    <div class="widget modern-topics">
+        <h3 class="modern-widget-title">Topics I Blog About</h3>
+        <div class="topics-list">
+            <a href="#" class="topic-pill">Client Side <span class="topic-count">10</span></a>
+            <a href="#" class="topic-pill">Data <span class="topic-count">1</span></a>
+            <a href="#" class="topic-pill">Languages <span class="topic-count">22</span></a>
+        </div>
+    </div>
+</aside>
+
+<style>
+    /* Modern Sidebar Styles */
+    .modern-sidebar .widget {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        margin-bottom: 30px;
+        overflow: hidden;
+        border: 1px solid #f0f2f5;
+    }
+
+    /* Profile Widget */
+    .modern-profile .profile-header {
+        height: 80px;
+        background: #2B333E;
+    }
+
+    .modern-profile .profile-body {
+        padding: 0 25px 25px;
+        text-align: center;
+        position: relative;
+        margin-top: -50px;
+    }
+
+    .modern-profile .profile-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 4px solid #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    .modern-profile .profile-name {
+        font-size: 22px;
+        font-weight: 700;
+        color: #2E3641;
+        margin: 0 0 10px 0;
+        font-family: 'Merriweather', serif;
+    }
+
+    .modern-profile .profile-bio {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .modern-profile .profile-socials a {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        background: #f4f5f7;
+        color: #555;
+        border-radius: 50%;
+        margin: 0 5px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .modern-profile .profile-socials a:hover {
+        background: #45b0ee;
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    /* Common Widget Styles */
+    .modern-widget-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #2E3641;
+        margin: 0;
+        padding: 20px 25px;
+        border-bottom: 1px solid #f0f2f5;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* Ad Widget */
+    .modern-ad .ad-placeholder {
+        padding: 25px;
+    }
+
+    .modern-ad .ad-placeholder span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f8f9fa;
+        border: 2px dashed #e1e4e8;
+        border-radius: 8px;
+        height: 200px;
+        color: #adb5bd;
+        font-weight: 600;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Topics Widget */
+    .modern-topics .topics-list {
+        padding: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .modern-topics .topic-pill {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 16px;
+        background: #f4f5f7;
+        color: #495057;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        font-family: 'Lato', sans-serif;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .modern-topics .topic-pill:hover {
+        background: #45b0ee;
+        color: #ffffff;
+    }
+
+    .modern-topics .topic-count {
+        background: #e1e4e8;
+        color: #495057;
+        border-radius: 12px;
+        padding: 2px 8px;
+        font-size: 11px;
+        margin-left: 8px;
+        transition: all 0.2s ease;
+    }
+
+    .modern-topics .topic-pill:hover .topic-count {
+        background: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+    }
+</style>
