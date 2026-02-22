@@ -3,36 +3,48 @@ layout: default
 ---
 <div id="primary" class="row right_side">
     <div id="content" class="col-lg-8" role="main">
-        <article class="post type-post status-publish format-standard hentry">
-            <div class="post-title box">
-                <h1 class="entry-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
-                <div class="post-meta">
-                    <ul>
-                        <li><time class="entry-date updated" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date
-                                | date: "%d. %b. %Y" }}</time></li>
-                        <li class="divider">/</li>
-                        <li>
-                            {% for tag in page.tags %}
-                            <a href="/tags/{{ tag }}" title="View all posts in {{ tag }}">{{ tag }}</a>{% if
-                            forloop.last == false %}, {% endif %}
-                            {% endfor %}
-                        </li>
-                        <li class="divider">/</li>
-                        <li><a href="{{ page.url }}#comments">0 Comments</a></li>
-                    </ul>
+        <article class="post type-post status-publish format-standard hentry box mb-4">
+            <header class="article-header border-bottom pb-3 mb-3">
+                <h1 class="entry-title mb-2">{{ page.title }}</h1>
+                <div class="post-meta text-muted small d-flex align-items-center gap-2">
+                    <time class="entry-date" datetime="{{ page.date | date_to_xmlschema }}"><i
+                            class="icon-calendar-3"></i> {{ page.date | date: "%d. %b. %Y" }}</time>
+                    <span class="divider">/</span>
+                    <div class="tags">
+                        <i class="icon-tag"></i>
+                        {% for tag in page.tags %}
+                        <a href="/tags/{{ tag }}" class="text-muted">{{ tag }}</a>{% if forloop.last == false %}, {%
+                        endif %}
+                        {% endfor %}
+                    </div>
+                    <span class="divider">/</span>
+                    <a href="#disqus_thread" class="text-muted"><i class="icon-comment-empty"></i> Comments</a>
                 </div>
-                <div class="post-format-badge post-format-standard">
-                    <i class="icon-calendar-3"></i>
-                </div>
+            </header>
+
+            <div class="article-body mb-5">
+                {{ content }}
             </div>
 
-            <div class="entry-container noimg">
-                <div class="entry-content">
-                    {{ content }}
-                    <footer class="entry-meta clearfix">
-                    </footer><!-- .entry-meta -->
-                </div><!-- .entry-content -->
-            </div><!-- .entry-container -->
+            <hr class="mb-4">
+
+            <!-- Disqus Comments -->
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = '{{ page.url | absolute_url }}';
+                    this.page.identifier = '{{ page.id }}';
+                };
+                (function () {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://ganeshji.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                    by Disqus.</a></noscript>
+
         </article>
 
         <div class="single-pagination clearfix">

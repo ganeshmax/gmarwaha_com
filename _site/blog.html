@@ -24,7 +24,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/fontello.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css?v=2">
     <link rel="stylesheet" href="/assets/css/syntax.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Merriweather:wght@300;400;700;900&display=swap"
@@ -34,13 +34,12 @@
 </head>
 
 <body class="home blog">
-    <div id="page" class="site">
+    <div id="page" class="site d-flex flex-column min-vh-100">
         <header id="masthead" role="banner" class="header_normal">
-            <div class="row top-banner m-0">
+            <div class="top-banner">
                 <div class="container d-flex justify-content-between align-items-center">
-                    <div class="banner-overlay"></div>
                     <a class="brand brand-text" href="/" title="Ganesh Marwaha" rel="home">
-                        <h1>Ganesh Marwaha<small>Software Engineer. Tinkerer.</small></h1>
+                        <h1>Ganesh Marwaha<small>&nbsp;&ndash;&nbsp;Software Engineer. Tinkerer.</small></h1>
                     </a>
                     <div class="top-banner-social">
                         <a target="_blank" href="#"><i class="icon-facebook-1"></i></a>
@@ -58,16 +57,7 @@
                     <nav class="clean-nav">
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="/about/">About</a></li>
-                            <li class="dropdown position-relative">
-                                <a href="/blog/" class="dropdown-toggle" data-toggle="dropdown">Blog <b
-                                        class="caret"></b></a>
-                                <ul class="dropdown-menu-clean">
-                                    <li><a href="#">Latest Posts</a></li>
-                                    <li><a href="#">Categories</a></li>
-                                    <li><a href="#">Archives</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="/blog/">Blog</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -75,38 +65,37 @@
 
 
         </header><!-- #masthead .site-header -->
-        <div id="main" class="container content">
+        <div id="main" class="container content flex-grow-1">
             <div id="primary" class="row right_side">
     <div id="content" class="col-lg-8" role="main">
         <div id="main_columns" class="columns">
             
-            <article class="post type-post status-publish format-standard hentry">
-                <div class="post-title box">
-                    <h1 class="entry-title"><a href="/jekyll/update/2026/02/22/welcome-to-jekyll.html">Welcome to Jekyll!</a></h1>
-                    <div class="post-meta">
-                        <ul>
-                            <li><time class="entry-date updated" datetime="2026-02-22T10:00:00-06:00">22. Feb. 2026</time></li>
-                            <li class="divider">/</li>
-                            <li>
-                                
-                            </li>
-                            <li class="divider">/</li>
-                            <li><a href="/jekyll/update/2026/02/22/welcome-to-jekyll.html#comments">0 Comments</a></li>
-                        </ul>
+            <article class="post type-post status-publish format-standard hentry box mb-4">
+                <header class="article-header border-bottom pb-3 mb-3">
+                    <h1 class="entry-title mb-2"><a href="/jekyll/update/2026/02/22/welcome-to-jekyll.html" class="text-dark text-decoration-none">Welcome to Jekyll!</a></h1>
+                    <div class="post-meta text-muted small d-flex align-items-center gap-2">
+                        <time class="entry-date" datetime="2026-02-22T10:00:00-06:00"><i
+                                class="icon-calendar-3"></i> 22. Feb. 2026</time>
+                        <span class="divider">/</span>
+                        <div class="tags">
+                            <i class="icon-tag"></i>
+                            
+                        </div>
+                        <span class="divider">/</span>
+                        <a href="/jekyll/update/2026/02/22/welcome-to-jekyll.html#disqus_thread" class="text-muted"><i class="icon-comment-empty"></i>
+                            Comments</a>
                     </div>
-                    <div class="post-format-badge post-format-standard">
-                        <i class="icon-picture-1"></i>
+                </header>
+
+                <div class="article-body">
+                    <div class="article-excerpt text-muted mb-3"
+                        style="display: -webkit-box; -webkit-line-clamp: 4; line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">
+                        You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.
+
+
                     </div>
-                </div>
-                <!-- Assuming no featured image for now -->
-                <div class="entry-container noimg">
-                    <div class="entry-content">
-                        <p>You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...</p>
-                        <a href="/jekyll/update/2026/02/22/welcome-to-jekyll.html" class="more-link">Continue reading <span
-                                class="meta-nav">&rarr;</span></a>
-                        <footer class="entry-meta clearfix">
-                        </footer>
-                    </div>
+                    <a href="/jekyll/update/2026/02/22/welcome-to-jekyll.html" class="btn btn-outline-primary btn-sm btn-read-more">Continue reading
+                        &rarr;</a>
                 </div>
             </article>
             
@@ -131,25 +120,45 @@
         </div>
     </div>
 
-    <div class="widget modern-ad">
+    <div class="widget widget-ad">
         <h3 class="modern-widget-title">Advertisement</h3>
-        <div class="ad-placeholder">
+        <div class="ad-space">
             <span>Ad Space</span>
         </div>
     </div>
 
-    <div class="widget modern-topics">
+    <div class="widget widget-topics">
         <h3 class="modern-widget-title">Topics I Blog About</h3>
-        <div class="topics-list">
-            <a href="#" class="topic-pill">Client Side <span class="topic-count">10</span></a>
-            <a href="#" class="topic-pill">Data <span class="topic-count">1</span></a>
-            <a href="#" class="topic-pill">Languages <span class="topic-count">22</span></a>
+        <div class="topic-pills">
+            <a href="#" class="topic-link">Client Side <span class="topic-count">10</span></a>
+            <a href="#" class="topic-link">Data <span class="topic-count">1</span></a>
+            <a href="#" class="topic-link">Languages <span class="topic-count">22</span></a>
         </div>
+    </div>
+
+    <div class="widget widget-timeline">
+        <h3 class="modern-widget-title">Timeline</h3>
+        <ul class="timeline-list">
+            <li><a href="#">Present <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2025 <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2024 <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2023 <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2022 <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2021 <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2020 <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2019 <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2018 <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2017 <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2016 <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2015 <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2014 <span class="post-count">(0)</span></a></li>
+            <li><a href="#">2013 <span class="post-count">(0)</span></a></li>
+        </ul>
     </div>
 </aside>
 </div>
         </div><!-- #main -->
-        <footer id="colophon" class="site-footer" role="contentinfo">
+        <footer id="colophon" class="site-footer mt-auto" role="contentinfo">
             <div class="container">
                 <div class="row pt-4" id="footer-body">
                 </div>

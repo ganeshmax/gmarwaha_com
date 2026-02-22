@@ -14,7 +14,7 @@ body {
 /* Base Top Banner */
 #masthead .top-banner {
     background: #2B333E;
-    padding: 30px 0;
+    padding: 15px 0;
     color: #fff;
 }
 
@@ -25,16 +25,17 @@ body {
 
 #masthead .top-banner .brand h1 {
     margin: 0;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
+    display: flex;
+    align-items: center;
 }
 
 #masthead .top-banner .brand small {
     font-size: 14px;
     font-weight: 300;
     color: #ccc;
-    display: block;
-    margin-top: 5px;
+    margin-top: 2px;
 }
 
 .top-banner-social a {
@@ -166,7 +167,25 @@ body {
     color: #444;
 }
 
+#main {
+    padding-top: 40px;
+}
+
 /* Sidebar Specifics */
+.widget {
+    background: #FFF;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.widget-ad,
+.widget-topics,
+.widget-timeline {
+    padding: 25px;
+}
+
 .modern-profile .profile-header {
     height: 80px;
     background: #2B333E;
@@ -271,6 +290,57 @@ body {
     font-size: 11px;
     margin-left: 8px;
     font-weight: 600;
+}
+
+/* Timeline Widget */
+.widget-timeline .timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget-timeline .timeline-list li {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #e1e4e8;
+}
+
+.widget-timeline .timeline-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.widget-timeline .timeline-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.widget-timeline .timeline-list a:hover {
+    color: #45b0ee;
+}
+
+.widget-timeline .timeline-list .post-count {
+    color: #888;
+    font-size: 12px;
+}
+
+/* Sidebar Specifics Shared */
+.modern-widget-title {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    color: #2E3641;
+    margin-bottom: 15px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e1e4e8;
+    font-weight: 700;
 }
 
 /* Footer Specifics */
