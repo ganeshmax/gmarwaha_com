@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang=" en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Ceylon – Yet Another JVM Language (YAJL) | Ganesh Marwaha</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Ceylon – Yet Another JVM Language (YAJL)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It is all too familiar, yet surprising; it is all too common, yet shocking; to see yet another JVM language created to scratch an itch that countless other languages are already trying to solve." />
+<meta property="og:description" content="It is all too familiar, yet surprising; it is all too common, yet shocking; to see yet another JVM language created to scratch an itch that countless other languages are already trying to solve." />
+<link rel="canonical" href="http://localhost:4000/2011/04/18/ceylon-yet-another-jvm-language-yajl.html" />
+<meta property="og:url" content="http://localhost:4000/2011/04/18/ceylon-yet-another-jvm-language-yajl.html" />
+<meta property="og:site_name" content="Ganesh Marwaha" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-04-18T07:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Ceylon – Yet Another JVM Language (YAJL)" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2011/04/18/ceylon-yet-another-jvm-language-yajl.html","headline":"Ceylon – Yet Another JVM Language (YAJL)","dateModified":"2011-04-18T07:00:00-05:00","datePublished":"2011-04-18T07:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2011/04/18/ceylon-yet-another-jvm-language-yajl.html"},"description":"It is all too familiar, yet surprising; it is all too common, yet shocking; to see yet another JVM language created to scratch an itch that countless other languages are already trying to solve.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/fontello.css">
+    <link rel="stylesheet" href="/assets/css/main.css?v=4">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="home blog">
+    <div id="page" class="site d-flex flex-column min-vh-100">
+        <header id="masthead" role="banner" class="header_normal">
+            <div class="top-banner">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a class="brand brand-text" href="/" title="Ganesh Marwaha" rel="home">
+                        <h1>Ganesh Marwaha<small>&nbsp;&ndash;&nbsp;Software Engineer. Tinkerer.</small></h1>
+                    </a>
+                    <div class="top-banner-social">
+                        <a target="_blank" href="#"><i class="icon-facebook-1"></i></a>
+                        <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                                class="icon-twitter-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-gplus-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+                        <a target="_blank" href="/feed.xml"><i class="icon-rss-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clean-navigation">
+                <div class="container d-flex align-items-center justify-content-start">
+                    <nav class="clean-nav">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li class="dropdown" style="position:relative;">
+                                <a href="#">Article Series <span class="caret">&#9660;</span></a>
+                                <ul class="dropdown-menu-clean">
+                                    <li><a href="/mobile-payments-faq/">Mobile Payments FAQ</a></li>
+                                    <li><a href="/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" style="position:relative;">
+                                <a href="#">Projects <span class="caret">&#9660;</span></a>
+                                <ul class="dropdown-menu-clean">
+                                    <li><a href="/jquery/jcarousellite/">jCarouselLite</a></li>
+                                    <li><a href="/jquery/lavalamp/">Lavalamp</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+        </header><!-- #masthead .site-header -->
+        <div id="main" class="container content flex-grow-1">
+            <div id="primary" class="row right_side">
+    <div id="content" class="col-lg-8" role="main">
+        <article class="post type-post status-publish format-standard hentry box mb-4">
+            <header class="article-header border-bottom pb-3 mb-3">
+                <h1 class="entry-title mb-2">Ceylon – Yet Another JVM Language (YAJL)</h1>
+                <div class="post-meta text-muted small d-flex align-items-center gap-2">
+                    <time class="entry-date" datetime="2011-04-18T07:00:00-05:00"><i
+                            class="icon-calendar-3"></i> 18. Apr. 2011</time>
+                    <span class="divider">/</span>
+                    <div class="tags">
+                        <i class="icon-tag"></i>
+                        
+                        <a href="/tags/General" class="text-muted">General</a>
+                        
+                    </div>
+                    <span class="divider">/</span>
+                    <a href="#disqus_thread" class="text-muted"><i class="icon-comment-empty"></i> Comments</a>
+                </div>
+            </header>
+
+            <div class="article-body mb-5">
+                <p>It is all too familiar, yet surprising; it is all too common, yet shocking; to see <a href="http://en.wikipedia.org/wiki/List_of_JVM_languages">yet another JVM language</a> created to scratch an itch that countless other languages are already trying to solve.</p>
+
+<p>Of course Java is not expressive enough, it doesn’t have higher order functions, it doesn’t have modularity as a language feature, it doesn’t have clean way to do meta-programming, it does NOT have so many more features we love and does have so many more features we hate. These are most of what has frustrated Gavin King (the creator of Hibernate) as well and made him think about creating a new language – <a href="http://relation.to/Bloggers/TalkAtQConBeijing">Ceylon</a>. A few days ago, in his presentation at the <a href="http://www.qconbeijing.com/">QCon Beijing 2011</a> he gave a first glimpse of the language features and a few code snippets showing its beauty.</p>
+
+<p>A lot of people have raised concerns and expressed strong opinions questioning a need for yet another language. <a href="http://www.scala-lang.org/">Scala</a> fans, the <a href="http://groovy.codehaus.org/">Groovy(++)</a> camp, <a href="http://gosu-lang.org/">Gosu</a> and <a href="http://fantom.org/">Fantom</a> hackers all think that Ceylon does not solve anything that is not solved already or could have been solved by just contributing to one of these modern languages. So, I am not going to be yet another anti Ceylon person but I am not a fan either.</p>
+
+<p>I believe Ceylon is more of a strategic approach from RedHat than a language created out of true necessity. They would like to control a language and its followers like most other giant companies do today. Think about it. Oracle is controlling Java, Microsoft is controlling C# (VB, VC++, etc), Google is controlling Go (and Python?), Apple is controlling Objective C and VMWare is controlling Groovy. RedHat has just joined the party leaving only IBM out of the equation. I am sure they are not far behind. I just sincerely hope that they adopt an existing language (Scala?) instead of creating yet another one.</p>
+
+<p>That said, the language itself looks cool, is very expressive and adds a lot of syntactic sweetness to say the least. I just wanted to highlight a few of them here…</p>
+
+<p><strong>String Interpolation:</strong></p>
+
+<p>In Java we use a “+” sign for string concatenation. There is no concept of string interpolation in either Java or Scala. In Groovy ${} construct is used while Ruby uses #{}. Ceylon’s syntax looks better than either of them though. It uses a “space” as the string interpolation operator and the result looks a lot cleaner.  Don’t you think?</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+String name;
+writeLine("Hello " name "!");
+
+</code></pre></div></div>
+
+<p><strong>Getter:</strong></p>
+
+<p>In Java we use getXxx() methods to get a property value. This looks like a method and quacks like a method and does not give the feeling of accessing a property at all. In Ceylon, a very simple innovation has resulted in much more succinct getter methods. They have decided to get rid of paranthesis to both define and call getter methods. Look at the last line of the following snippet. Does it look like a method call? NO. Does it look like accessing a property? Of course it does !!!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+class Counter() {
+   variable Natural count := 0;
+   shared Natural currentCount {
+      return count;
+   }
+}
+Counter c = new Counter();
+writeLine(c.currentCount);
+
+</code></pre></div></div>
+
+<p><strong>Constructor:</strong></p>
+
+<p>In Ceylon there is no separate constructor. The class definition itself acts as a constructor as shown below. Since, there is no concept of method or operator overloading in Ceylon there is no necessity to have a separate method and this syntax induces a “Why didn’t I think of this before ?” moment… The necessity for an overloaded method is handled by optional /defaulted parameters concept. So, you don’t have to worry too much about it…</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+class Customer (String cName, Natural cAge, Date cDob) {
+   variable String name :=  cName;
+   …
+}
+
+</code></pre></div></div>
+
+<p><strong>Builder:</strong></p>
+
+<p>With the support of named parameters and higher-order functions and quite a bit of thought, a syntactic structure as expressive as given below has been achieved in a general purpose and statically typed language like Ceylon.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Html hello {
+   Head head { title = "Squares"; }
+   Body body {
+      Div {
+         cssClass = "greeting";
+         "Hello" name "!";
+      }
+   }
+
+</code></pre></div></div>
+
+<p>And then there is the rest of the now so common features like array like access to Sequences (equivalent of List in Java), higher-order functions, Closures, Currying, etc</p>
+
+<p>It is not like I loved every single feature of Ceylon. I hated a few, but I am reserving that rant for another post…</p>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <!-- Disqus Comments -->
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = 'http://localhost:4000/2011/04/18/ceylon-yet-another-jvm-language-yajl.html';
+                    this.page.identifier = '/2011/04/18/ceylon-yet-another-jvm-language-yajl';
+                };
+                (function () {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://ganeshji.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                    by Disqus.</a></noscript>
+
+        </article>
+
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="side-bar" class="col-lg-4 widget-area modern-sidebar pb-4">
+    <div class="widget modern-profile">
+        <div class="profile-header"></div>
+        <div class="profile-body">
+            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?d=mp&f=y" alt="Ganesh Marwaha"
+                class="profile-avatar">
+            <h3 class="profile-name">Ganesh Marwaha</h3>
+            <p class="profile-bio">Software Engineer &amp; Head of Engineering for Virtusa. Passionate about Digital
+                Transformation, Microservices, and Developer Experiences.</p>
+            <div class="profile-socials">
+                <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                        class="icon-twitter-1"></i></a>
+                <a target="_blank" href="https://github.com/gmarwaha"><i class="icon-github"></i></a>
+                <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget widget-ad">
+        <h3 class="modern-widget-title">Advertisement</h3>
+        <div class="ad-space">
+            <span>Ad Space</span>
+        </div>
+    </div>
+
+    <div class="widget widget-topics">
+        <h3 class="modern-widget-title">Topics I Blog About</h3>
+        <div class="topic-pills">
+            
+            
+            
+            
+            <a href="/tags/android" class="topic-link">
+                Android <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/apple-pay" class="topic-link">
+                Apple Pay <span class="topic-count">5</span>
+            </a>
+            
+            
+            
+            <a href="/tags/blackberry" class="topic-link">
+                Blackberry <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/gwt" class="topic-link">
+                GWT <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/general" class="topic-link">
+                General <span class="topic-count">14</span>
+            </a>
+            
+            
+            
+            <a href="/tags/google-wallet" class="topic-link">
+                Google Wallet <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/groovy" class="topic-link">
+                Groovy <span class="topic-count">6</span>
+            </a>
+            
+            
+            
+            <a href="/tags/hadoop" class="topic-link">
+                Hadoop <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/heroku" class="topic-link">
+                Heroku <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/hibernate" class="topic-link">
+                Hibernate <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/mobile-payments" class="topic-link">
+                Mobile Payments <span class="topic-count">18</span>
+            </a>
+            
+            
+            
+            <a href="/tags/nfc" class="topic-link">
+                NFC <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/sqlite" class="topic-link">
+                SQLite <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/tomcat" class="topic-link">
+                Tomcat <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/iphone" class="topic-link">
+                iPhone <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/jcarousellite" class="topic-link">
+                jCarouselLite <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/jquery" class="topic-link">
+                jQuery <span class="topic-count">7</span>
+            </a>
+            
+        </div>
+    </div>
+
+    <div class="widget widget-timeline">
+        <h3 class="modern-widget-title">Timeline</h3>
+        <ul class="timeline-list">
+            
+            
+            <li>
+                <a href="/blog/2015/">
+                    2015
+                    <span class="post-count">(1)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2014/">
+                    2014
+                    <span class="post-count">(23)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2012/">
+                    2012
+                    <span class="post-count">(3)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2011/">
+                    2011
+                    <span class="post-count">(15)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2010/">
+                    2010
+                    <span class="post-count">(6)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2009/">
+                    2009
+                    <span class="post-count">(9)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2008/">
+                    2008
+                    <span class="post-count">(4)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2007/">
+                    2007
+                    <span class="post-count">(4)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2006/">
+                    2006
+                    <span class="post-count">(1)</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+</aside>
+</div>
+        </div><!-- #main -->
+        <footer id="colophon" class="site-footer mt-auto" role="contentinfo">
+            <div class="container">
+                <div class="row pt-4" id="footer-body">
+                </div>
+            </div>
+            <div class="row mt-3 text-center" id="footer-bottom">
+                &copy; 2026 Ganesh Marwaha
+            </div>
+        </footer>
+    </div><!-- #page -->
+</body>
+
+</html>

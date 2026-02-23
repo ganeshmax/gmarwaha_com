@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang=" en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Apple Pay vs Google Wallet : The Secure Element | Ganesh Marwaha</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Apple Pay vs Google Wallet : The Secure Element" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Note: You can read all articles in this series by visiting the Table of Contents" />
+<meta property="og:description" content="Note: You can read all articles in this series by visiting the Table of Contents" />
+<link rel="canonical" href="http://localhost:4000/2014/10/02/apple-pay-vs-google-wallet-the-secure-element.html" />
+<meta property="og:url" content="http://localhost:4000/2014/10/02/apple-pay-vs-google-wallet-the-secure-element.html" />
+<meta property="og:site_name" content="Ganesh Marwaha" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-10-02T07:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Apple Pay vs Google Wallet : The Secure Element" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2014/10/02/apple-pay-vs-google-wallet-the-secure-element.html","headline":"Apple Pay vs Google Wallet : The Secure Element","dateModified":"2014-10-02T07:00:00-05:00","datePublished":"2014-10-02T07:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2014/10/02/apple-pay-vs-google-wallet-the-secure-element.html"},"description":"Note: You can read all articles in this series by visiting the Table of Contents","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/fontello.css">
+    <link rel="stylesheet" href="/assets/css/main.css?v=4">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="home blog">
+    <div id="page" class="site d-flex flex-column min-vh-100">
+        <header id="masthead" role="banner" class="header_normal">
+            <div class="top-banner">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a class="brand brand-text" href="/" title="Ganesh Marwaha" rel="home">
+                        <h1>Ganesh Marwaha<small>&nbsp;&ndash;&nbsp;Software Engineer. Tinkerer.</small></h1>
+                    </a>
+                    <div class="top-banner-social">
+                        <a target="_blank" href="#"><i class="icon-facebook-1"></i></a>
+                        <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                                class="icon-twitter-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-gplus-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+                        <a target="_blank" href="/feed.xml"><i class="icon-rss-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clean-navigation">
+                <div class="container d-flex align-items-center justify-content-start">
+                    <nav class="clean-nav">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li class="dropdown" style="position:relative;">
+                                <a href="#">Article Series <span class="caret">&#9660;</span></a>
+                                <ul class="dropdown-menu-clean">
+                                    <li><a href="/mobile-payments-faq/">Mobile Payments FAQ</a></li>
+                                    <li><a href="/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" style="position:relative;">
+                                <a href="#">Projects <span class="caret">&#9660;</span></a>
+                                <ul class="dropdown-menu-clean">
+                                    <li><a href="/jquery/jcarousellite/">jCarouselLite</a></li>
+                                    <li><a href="/jquery/lavalamp/">Lavalamp</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+        </header><!-- #masthead .site-header -->
+        <div id="main" class="container content flex-grow-1">
+            <div id="primary" class="row right_side">
+    <div id="content" class="col-lg-8" role="main">
+        <article class="post type-post status-publish format-standard hentry box mb-4">
+            <header class="article-header border-bottom pb-3 mb-3">
+                <h1 class="entry-title mb-2">Apple Pay vs Google Wallet : The Secure Element</h1>
+                <div class="post-meta text-muted small d-flex align-items-center gap-2">
+                    <time class="entry-date" datetime="2014-10-02T07:00:00-05:00"><i
+                            class="icon-calendar-3"></i> 02. Oct. 2014</time>
+                    <span class="divider">/</span>
+                    <div class="tags">
+                        <i class="icon-tag"></i>
+                        
+                        <a href="/tags/Apple Pay" class="text-muted">Apple Pay</a>, 
+                        
+                        <a href="/tags/Google Wallet" class="text-muted">Google Wallet</a>
+                        
+                    </div>
+                    <span class="divider">/</span>
+                    <a href="#disqus_thread" class="text-muted"><i class="icon-comment-empty"></i> Comments</a>
+                </div>
+            </header>
+
+            <div class="article-body mb-5">
+                <p>Note: You can read all articles in this <a href="http://www.gmarwaha.com/blog/apple-pay-vs-google-wallet/">series</a> by visiting the <a href="http://www.gmarwaha.com/blog/apple-pay-vs-google-wallet/">Table of Contents</a></p>
+
+<p>Both <a href="/2014/10/17/mobile-payments-what-is-google-wallet.html">Google Wallet</a> and <a href="https://www.apple.com/iphone-6/apple-pay/">ApplePay</a> are trying to solve the same set of problems – mobile payments at the physical POS and inside apps. They have many characteristics that are very similar, but they also differ in significant ways when it comes to implementation and user experience. In this series of blog posts, we will analyze a few similarities and differences one by one. We will start by talking about the <code class="language-plaintext highlighter-rouge">Secure Element</code> today.</p>
+
+<p>A <a href="/2014/09/01/mobile-payments-what-is-a-secure-element.html">Secure Element</a> (SE) securely stores card/cardholder data and does cryptographic processing. During a payment transaction it emulates a <a href="/2014/05/11/mobile-payments-what-is-a-contactless-chip-card.html">contactless card</a> using industry standard protocols to help authorize a transaction. The Secure Element could either be embedded in the phone or embedded in your network operator’s SIM card. We will generically refer to them as device-based Secure Element. More recently, with the introduction of <a href="/2014/09/20/mobile-payments-what-is-hce.html">HCE</a> technology by Google, the definition of Secure Element has been expanded to include a secure cloud as well. We will refer to them as cloud-based Secure Element.</p>
+
+<p>In the beginning, Google Wallet v1.0 started its journey by using the device-based Secure Element for <a href="/2014/08/07/mobile-payments-what-is-nfc-card-emulation-mode.html">card emulation</a>. This approach didn’t work out well for Google as most of the major network operators (Verizon, AT&amp;T and T-Mobile) decided to support their own brand of wallet called <a href="http://gosoftcard.com/">Softcard</a> (previously <a href="https://www.paywithisis.com/">Isis</a>) and blocked access to the <a href="/2014/09/01/mobile-payments-what-is-a-secure-element.html">Secure Element</a> for any other wallet providers. Google had no choice but to move on.
+Today, Google wallet v3.0 does not use a device-based Secure Element. It uses a technology called <a href="/2014/09/20/mobile-payments-what-is-hce.html">Host-based card emulation</a> (HCE) instead, where <a href="/2014/08/07/mobile-payments-what-is-nfc-card-emulation-mode.html">card-emulation</a> and the Secure Element are separated into different areas. For example, in HCE mode, when an <a href="/2014/08/03/mobile-payments-what-is-nfc.html">NFC</a> enabled Android phone is tapped against a contactless terminal, the NFC controller inside the phone redirects communication from the terminal to the host operating system. Google wallet picks up the request from the host operating system and responds to the communication with a virtual card number and uses industry standard contactless protocols to complete the transaction. This is the <a href="/2014/08/07/mobile-payments-what-is-nfc-card-emulation-mode.html">card-emulation</a> part. The transaction proceeds and reaches the Google cloud servers where the virtual card number is replaced with real card data and authorized with the real Issuer. Since the real card data is securely stored in Google’s cloud servers, the cloud represents the <a href="/2014/09/01/mobile-payments-what-is-a-secure-element.html">Secure Element</a> part. In general, this approach is considered less secure compared to the embedded SE approach. But there are some areas (like Lost &amp; Stolen use-case) where it is more secure. We will discuss that in a different post.</p>
+
+<p>NOTE: This doesn’t mean that Android operating system does not support device-based Secure element anymore. In fact it supports both device-based Secure Element and HCE using a routing table at the NFC controller level.</p>
+
+<p><a href="https://www.apple.com/iphone-6/apple-pay/">ApplePay</a>, in contrast, works using traditional device-based Secure Element. It does not use HCE technology. Consequently, Apple does not store the real card or token data in their cloud servers at all. The on-device Secure Element essentially performs <a href="/2014/08/07/mobile-payments-what-is-nfc-card-emulation-mode.html">card-emulation</a> in addition to secure storage. It sends payment data to the contactless terminal when you <a href="/2014/05/11/mobile-payments-what-is-tap-pay.html">Tap &amp; Pay</a>. I have attempted to <a href="/2014/09/24/apple-pay-an-attempt-to-demystify.html">demystify how ApplePay works</a> in one of my previous posts. In many ways it is similar to how Google Wallet v1.0 used to work (with some important differences).
+First, ApplePay does not store the real card data inside the SE. This is in direct contrast to Google Wallet 1.0 and Softcard. Instead, they store a token that conforms to <a href="http://www.emvco.com/">EMVCo</a> <a href="http://www.emvco.com/specifications.aspx?id=263">tokenization</a> specification. It is this token (along with a cryptogram) that gets sent to the contactless terminal. During the authorization flow, the <a href="/2014/03/21/mobile-payments-who-is-a-payment-network.html">card network</a> identifies the token, de-tokenizes them into real PAN with the help of a Token Service Provider (TSP) and sends the real PAN over to <a href="/2014/02/05/mobile-payments-who-is-an-issuer.html">Issuer</a> for authorization.</p>
+
+<p>Second, Apple owns and controls the Secure Element embedded inside the device thereby avoiding unnecessary challenges from the MNOs.</p>
+
+<p>Finally, Apple significantly simplified the provisioning model. If they had to provision the real card details, they would have to depend on a complex and convoluted process. Fortunately, they provision a token instead and took the opportunity to simplify the process to a bare minimum.</p>
+
+<p>In the next post, we will discuss how these two services differ when the device is lost or stolen.</p>
+
+<div class="related-reading">
+<p class="related-reading-title">Related Reading</p>
+<ul>
+    <li><a href="http://www.gmarwaha.com/blog/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet – Article Series</a></li>
+    <li><a href="http://www.gmarwaha.com/blog/mobile-payments-faq/">Mobile Payments FAQ</a></li>
+    <li><a href="/2014/09/24/apple-pay-an-attempt-to-demystify.html">Apple Pay – An attempt to demystify</a></li>
+    <li><a href="/2014/10/17/mobile-payments-what-is-google-wallet.html">What is Google Wallet?</a></li>
+    <li><a href="/2014/10/20/mobile-payments-what-is-apple-pay.html">What is Apple Pay?</a></li>
+    <li><a href="/2014/08/03/mobile-payments-what-is-nfc.html">What is NFC?</a></li>
+    <li><a href="/2014/08/07/mobile-payments-what-is-nfc-card-emulation-mode.html">What is NFC Card Emulation Mode?</a></li>
+    <li><a href="/2014/09/01/mobile-payments-what-is-a-secure-element.html">What is a Secure Element?</a></li>
+    <li><a href="/2014/09/20/mobile-payments-what-is-hce.html">What is HCE?</a></li>
+</ul>
+</div>
+
+
+            </div>
+
+            <hr class="mb-4">
+
+            <!-- Disqus Comments -->
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = 'http://localhost:4000/2014/10/02/apple-pay-vs-google-wallet-the-secure-element.html';
+                    this.page.identifier = '/2014/10/02/apple-pay-vs-google-wallet-the-secure-element';
+                };
+                (function () {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://ganeshji.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                    by Disqus.</a></noscript>
+
+        </article>
+
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="side-bar" class="col-lg-4 widget-area modern-sidebar pb-4">
+    <div class="widget modern-profile">
+        <div class="profile-header"></div>
+        <div class="profile-body">
+            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?d=mp&f=y" alt="Ganesh Marwaha"
+                class="profile-avatar">
+            <h3 class="profile-name">Ganesh Marwaha</h3>
+            <p class="profile-bio">Software Engineer &amp; Head of Engineering for Virtusa. Passionate about Digital
+                Transformation, Microservices, and Developer Experiences.</p>
+            <div class="profile-socials">
+                <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                        class="icon-twitter-1"></i></a>
+                <a target="_blank" href="https://github.com/gmarwaha"><i class="icon-github"></i></a>
+                <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget widget-ad">
+        <h3 class="modern-widget-title">Advertisement</h3>
+        <div class="ad-space">
+            <span>Ad Space</span>
+        </div>
+    </div>
+
+    <div class="widget widget-topics">
+        <h3 class="modern-widget-title">Topics I Blog About</h3>
+        <div class="topic-pills">
+            
+            
+            
+            
+            <a href="/tags/android" class="topic-link">
+                Android <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/apple-pay" class="topic-link">
+                Apple Pay <span class="topic-count">5</span>
+            </a>
+            
+            
+            
+            <a href="/tags/blackberry" class="topic-link">
+                Blackberry <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/gwt" class="topic-link">
+                GWT <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/general" class="topic-link">
+                General <span class="topic-count">14</span>
+            </a>
+            
+            
+            
+            <a href="/tags/google-wallet" class="topic-link">
+                Google Wallet <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/groovy" class="topic-link">
+                Groovy <span class="topic-count">6</span>
+            </a>
+            
+            
+            
+            <a href="/tags/hadoop" class="topic-link">
+                Hadoop <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/heroku" class="topic-link">
+                Heroku <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/hibernate" class="topic-link">
+                Hibernate <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/mobile-payments" class="topic-link">
+                Mobile Payments <span class="topic-count">18</span>
+            </a>
+            
+            
+            
+            <a href="/tags/nfc" class="topic-link">
+                NFC <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/sqlite" class="topic-link">
+                SQLite <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/tomcat" class="topic-link">
+                Tomcat <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/iphone" class="topic-link">
+                iPhone <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/jcarousellite" class="topic-link">
+                jCarouselLite <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/jquery" class="topic-link">
+                jQuery <span class="topic-count">7</span>
+            </a>
+            
+        </div>
+    </div>
+
+    <div class="widget widget-timeline">
+        <h3 class="modern-widget-title">Timeline</h3>
+        <ul class="timeline-list">
+            
+            
+            <li>
+                <a href="/blog/2015/">
+                    2015
+                    <span class="post-count">(1)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2014/">
+                    2014
+                    <span class="post-count">(23)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2012/">
+                    2012
+                    <span class="post-count">(3)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2011/">
+                    2011
+                    <span class="post-count">(15)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2010/">
+                    2010
+                    <span class="post-count">(6)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2009/">
+                    2009
+                    <span class="post-count">(9)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2008/">
+                    2008
+                    <span class="post-count">(4)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2007/">
+                    2007
+                    <span class="post-count">(4)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2006/">
+                    2006
+                    <span class="post-count">(1)</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+</aside>
+</div>
+        </div><!-- #main -->
+        <footer id="colophon" class="site-footer mt-auto" role="contentinfo">
+            <div class="container">
+                <div class="row pt-4" id="footer-body">
+                </div>
+            </div>
+            <div class="row mt-3 text-center" id="footer-bottom">
+                &copy; 2026 Ganesh Marwaha
+            </div>
+        </footer>
+    </div><!-- #page -->
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang=" en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Heroku – Trouble with Windows and SSH Keys | Ganesh Marwaha</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Heroku – Trouble with Windows and SSH Keys" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Heroku, one of my favorite cloud platforms, is a hosted platform built specifically for deploying Rails and other Ruby based web applications. Heroku makes deploying Rails applications to cloud ridiculously easy – as long as your source code is under version control with Git." />
+<meta property="og:description" content="Heroku, one of my favorite cloud platforms, is a hosted platform built specifically for deploying Rails and other Ruby based web applications. Heroku makes deploying Rails applications to cloud ridiculously easy – as long as your source code is under version control with Git." />
+<link rel="canonical" href="http://localhost:4000/2011/05/18/heroku-trouble-with-windows-and-ssh-keys.html" />
+<meta property="og:url" content="http://localhost:4000/2011/05/18/heroku-trouble-with-windows-and-ssh-keys.html" />
+<meta property="og:site_name" content="Ganesh Marwaha" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-05-18T07:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Heroku – Trouble with Windows and SSH Keys" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2011/05/18/heroku-trouble-with-windows-and-ssh-keys.html","headline":"Heroku – Trouble with Windows and SSH Keys","dateModified":"2011-05-18T07:00:00-05:00","datePublished":"2011-05-18T07:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2011/05/18/heroku-trouble-with-windows-and-ssh-keys.html"},"description":"Heroku, one of my favorite cloud platforms, is a hosted platform built specifically for deploying Rails and other Ruby based web applications. Heroku makes deploying Rails applications to cloud ridiculously easy – as long as your source code is under version control with Git.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/fontello.css">
+    <link rel="stylesheet" href="/assets/css/main.css?v=4">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="home blog">
+    <div id="page" class="site d-flex flex-column min-vh-100">
+        <header id="masthead" role="banner" class="header_normal">
+            <div class="top-banner">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a class="brand brand-text" href="/" title="Ganesh Marwaha" rel="home">
+                        <h1>Ganesh Marwaha<small>&nbsp;&ndash;&nbsp;Software Engineer. Tinkerer.</small></h1>
+                    </a>
+                    <div class="top-banner-social">
+                        <a target="_blank" href="#"><i class="icon-facebook-1"></i></a>
+                        <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                                class="icon-twitter-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-gplus-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+                        <a target="_blank" href="/feed.xml"><i class="icon-rss-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clean-navigation">
+                <div class="container d-flex align-items-center justify-content-start">
+                    <nav class="clean-nav">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li class="dropdown" style="position:relative;">
+                                <a href="#">Article Series <span class="caret">&#9660;</span></a>
+                                <ul class="dropdown-menu-clean">
+                                    <li><a href="/mobile-payments-faq/">Mobile Payments FAQ</a></li>
+                                    <li><a href="/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" style="position:relative;">
+                                <a href="#">Projects <span class="caret">&#9660;</span></a>
+                                <ul class="dropdown-menu-clean">
+                                    <li><a href="/jquery/jcarousellite/">jCarouselLite</a></li>
+                                    <li><a href="/jquery/lavalamp/">Lavalamp</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+        </header><!-- #masthead .site-header -->
+        <div id="main" class="container content flex-grow-1">
+            <div id="primary" class="row right_side">
+    <div id="content" class="col-lg-8" role="main">
+        <article class="post type-post status-publish format-standard hentry box mb-4">
+            <header class="article-header border-bottom pb-3 mb-3">
+                <h1 class="entry-title mb-2">Heroku – Trouble with Windows and SSH Keys</h1>
+                <div class="post-meta text-muted small d-flex align-items-center gap-2">
+                    <time class="entry-date" datetime="2011-05-18T07:00:00-05:00"><i
+                            class="icon-calendar-3"></i> 18. May. 2011</time>
+                    <span class="divider">/</span>
+                    <div class="tags">
+                        <i class="icon-tag"></i>
+                        
+                        <a href="/tags/Heroku" class="text-muted">Heroku</a>
+                        
+                    </div>
+                    <span class="divider">/</span>
+                    <a href="#disqus_thread" class="text-muted"><i class="icon-comment-empty"></i> Comments</a>
+                </div>
+            </header>
+
+            <div class="article-body mb-5">
+                <p><a href="http://www.heroku.com/">Heroku</a>, one of my favorite cloud platforms, is a hosted platform built specifically for deploying Rails and other Ruby based web applications. Heroku makes deploying Rails applications to cloud ridiculously easy – as long as your source code is under version control with Git.</p>
+
+<p>The general process of installing and using Heroku on Windows is fairly simple. You should already have Ruby, Rails and Git for Windows (<a href="http://code.google.com/p/msysgit/">msysgit</a>) installed. Once you have them, go to <a href="http://www.heroku.com/">Heroku.com</a> and sign up for an account. After signing up, install the Heroku gem with the following command.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+$ gem install heroku
+
+</code></pre></div></div>
+
+<p>Typically, as in <a href="https://github.com/">GitHub </a>you will need to create SSH keys if you haven’t already, and then tell Heroku about your public key so that you can use Git to push your application repository up to their servers. Detailed information for setting up Git and creating ssh keys on Windows can be found <a href="http://help.github.com/win-set-up-git/">here</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+# Create new keys
+$ ssh-keygen -t rsa -C "your_email@yourdomain.com"
+
+# Tell heroku about your public key
+$ heroku keys:add
+
+</code></pre></div></div>
+
+<p>Remember? Your source code should be under version control with git. So, from within the root of your application folder, use typical git gimmicks to create a local git repository and commit your application source to the local repository.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+$ cd my_app
+$ git init
+$ git add .
+$ git commit -m "initial version"
+
+</code></pre></div></div>
+
+<p>Finally, from within the root of your application folder, use the heroku command to create a place on the Heroku servers for the application to live. Then, you can deploy your application to the cloud by pushing your local git repo to heroku…</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+# Create an application space on the server
+$ heroku create
+
+# Deploy your application to the cloud
+$ git push heroku master
+
+</code></pre></div></div>
+
+<p>If until now everything went well <strong>except for the last step</strong> and instead of getting your application deployed if you got the following error, then it was worth your time to have read this post until this point…</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Permission denied (publickey).
+fatal: The remote end hung up unexpectedly
+
+</code></pre></div></div>
+
+<p>It was a frustrating experience trying to figure out the problem. The keys were created fine and they got added to heroku just fine as well. In fact i could verify it with the following command and my keys were right there.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+heroku keys:list
+
+</code></pre></div></div>
+
+<p>Whatever I do, I kept getting the same error. Finally after a lot of googling, experimenting and hair plucking the problem got resolved. Here goes the solution…</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>Typically once you create the keys as mentioned above, two files  – “id_rsa” and “id_rsa.pub” – are stored in the “.ssh” folder within the user’s home folder. If you are working with linux that seems to be good enough. But for the windows version of git that doesn’t seem to cut it. It wants the keys to be stored inside the “.ssh” folder within the “msysgit” installation folder as well. If you don’t find a “.ssh” folder inside the “msysgit” installation folder, feel free to create one. Once you drop these two key files there and repeat the entire process, everything went as smooth and my application got deployed in the heroku cloud and the world is again a better place to live in.</p>
+
+<p>I am sure many people will hit the same road block. At least I am sure I will come across it again and wouldn’t remember how I solved it in the first place. Happens, doesn’t it? So, I thought i will document it here for future reference.</p>
+
+<p>If there is any other solution, or if this solution is incorrect, feel free to leave a comment.</p>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <!-- Disqus Comments -->
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = 'http://localhost:4000/2011/05/18/heroku-trouble-with-windows-and-ssh-keys.html';
+                    this.page.identifier = '/2011/05/18/heroku-trouble-with-windows-and-ssh-keys';
+                };
+                (function () {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://ganeshji.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                    by Disqus.</a></noscript>
+
+        </article>
+
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="side-bar" class="col-lg-4 widget-area modern-sidebar pb-4">
+    <div class="widget modern-profile">
+        <div class="profile-header"></div>
+        <div class="profile-body">
+            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?d=mp&f=y" alt="Ganesh Marwaha"
+                class="profile-avatar">
+            <h3 class="profile-name">Ganesh Marwaha</h3>
+            <p class="profile-bio">Software Engineer &amp; Head of Engineering for Virtusa. Passionate about Digital
+                Transformation, Microservices, and Developer Experiences.</p>
+            <div class="profile-socials">
+                <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                        class="icon-twitter-1"></i></a>
+                <a target="_blank" href="https://github.com/gmarwaha"><i class="icon-github"></i></a>
+                <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget widget-ad">
+        <h3 class="modern-widget-title">Advertisement</h3>
+        <div class="ad-space">
+            <span>Ad Space</span>
+        </div>
+    </div>
+
+    <div class="widget widget-topics">
+        <h3 class="modern-widget-title">Topics I Blog About</h3>
+        <div class="topic-pills">
+            
+            
+            
+            
+            <a href="/tags/android" class="topic-link">
+                Android <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/apple-pay" class="topic-link">
+                Apple Pay <span class="topic-count">5</span>
+            </a>
+            
+            
+            
+            <a href="/tags/blackberry" class="topic-link">
+                Blackberry <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/gwt" class="topic-link">
+                GWT <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/general" class="topic-link">
+                General <span class="topic-count">14</span>
+            </a>
+            
+            
+            
+            <a href="/tags/google-wallet" class="topic-link">
+                Google Wallet <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/groovy" class="topic-link">
+                Groovy <span class="topic-count">6</span>
+            </a>
+            
+            
+            
+            <a href="/tags/hadoop" class="topic-link">
+                Hadoop <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/heroku" class="topic-link">
+                Heroku <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/hibernate" class="topic-link">
+                Hibernate <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/mobile-payments" class="topic-link">
+                Mobile Payments <span class="topic-count">18</span>
+            </a>
+            
+            
+            
+            <a href="/tags/nfc" class="topic-link">
+                NFC <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/sqlite" class="topic-link">
+                SQLite <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/tomcat" class="topic-link">
+                Tomcat <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/iphone" class="topic-link">
+                iPhone <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/jcarousellite" class="topic-link">
+                jCarouselLite <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/jquery" class="topic-link">
+                jQuery <span class="topic-count">7</span>
+            </a>
+            
+        </div>
+    </div>
+
+    <div class="widget widget-timeline">
+        <h3 class="modern-widget-title">Timeline</h3>
+        <ul class="timeline-list">
+            
+            
+            <li>
+                <a href="/blog/2015/">
+                    2015
+                    <span class="post-count">(1)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2014/">
+                    2014
+                    <span class="post-count">(23)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2012/">
+                    2012
+                    <span class="post-count">(3)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2011/">
+                    2011
+                    <span class="post-count">(15)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2010/">
+                    2010
+                    <span class="post-count">(6)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2009/">
+                    2009
+                    <span class="post-count">(9)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2008/">
+                    2008
+                    <span class="post-count">(4)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2007/">
+                    2007
+                    <span class="post-count">(4)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2006/">
+                    2006
+                    <span class="post-count">(1)</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+</aside>
+</div>
+        </div><!-- #main -->
+        <footer id="colophon" class="site-footer mt-auto" role="contentinfo">
+            <div class="container">
+                <div class="row pt-4" id="footer-body">
+                </div>
+            </div>
+            <div class="row mt-3 text-center" id="footer-bottom">
+                &copy; 2026 Ganesh Marwaha
+            </div>
+        </footer>
+    </div><!-- #page -->
+</body>
+
+</html>

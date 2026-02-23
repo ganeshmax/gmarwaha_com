@@ -780,50 +780,6 @@ footer.site-footer a {
 
 /* Cards inherit .widget for bg/border/radius/shadow.
    We need to ensure proper padding, margin, and overflow for the nav rows. */
-.project-sidebar-widget {
-    overflow: hidden;
-    margin-bottom: 40px !important;
-    padding: 0;
-}
-
-/* Title: built on .modern-widget-title base */
-.project-sidebar-title {
-    padding: 20px 25px 12px;
-    margin-bottom: 0;
-    text-transform: none;
-}
-
-.project-sidebar-nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.project-sidebar-nav li {
-    border-top: 1px solid #f3f4f6;
-}
-
-.project-sidebar-nav li a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 9px 25px;
-    font-size: 13px;
-    font-family: var(--font-sans);
-    color: #374151;
-    text-decoration: none;
-    transition: background 0.15s, color 0.15s;
-}
-
-.project-sidebar-nav li a:hover {
-    background: #f0f4ff;
-    color: #2563eb;
-}
-
-.demo-nav li a {
-    font-size: 12.5px;
-    padding: 8px 25px;
-}
 
 /* Sidebar badges */
 .sidebar-badge {

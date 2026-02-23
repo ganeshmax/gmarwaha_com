@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang=" en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>jCarouselLite - A lightweight jQuery carousel plugin | Ganesh Marwaha</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="jCarouselLite - A lightweight jQuery carousel plugin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Software Engineer. Tinkerer." />
+<meta property="og:description" content="Software Engineer. Tinkerer." />
+<link rel="canonical" href="http://localhost:4000/jquery/jcarousellite/" />
+<meta property="og:url" content="http://localhost:4000/jquery/jcarousellite/" />
+<meta property="og:site_name" content="Ganesh Marwaha" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="jCarouselLite - A lightweight jQuery carousel plugin" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/jquery/jcarousellite/","headline":"jCarouselLite - A lightweight jQuery carousel plugin","description":"Software Engineer. Tinkerer.","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/fontello.css">
+    <link rel="stylesheet" href="/assets/css/main.css?v=4">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="home blog">
+    <div id="page" class="site d-flex flex-column min-vh-100">
+        <header id="masthead" role="banner" class="header_normal">
+            <div class="top-banner">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a class="brand brand-text" href="/" title="Ganesh Marwaha" rel="home">
+                        <h1>Ganesh Marwaha<small>&nbsp;&ndash;&nbsp;Software Engineer. Tinkerer.</small></h1>
+                    </a>
+                    <div class="top-banner-social">
+                        <a target="_blank" href="#"><i class="icon-facebook-1"></i></a>
+                        <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                                class="icon-twitter-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-gplus-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+                        <a target="_blank" href="/feed.xml"><i class="icon-rss-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clean-navigation">
+                <div class="container d-flex align-items-center justify-content-start">
+                    <nav class="clean-nav">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li class="dropdown" style="position:relative;">
+                                <a href="#">Article Series <span class="caret">&#9660;</span></a>
+                                <ul class="dropdown-menu-clean">
+                                    <li><a href="/mobile-payments-faq/">Mobile Payments FAQ</a></li>
+                                    <li><a href="/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" style="position:relative;">
+                                <a href="#">Projects <span class="caret">&#9660;</span></a>
+                                <ul class="dropdown-menu-clean">
+                                    <li><a href="/jquery/jcarousellite/">jCarouselLite</a></li>
+                                    <li><a href="/jquery/lavalamp/">Lavalamp</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+        </header><!-- #masthead .site-header -->
+        <div id="main" class="container content flex-grow-1">
+            <div id="primary" class="row right_side">
+    <div id="content" class="col-lg-8" role="main">
+        <article class="box mb-4">
+            <header class="article-header border-bottom pb-3 mb-4">
+                <h1 class="entry-title">jCarouselLite</h1>
+                <p class="text-muted" style="font-size:14px; margin-top: 8px;">A super light-weight (~2 KB) jQuery
+                    plugin for creating carousels with images or any HTML content.</p>
+            </header>
+
+            <div class="article-body project-page">
+
+                <div class="project-callout">
+                    <strong>Version 1.1</strong> — Sept 2014 &nbsp;·&nbsp;
+                    <a href="https://github.com/ganeshmax/jcarousellite" target="_blank">GitHub</a> &nbsp;·&nbsp;
+                    Compatible with jQuery 1.11.x, Mousewheel 3.1.x, Easing 1.3
+                </div>
+
+                <!-- INFORMATION -->
+                <h2 id="information">Information</h2>
+
+                <h3>Why?</h3>
+                <p>jCarouselLite is a jQuery plugin that carries you on a carousel ride filled with images and HTML
+                    content. Put simply, you can navigate images and/or HTML in a carousel-style widget. It is super
+                    light-weight, at about <strong>2 KB</strong>, yet very flexible and customizable to fit most needs.
+                </p>
+
+                <h3>How?</h3>
+                <p>It requires no special CSS file or class names. You just include the JS file, supply the HTML markup
+                    (a <code>div</code> enclosing a <code>ul</code>), and call the function. That's it — the carousel
+                    calculates dimensions automatically based on your items.</p>
+
+                <h3>What's inside?</h3>
+                <ul>
+                    <li>A single <strong>~2 KB</strong> minified JavaScript file</li>
+                    <li>No required CSS — the plugin auto-sizes based on item dimensions you provide</li>
+                    <li>Optional support for the jQuery Easing and MouseWheel plugins</li>
+                    <li>Horizontal and vertical scrolling, circular navigation, auto-scroll, and more</li>
+                </ul>
+
+                <!-- INSTALLATION -->
+                <h2 id="installation">Installation</h2>
+
+                <h3>Step 1 — Include files</h3>
+
+                <pre><code class="language-html">&lt;!-- Required --&gt;
+&lt;script type="text/javascript" src="path/to/jquery.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="path/to/jcarousellite.js"&gt;&lt;/script&gt;
+&lt;!-- Optional --&gt;
+&lt;script type="text/javascript" src="path/to/easing.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="path/to/mousewheel.js"&gt;&lt;/script&gt;</code></pre>
+
+                <h3>Step 2 — HTML markup</h3>
+
+                <pre><code class="language-html">&lt;button class="prev"&gt;&amp;laquo;&lt;/button&gt;
+&lt;button class="next"&gt;&amp;raquo;&lt;/button&gt;
+&lt;div class="any-class"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;img src="image/1.jpg" style="width:150px; height:118px;"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;img src="image/2.jpg" style="width:150px; height:118px;"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;img src="image/3.jpg" style="width:150px; height:118px;"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;img src="image/4.jpg" style="width:150px; height:118px;"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;img src="image/5.jpg" style="width:150px; height:118px;"&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+                <h3>Step 3 — Initialize the plugin</h3>
+
+                <pre><code class="language-javascript">$(function() {
+    $(".any-class").jCarouselLite({
+        btnNext: ".next",
+        btnPrev: ".prev"
+    });
+});</code></pre>
+
+                <!-- DOCUMENTATION -->
+                <h2 id="documentation">Documentation</h2>
+
+                <p>All configuration options are passed as a plain object to <code>jCarouselLite()</code>.</p>
+
+                <table class="project-table">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>btnNext</code></td>
+                            <td>Selector</td>
+                            <td>—</td>
+                            <td>jQuery selector for the "next" button.</td>
+                        </tr>
+                        <tr>
+                            <td><code>btnPrev</code></td>
+                            <td>Selector</td>
+                            <td>—</td>
+                            <td>jQuery selector for the "previous" button.</td>
+                        </tr>
+                        <tr>
+                            <td><code>btnGo</code></td>
+                            <td>Array</td>
+                            <td>—</td>
+                            <td>Array of selectors for custom navigation (e.g., tabbed interfaces).</td>
+                        </tr>
+                        <tr>
+                            <td><code>mouseWheel</code></td>
+                            <td>Boolean</td>
+                            <td><code>false</code></td>
+                            <td>Enable mouse-wheel navigation (requires the mousewheel plugin).</td>
+                        </tr>
+                        <tr>
+                            <td><code>auto</code></td>
+                            <td>Number</td>
+                            <td><code>null</code></td>
+                            <td>Milliseconds between auto-scrolls. <code>null</code> disables auto-scroll.</td>
+                        </tr>
+                        <tr>
+                            <td><code>speed</code></td>
+                            <td>Number</td>
+                            <td><code>200</code></td>
+                            <td>Animation speed in ms. Set to <code>0</code> to remove the slide effect.</td>
+                        </tr>
+                        <tr>
+                            <td><code>easing</code></td>
+                            <td>String</td>
+                            <td><code>null</code></td>
+                            <td>Easing effect name (requires the jQuery Easing plugin).</td>
+                        </tr>
+                        <tr>
+                            <td><code>vertical</code></td>
+                            <td>Boolean</td>
+                            <td><code>false</code></td>
+                            <td><code>true</code> for a vertical carousel, <code>false</code> for horizontal.</td>
+                        </tr>
+                        <tr>
+                            <td><code>circular</code></td>
+                            <td>Boolean</td>
+                            <td><code>true</code></td>
+                            <td>Enable infinite/circular wrap-around navigation.</td>
+                        </tr>
+                        <tr>
+                            <td><code>visible</code></td>
+                            <td>Number</td>
+                            <td><code>3</code></td>
+                            <td>Number of items visible at once. Decimals like <code>3.5</code> tease the next item.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>start</code></td>
+                            <td>Number</td>
+                            <td><code>0</code></td>
+                            <td>Zero-based index of the starting item.</td>
+                        </tr>
+                        <tr>
+                            <td><code>scroll</code></td>
+                            <td>Number</td>
+                            <td><code>1</code></td>
+                            <td>Number of items to scroll per button click.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- STYLING -->
+                <h2 id="styling">Styling – Default &amp; Custom</h2>
+
+                <p>The plugin handles horizontal/vertical alignment and sizing based on the <code>visible</code> count.
+                    You must provide the dimensions of individual items in your HTML or CSS.</p>
+
+                <h3>Custom styling example</h3>
+
+                <pre><code class="language-css">#jcl-demo .carousel {
+    border: 1px solid #bababa;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    float: left;
+    padding-left: 10px;
+}
+#jcl-demo .carousel-ul-li-img {
+    width: 150px;
+    height: 118px;
+    vertical-align: middle;
+    margin: 10px 10px 10px 0;
+}</code></pre>
+
+                <!-- DOWNLOAD -->
+                <h2 id="download">Download</h2>
+
+                <div class="download-grid">
+                    <div class="download-card">
+                        <div class="download-version">v1.1 <span class="current-badge">current</span></div>
+                        <a href="https://raw.githubusercontent.com/ganeshmax/jcarousellite/master/jquery.jcarousellite.js"
+                            target="_blank" class="download-link">Full source</a>
+                        <a href="https://raw.githubusercontent.com/ganeshmax/jcarousellite/master/jquery.jcarousellite.min.js"
+                            target="_blank" class="download-link">Minified</a>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-version">v1.0.1 <span class="legacy-badge">legacy</span></div>
+                        <a href="https://raw.githubusercontent.com/ganeshmax/jcarousellite/master/versions/jquery.jcarousellite-1.0.1.js"
+                            target="_blank" class="download-link">Full source</a>
+                        <a href="https://raw.githubusercontent.com/ganeshmax/jcarousellite/master/versions/jquery.jcarousellite-1.0.1.min.js"
+                            target="_blank" class="download-link">Minified</a>
+                    </div>
+                </div>
+
+                <!-- KNOWN ISSUES -->
+                <h2 id="known-issues">Known Issues</h2>
+
+                <ul>
+                    <li><strong>IE 6.0 width issue</strong> — In some configurations, the carousel width may not be
+                        calculated correctly in Internet Explorer 6. Specifying explicit item widths in CSS resolves
+                        this.</li>
+                    <li><strong>Image dimensions required</strong> — The plugin relies on item dimensions to compute
+                        the carousel width. Always specify <code>width</code> and <code>height</code> on your
+                        <code>&lt;img&gt;</code> elements or via CSS, otherwise the carousel may render
+                        incorrectly.
+                    </li>
+                    <li><strong>Flicker on load</strong> — On slow connections, unstyled list items may briefly be
+                        visible before the plugin initialises. To prevent this, hide the carousel container in CSS and
+                        show it in your <code>afterEnd</code> callback, or initialise the plugin inside
+                        <code>$(window).load()</code> rather than <code>$(document).ready()</code>.
+                    </li>
+                </ul>
+
+                <!-- CHANGE LOG -->
+                <h2 id="change-log">Change Log</h2>
+                <ul class="changelog-list">
+                    <li><strong>v1.1</strong> (Sept 2014) — Fixed lingering defects. Tested with jQuery 1.11.x,
+                        Mousewheel 3.1.x, Easing 1.3. Moved to GitHub.</li>
+                    <li><strong>v1.0.1</strong> — Initial major release improvements and stability fixes.</li>
+                </ul>
+
+            </div>
+        </article>
+    </div>
+    <aside id="sidebar" class="col-lg-4 project-sidebar">
+
+        <div class="widget project-sidebar-widget">
+            <h4 class="modern-widget-title project-sidebar-title">Project</h4>
+            <ul class="project-sidebar-nav">
+                <li><a href="#information">Information</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#styling">Styling – Default &amp; Custom</a></li>
+                <li><a href="#documentation">Documentation</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#known-issues">Known Issues</a></li>
+                <li><a href="#change-log">Change Log</a></li>
+                <li><a href="https://github.com/ganeshmax/jcarousellite" target="_blank">GitHub ↗</a></li>
+            </ul>
+        </div>
+
+        <div class="widget project-sidebar-widget">
+            <h4 class="modern-widget-title project-sidebar-title">Demo</h4>
+            <ul class="project-sidebar-nav demo-nav">
+                <li><a href="/jquery/jcarousellite/demo/#demo1">Default Configuration</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo17">Auto Scroll <span
+                            class="sidebar-badge new-badge">NEW</span></a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo14">Scroll More <span
+                            class="sidebar-badge new-badge">NEW</span></a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo19">Mouse Wheel <span
+                            class="sidebar-badge new-badge">NEW</span></a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo20">Mouse Wheel &amp; Buttons <span
+                            class="sidebar-badge new-badge">NEW</span></a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo2">Custom Animation – Easing</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo3">Custom Animation – Speed</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo4">Custom Widget</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo5">More or Less</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo6">Non-Image Content</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo7">Mixed Content</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo8">Vertical</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo9">External Controls</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo10">Callbacks</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo11">Image Slider</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo12">Image Slider – External Controls</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo13">Fraction Configuration</a></li>
+                <li><a href="/jquery/jcarousellite/demo/#demo15">Non Circular</a></li>
+            </ul>
+        </div>
+
+    </aside>
+</div>
+        </div><!-- #main -->
+        <footer id="colophon" class="site-footer mt-auto" role="contentinfo">
+            <div class="container">
+                <div class="row pt-4" id="footer-body">
+                </div>
+            </div>
+            <div class="row mt-3 text-center" id="footer-bottom">
+                &copy; 2026 Ganesh Marwaha
+            </div>
+        </footer>
+    </div><!-- #page -->
+</body>
+
+</html>

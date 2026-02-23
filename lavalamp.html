@@ -1,0 +1,174 @@
+---
+layout: default
+title: "Lavalamp for jQuery Lovers"
+permalink: /jquery/lavalamp/
+---
+<div id="primary" class="row right_side">
+    <div id="content" class="col-lg-8" role="main">
+        <article class="box mb-4">
+            <header class="article-header border-bottom pb-3 mb-4">
+                <h1 class="entry-title">Lavalamp for jQuery Lovers</h1>
+                <p class="text-muted" style="font-size:14px; margin-top: 8px;">A nifty animated menu effect — just 700
+                    bytes minified. A jQuery port of the original Mootools version by Guillermo Rauch.</p>
+            </header>
+
+            <div class="article-body project-page">
+
+                <div class="project-callout">
+                    Compatible with jQuery 1.11.1, jQuery Easing 1.3
+                </div>
+
+                <p>Lavalamp creates a smooth background-sliding highlight effect for navigation menus. The background
+                    element glides from one menu item to another, following your mouse with a customizable easing
+                    effect. It weighs just <strong>700 bytes</strong> minified.</p>
+
+                <h2>Installation</h2>
+
+                <h3 id="step-1">Step 1 — HTML</h3>
+
+                <p>Use a semantically correct <code>&lt;ul&gt;</code> list for your navigation.</p>
+
+                <pre><code class="language-html">&lt;ul class="lavaLamp"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Work&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                <h3 id="step-2">Step 2 — CSS</h3>
+
+                <p>The "sliding doors" technique: the <code>.lavaLamp</code> list has <code>position: relative</code>,
+                    and the background highlight element is absolutely positioned inside it.</p>
+
+                <pre><code class="language-css">ul.lavaLamp {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.lavaLamp li {
+    float: left;
+    cursor: pointer;
+}
+ul.lavaLamp li.back {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}</code></pre>
+
+                <h3 id="step-3">Step 3 — JavaScript</h3>
+
+                <p>Initialize lavaLamp on your navigation element. Optionally pass an easing function and speed.</p>
+
+                <pre><code class="language-javascript">$(function() {
+    $(".lavaLamp").lavaLamp({
+        fx: "backout",
+        speed: 700
+    });
+});</code></pre>
+
+                <p>The <code>fx</code> option accepts any <a href="https://jqueryui.com/effect/" target="_blank">jQuery
+                        Easing</a> value. <code>speed</code> controls the animation duration in milliseconds.</p>
+
+                <h2>Bonus Variations</h2>
+
+                <p>The plugin supports different visual styles using modern CSS instead of image sprites:</p>
+
+                <h3 id="lavalamp-demo">With Image (Default Modern)</h3>
+                <p>Instead of an old image, we recreate the classic "bubble" look with a sleek CSS gradient and shadow.
+                </p>
+                <div class="custom-container lavalamp-demo-container">
+                    <ul class="lavaLamp lavalamp-default align-center" id="demo-default">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <h3 id="demo2">Bottom Style <span class="sidebar-badge noimage-badge">No Image</span></h3>
+                <p>The highlight bar appears as a sleek blue line along the bottom edge of the menu items.</p>
+                <div class="custom-container lavalamp-demo-container">
+                    <ul class="lavaLamp lavalamp-bottom align-center" id="demo-bottom">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <h3 id="demo3">Box Style <span class="sidebar-badge noimage-badge">No Image</span></h3>
+                <p>A simple, clean grey bounding-box outline slides between items.</p>
+                <div class="custom-container lavalamp-demo-container">
+                    <ul class="lavaLamp lavalamp-box align-center" id="demo-box">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <h2>Credits</h2>
+
+                <ul class="credits-list">
+                    <li><strong>Guillermo Rauch</strong> — Original Mootools version</li>
+                    <li><strong>Stephan Beal</strong> — Suggested the name "Lavalamp"</li>
+                    <li><strong>Glen Lipka</strong> — Provided the image sprites used in the demo</li>
+                </ul>
+
+            </div>
+        </article>
+    </div>
+    <aside id="sidebar" class="col-lg-4 widget-area modern-sidebar pb-4">
+
+        <div class="widget widget-timeline">
+            <h3 class="modern-widget-title">Installation Steps</h3>
+            <ul class="timeline-list">
+                <li><a href="#step-1">Step 1 — HTML</a></li>
+                <li><a href="#step-2">Step 2 — CSS</a></li>
+                <li><a href="#step-3">Step 3 — JavaScript</a></li>
+            </ul>
+        </div>
+
+        <div class="widget widget-timeline">
+            <h3 class="modern-widget-title">Demo</h3>
+            <ul class="timeline-list">
+                <li><a href="#lavalamp-demo">With Image</a></li>
+                <li><a href="#demo-bottom">Bottom Style</a></li>
+                <li><a href="#demo-box">Box Style</a></li>
+            </ul>
+        </div>
+
+        <div class="widget widget-timeline">
+            <h3 class="modern-widget-title">Project Info</h3>
+            <ul class="timeline-list">
+                <li><a href="https://github.com/ganeshmax/lavalamp" target="_blank">GitHub ↗</a></li>
+            </ul>
+        </div>
+
+    </aside>
+</div>
+
+<script src="/assets/js/jquery.easing.min.js"></script>
+<script src="/assets/js/jquery.lavalamp.js"></script>
+<script>
+    $(document).ready(function () {
+        // Initialize Default Style
+        $("#demo-default").lavaLamp({
+            fx: "backout",
+            speed: 700
+        });
+
+        // Initialize Bottom Line Style
+        $("#demo-bottom").lavaLamp({
+            fx: "backout",
+            speed: 700
+        });
+
+        // Initialize Box Style
+        $("#demo-box").lavaLamp({
+            fx: "backout",
+            speed: 700
+        });
+    });
+</script>

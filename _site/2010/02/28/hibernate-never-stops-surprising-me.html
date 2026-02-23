@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang=" en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Hibernate never stops surprising me | Ganesh Marwaha</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Hibernate never stops surprising me" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I have a simple form in my web application where a user can fill in his personal details and address details. User specific fields include firstName, middleName and lastName while Address specific fields include street, city and zip. On the server side, I have POJOs for User and Address. Finally I use Hibernate to map these POJOs to the database. Since, the Address will not be used outside the context of the User, I decided to map it as a Component of the User class." />
+<meta property="og:description" content="I have a simple form in my web application where a user can fill in his personal details and address details. User specific fields include firstName, middleName and lastName while Address specific fields include street, city and zip. On the server side, I have POJOs for User and Address. Finally I use Hibernate to map these POJOs to the database. Since, the Address will not be used outside the context of the User, I decided to map it as a Component of the User class." />
+<link rel="canonical" href="http://localhost:4000/2010/02/28/hibernate-never-stops-surprising-me.html" />
+<meta property="og:url" content="http://localhost:4000/2010/02/28/hibernate-never-stops-surprising-me.html" />
+<meta property="og:site_name" content="Ganesh Marwaha" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2010-02-28T06:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Hibernate never stops surprising me" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2010/02/28/hibernate-never-stops-surprising-me.html","headline":"Hibernate never stops surprising me","dateModified":"2010-02-28T06:00:00-06:00","datePublished":"2010-02-28T06:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2010/02/28/hibernate-never-stops-surprising-me.html"},"description":"I have a simple form in my web application where a user can fill in his personal details and address details. User specific fields include firstName, middleName and lastName while Address specific fields include street, city and zip. On the server side, I have POJOs for User and Address. Finally I use Hibernate to map these POJOs to the database. Since, the Address will not be used outside the context of the User, I decided to map it as a Component of the User class.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/fontello.css">
+    <link rel="stylesheet" href="/assets/css/main.css?v=4">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="home blog">
+    <div id="page" class="site d-flex flex-column min-vh-100">
+        <header id="masthead" role="banner" class="header_normal">
+            <div class="top-banner">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a class="brand brand-text" href="/" title="Ganesh Marwaha" rel="home">
+                        <h1>Ganesh Marwaha<small>&nbsp;&ndash;&nbsp;Software Engineer. Tinkerer.</small></h1>
+                    </a>
+                    <div class="top-banner-social">
+                        <a target="_blank" href="#"><i class="icon-facebook-1"></i></a>
+                        <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                                class="icon-twitter-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-gplus-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+                        <a target="_blank" href="/feed.xml"><i class="icon-rss-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clean-navigation">
+                <div class="container d-flex align-items-center justify-content-start">
+                    <nav class="clean-nav">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li class="dropdown" style="position:relative;">
+                                <a href="#">Article Series <span class="caret">&#9660;</span></a>
+                                <ul class="dropdown-menu-clean">
+                                    <li><a href="/mobile-payments-faq/">Mobile Payments FAQ</a></li>
+                                    <li><a href="/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" style="position:relative;">
+                                <a href="#">Projects <span class="caret">&#9660;</span></a>
+                                <ul class="dropdown-menu-clean">
+                                    <li><a href="/jquery/jcarousellite/">jCarouselLite</a></li>
+                                    <li><a href="/jquery/lavalamp/">Lavalamp</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+        </header><!-- #masthead .site-header -->
+        <div id="main" class="container content flex-grow-1">
+            <div id="primary" class="row right_side">
+    <div id="content" class="col-lg-8" role="main">
+        <article class="post type-post status-publish format-standard hentry box mb-4">
+            <header class="article-header border-bottom pb-3 mb-3">
+                <h1 class="entry-title mb-2">Hibernate never stops surprising me</h1>
+                <div class="post-meta text-muted small d-flex align-items-center gap-2">
+                    <time class="entry-date" datetime="2010-02-28T06:00:00-06:00"><i
+                            class="icon-calendar-3"></i> 28. Feb. 2010</time>
+                    <span class="divider">/</span>
+                    <div class="tags">
+                        <i class="icon-tag"></i>
+                        
+                        <a href="/tags/Hibernate" class="text-muted">Hibernate</a>
+                        
+                    </div>
+                    <span class="divider">/</span>
+                    <a href="#disqus_thread" class="text-muted"><i class="icon-comment-empty"></i> Comments</a>
+                </div>
+            </header>
+
+            <div class="article-body mb-5">
+                <p>I have a simple form in my web application where a user can fill in his personal details and address details. <em>User</em> specific fields include firstName, middleName and lastName while <em>Address</em> specific fields include street, city and zip. On the server side, I have POJOs for <em>User</em> and <em>Address</em>. Finally I use <a href="http://www.hibernate.org">Hibernate</a> to map these POJOs to the database.  Since, the <em>Address</em> will not be used outside the context of the <em>User</em>, I decided to map it as a Component of the <em>User</em> class.</p>
+
+<p>The <em>User</em> class and its corresponding mapping is given below:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+@Entity @Table(name = "user")
+public class User {
+
+     @Column(name = "first_name")
+     private String firstName;
+     
+     @Column(name = "middle_name")
+     private String middleName;
+     
+     @Column(name = "last_name")
+     private String lastName;
+    
+     @Embedded
+     private Address homeAddress;
+
+     ... Getters and Setters
+}
+
+</code></pre></div></div>
+
+<p>The <em>Address</em> class is mapped to <em>User</em> as a component. You can see the specifics of the mapping below.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+@Embeddable
+public class Address {
+     @Column(name = "address_street")
+     private String street;
+     
+     @Column(name = "address_city")
+     private String city;
+     
+     @Column(name = "address_state")
+     private String state;
+
+     ... Getters and Setters
+}
+
+</code></pre></div></div>
+
+<p>As you may already know, mapping components using hibernate is a very useful feature. This feature and support for nested components and components referring to other entities are the primary source of support for rich and fine grained domain model in hibernate. But while i was using <em>Component</em> mapping, I recently stepped on an interesting Feature (or it could be an Issue) and I was happily surprised by it.</p>
+
+<p>Want to know the surprise? Keep reading…</p>
+
+<p>In this case you map an <em>Address</em> as a value type using <em>@Embedded</em> annotation in the “homeAddress” field of the <em>User</em> class. The <em>Address</em> class itself is declared to be <em>@Emeddable</em>. This is the standard Hibernate/JPA way to map value types. The Address class has street, city and zip and it gets stored into the same table as the User class’s table. Now, when you insert an instance of <em>User</em> into the database, while specifying all null values for <em>Address</em>‘s fields maybe because the user didn’t give his address, then what would you expect in return at some point in time when you retrieve this <em>User</em> back from the database.</p>
+
+<p>I for one expected user.getAddress() will return an Address instance. Then address.getStreet() will return null. But that is not what happened. user.getAddress() returned null by itself. That was interesting and even helped me in my case because, if the user hasn’t given any details for his home address, then it probably means that his address itself is not there in the system. So, returning null for getAddress() is semantically the right thing to do. I was surprised and when i checked the hibernate documentation it was even mentioned there that if all properties of a component are null, then the component itself is considered null.</p>
+
+<p>In another situation this could have been bad, I don’t know, but for my purpose I was happily surprised with this nice touch from hibernate. These kind of small things is what differentiates a great product from a good product. Ain’t it?</p>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <!-- Disqus Comments -->
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = 'http://localhost:4000/2010/02/28/hibernate-never-stops-surprising-me.html';
+                    this.page.identifier = '/2010/02/28/hibernate-never-stops-surprising-me';
+                };
+                (function () {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://ganeshji.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                    by Disqus.</a></noscript>
+
+        </article>
+
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="side-bar" class="col-lg-4 widget-area modern-sidebar pb-4">
+    <div class="widget modern-profile">
+        <div class="profile-header"></div>
+        <div class="profile-body">
+            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?d=mp&f=y" alt="Ganesh Marwaha"
+                class="profile-avatar">
+            <h3 class="profile-name">Ganesh Marwaha</h3>
+            <p class="profile-bio">Software Engineer &amp; Head of Engineering for Virtusa. Passionate about Digital
+                Transformation, Microservices, and Developer Experiences.</p>
+            <div class="profile-socials">
+                <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                        class="icon-twitter-1"></i></a>
+                <a target="_blank" href="https://github.com/gmarwaha"><i class="icon-github"></i></a>
+                <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget widget-ad">
+        <h3 class="modern-widget-title">Advertisement</h3>
+        <div class="ad-space">
+            <span>Ad Space</span>
+        </div>
+    </div>
+
+    <div class="widget widget-topics">
+        <h3 class="modern-widget-title">Topics I Blog About</h3>
+        <div class="topic-pills">
+            
+            
+            
+            
+            <a href="/tags/android" class="topic-link">
+                Android <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/apple-pay" class="topic-link">
+                Apple Pay <span class="topic-count">5</span>
+            </a>
+            
+            
+            
+            <a href="/tags/blackberry" class="topic-link">
+                Blackberry <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/gwt" class="topic-link">
+                GWT <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/general" class="topic-link">
+                General <span class="topic-count">14</span>
+            </a>
+            
+            
+            
+            <a href="/tags/google-wallet" class="topic-link">
+                Google Wallet <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/groovy" class="topic-link">
+                Groovy <span class="topic-count">6</span>
+            </a>
+            
+            
+            
+            <a href="/tags/hadoop" class="topic-link">
+                Hadoop <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/heroku" class="topic-link">
+                Heroku <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/hibernate" class="topic-link">
+                Hibernate <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/mobile-payments" class="topic-link">
+                Mobile Payments <span class="topic-count">18</span>
+            </a>
+            
+            
+            
+            <a href="/tags/nfc" class="topic-link">
+                NFC <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/sqlite" class="topic-link">
+                SQLite <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/tomcat" class="topic-link">
+                Tomcat <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/iphone" class="topic-link">
+                iPhone <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/jcarousellite" class="topic-link">
+                jCarouselLite <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/jquery" class="topic-link">
+                jQuery <span class="topic-count">7</span>
+            </a>
+            
+        </div>
+    </div>
+
+    <div class="widget widget-timeline">
+        <h3 class="modern-widget-title">Timeline</h3>
+        <ul class="timeline-list">
+            
+            
+            <li>
+                <a href="/blog/2015/">
+                    2015
+                    <span class="post-count">(1)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2014/">
+                    2014
+                    <span class="post-count">(23)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2012/">
+                    2012
+                    <span class="post-count">(3)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2011/">
+                    2011
+                    <span class="post-count">(15)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2010/">
+                    2010
+                    <span class="post-count">(6)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2009/">
+                    2009
+                    <span class="post-count">(9)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2008/">
+                    2008
+                    <span class="post-count">(4)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2007/">
+                    2007
+                    <span class="post-count">(4)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2006/">
+                    2006
+                    <span class="post-count">(1)</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+</aside>
+</div>
+        </div><!-- #main -->
+        <footer id="colophon" class="site-footer mt-auto" role="contentinfo">
+            <div class="container">
+                <div class="row pt-4" id="footer-body">
+                </div>
+            </div>
+            <div class="row mt-3 text-center" id="footer-bottom">
+                &copy; 2026 Ganesh Marwaha
+            </div>
+        </footer>
+    </div><!-- #page -->
+</body>
+
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang=" en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>LavaLamp for jQuery lovers! | Ganesh Marwaha</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="LavaLamp for jQuery lovers!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Click on the above image to land in the Lava Lamp Demo page. Then, hover over it and feel for yourself, the nifty effect that Lava Lamp offers. What you just experienced is nothing but the LavaLamp menu packaged as a plugin for the amazing jQuery javascript library. I personally believe that the effect rivals that of flash – Don’t you? Especially considering the fact that it is extremely light weight." />
+<meta property="og:description" content="Click on the above image to land in the Lava Lamp Demo page. Then, hover over it and feel for yourself, the nifty effect that Lava Lamp offers. What you just experienced is nothing but the LavaLamp menu packaged as a plugin for the amazing jQuery javascript library. I personally believe that the effect rivals that of flash – Don’t you? Especially considering the fact that it is extremely light weight." />
+<link rel="canonical" href="http://localhost:4000/2007/08/23/lavalamp-for-jquery-lovers.html" />
+<meta property="og:url" content="http://localhost:4000/2007/08/23/lavalamp-for-jquery-lovers.html" />
+<meta property="og:site_name" content="Ganesh Marwaha" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2007-08-23T07:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LavaLamp for jQuery lovers!" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2007/08/23/lavalamp-for-jquery-lovers.html","headline":"LavaLamp for jQuery lovers!","dateModified":"2007-08-23T07:00:00-05:00","datePublished":"2007-08-23T07:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2007/08/23/lavalamp-for-jquery-lovers.html"},"description":"Click on the above image to land in the Lava Lamp Demo page. Then, hover over it and feel for yourself, the nifty effect that Lava Lamp offers. What you just experienced is nothing but the LavaLamp menu packaged as a plugin for the amazing jQuery javascript library. I personally believe that the effect rivals that of flash – Don’t you? Especially considering the fact that it is extremely light weight.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/fontello.css">
+    <link rel="stylesheet" href="/assets/css/main.css?v=4">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="home blog">
+    <div id="page" class="site d-flex flex-column min-vh-100">
+        <header id="masthead" role="banner" class="header_normal">
+            <div class="top-banner">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a class="brand brand-text" href="/" title="Ganesh Marwaha" rel="home">
+                        <h1>Ganesh Marwaha<small>&nbsp;&ndash;&nbsp;Software Engineer. Tinkerer.</small></h1>
+                    </a>
+                    <div class="top-banner-social">
+                        <a target="_blank" href="#"><i class="icon-facebook-1"></i></a>
+                        <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                                class="icon-twitter-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-gplus-1"></i></a>
+                        <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+                        <a target="_blank" href="/feed.xml"><i class="icon-rss-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clean-navigation">
+                <div class="container d-flex align-items-center justify-content-start">
+                    <nav class="clean-nav">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li class="dropdown" style="position:relative;">
+                                <a href="#">Article Series <span class="caret">&#9660;</span></a>
+                                <ul class="dropdown-menu-clean">
+                                    <li><a href="/mobile-payments-faq/">Mobile Payments FAQ</a></li>
+                                    <li><a href="/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" style="position:relative;">
+                                <a href="#">Projects <span class="caret">&#9660;</span></a>
+                                <ul class="dropdown-menu-clean">
+                                    <li><a href="/jquery/jcarousellite/">jCarouselLite</a></li>
+                                    <li><a href="/jquery/lavalamp/">Lavalamp</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+        </header><!-- #masthead .site-header -->
+        <div id="main" class="container content flex-grow-1">
+            <div id="primary" class="row right_side">
+    <div id="content" class="col-lg-8" role="main">
+        <article class="post type-post status-publish format-standard hentry box mb-4">
+            <header class="article-header border-bottom pb-3 mb-3">
+                <h1 class="entry-title mb-2">LavaLamp for jQuery lovers!</h1>
+                <div class="post-meta text-muted small d-flex align-items-center gap-2">
+                    <time class="entry-date" datetime="2007-08-23T07:00:00-05:00"><i
+                            class="icon-calendar-3"></i> 23. Aug. 2007</time>
+                    <span class="divider">/</span>
+                    <div class="tags">
+                        <i class="icon-tag"></i>
+                        
+                        <a href="/tags/jQuery" class="text-muted">jQuery</a>, 
+                        
+                        <a href="/tags/jQuery" class="text-muted">jQuery</a>
+                        
+                    </div>
+                    <span class="divider">/</span>
+                    <a href="#disqus_thread" class="text-muted"><i class="icon-comment-empty"></i> Comments</a>
+                </div>
+            </header>
+
+            <div class="article-body mb-5">
+                <p>Click on the above image to land in the <a href="http://www.gmarwaha.com/jquery/lavalamp/index.php">Lava Lamp Demo</a> page. Then, hover over it and feel for yourself, the nifty effect that Lava Lamp offers. What you just experienced is nothing but the LavaLamp menu packaged as a plugin for the amazing <a href="http://jquery.com">jQuery javascript library</a>. I personally believe that the effect rivals that of flash – Don’t you? Especially considering the fact that it is extremely light weight.</p>
+
+<blockquote>
+
+</blockquote>
+
+<p>Just so you know, it weighs just 700 bytes(minified)!</p>
+
+<p>Often I have noticed, that the credits are usually granted towards the end. Just for a change, i am going to give my credits at the beginning. This effect was originally written by <a href="http://devthought.com/cssjavascript-true-power-fancy-menu/">Guillermo Rauch</a> for the <a href="http://mootools.net/">mootools javascript library</a>. All I did was to port it for the benefit of jQuery lovers. Thanks Guillermo for inspiring the javascript world with such a nice effect. A special thanks to <a href="http://wanderinghorse.net/home/stephan/">Stephan Beal</a> who named it “LavaLamp”, and to <a href="http://commadot.com/">Glen Lipka</a> for generously helping with the image sprites. Many fellow jQuery lovers also helped shape this plugin with valuable feedback in the mailing list. Thanks a ton, all you guys.</p>
+
+<p>As User Interface developers, we know that one of the first widgets our visitors use is a “Menu”. Capturing their attention right there is something that we always strive for, and I guess LavaLamp is a step in that direction. Before you get bored with all this useless talk, let me get you started on integrating LavaLamp into your jQuery powered site.</p>
+
+<p>I hope you agree that a typical HTML widget consists of 3 distinct components.</p>
+
+<ul>
+  <li>
+    <p>A semantically correct HTML markup</p>
+  </li>
+  <li>
+    <p>A CSS to skin the markup</p>
+  </li>
+  <li>
+    <p>An unobstrusive javascript that gives it a purpose</p>
+  </li>
+</ul>
+
+<p>Now lets follow the above steps and implement the LavaLamp menu for your site. Remember, In the process of porting from mootools to jQuery, i have simplified both the javascript and CSS for your convenience. So, be informed that you will need to follow the instructions on this page to get the jQuery version running. Follow the instructions on <a href="http://devthought.com/cssjavascript-true-power-fancy-menu/">Guillermo Rauch’s</a> page for the mootools version.</p>
+
+<h3 id="step-1-the-html">Step 1: The HTML</h3>
+
+<p>Since most UI developers believe that an unordered list(ul) represents the correct semantic structure for a Menu/Navbar, we will start by writing just that.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        &lt;ul class="lavaLamp"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Plant a tree&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Travel&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Ride an elephant&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;        
+
+</code></pre></div></div>
+
+<p>In the markup above, “ul” represents the menu, and each “li” represents a menu-item. At this point it is crucial to understand that we will be adding another artificial “li” to represent the background of the currently highlighted menu-item. Since the background itself is cosmetic and doesn’t represent a menu-item, we will be adding it from javascript. Just to make sure we are in sync, “you need not add this li”, the LavaLamp plugin will take care of it. Once added, the “li” representing the background will look like this.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        &lt;li class="back"&gt;&lt;div class="left"&gt;&lt;/div&gt;&lt;/li&gt;
+
+</code></pre></div></div>
+
+<h3 id="step-2-the-css">Step 2: The CSS</h3>
+
+<p>You can skin this markup in many different ways to achieve your own personalized menu. The following style sheet is just one possibility. A few more possibilities are demonstrated in the “Bonus” section towards the end of this blog entry.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* Styles for the entire LavaLamp menu */        
+.lavaLamp {
+    position: relative;
+    height: 29px; width: 421px;
+    background: url("../image/bg.gif") no-repeat top;
+    padding: 15px; margin: 10px 0;
+    overflow: hidden;
+}
+    /* Force the list to flow horizontally */
+    .lavaLamp li {
+        float: left;
+        list-style: none;                    
+    }
+        /* Represents the background of the highlighted menu-item. */
+        .lavaLamp li.back {
+            background: url("../image/lava.gif") no-repeat right -30px;
+            width: 9px; height: 30px;
+            z-index: 8;
+            position: absolute;
+        }
+            .lavaLamp li.back .left {
+                background: url("../image/lava.gif") no-repeat top left;
+                height: 30px;
+                margin-right: 9px; 
+            }
+        /* Styles for each menu-item. */    
+        .lavaLamp li a {
+            position: relative; overflow: hidden;
+            text-decoration: none; 
+            text-transform: uppercase;
+            font: bold 14px arial;
+            color: #fff; outline: none;
+            text-align: center;
+            height: 30px; top: 7px; 
+            z-index: 10; letter-spacing: 0; 
+            float: left; display: block;
+            margin: auto 10px;    
+        }
+
+</code></pre></div></div>
+
+<p>Trust me, this is a simple style sheet. Follow along to understand what is done in each of its sections.</p>
+
+<p>First, we style the “ul” with the bright orange background image and some basic properties like height, width, padding, margin etc. We use relative positioning because, that way we can absolutely position the background “li” relative to the “ul”. This helps by enabling us to move this background “li” freely within the context of the parent “ul”.</p>
+
+<p>Next, we make the “li”s flow horizontally instead of vertically. By default, it flows vertically. There are a couple of techniques to do this. In this case, we are using the “float:left” to achieve this effect.</p>
+
+<p>Next, we style the artifical “li” that represents the background of the currently highlighted menu-item. This uses the <a href="http://alistapart.com/articles/slidingdoors">sliding doors technique</a>. Also, notice the absolute positioning used as mentioned above.</p>
+
+<p>Finally, we style the anchor that represents the actual clickable portion of each menu-item. These styles are mostly cosmetic and self-explanatory.</p>
+
+<p>Some of the above rules may not be obvious if you are not very confident in how “positioning” works in CSS. For those, i highly encourage you to quickly read this article on <a href="http://www.barelyfitz.com/screencast/html-training/css/positioning/">CSS positioning</a>. It is short, sweet and very informative.</p>
+
+<h3 id="step-3-the-javascript">Step 3: The Javascript</h3>
+
+<p>This is the easy part. Most of the javascript work is taken care by the Lava Lamp plugin itself. As a developer, you just have to include the mandatory and/or optional javascript files and fire a call to initialize the menu.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script type="text/javascript" src="path/to/jquery.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="path/to/jquery.lavalamp.js"&gt;&lt;/script&gt;
+&lt;!-- Optional --&gt;
+&lt;script type="text/javascript" src="path/to/jquery.easing.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+    $(function() { $(".lavaLamp").lavaLamp({ fx: "backout", speed: 700 })});
+&lt;/script&gt;    
+
+</code></pre></div></div>
+
+<p>Include a reference to the jQuery library and the LavaLamp plugin. Optionally, include the easing plugin as well. It has many cool effects, that are not contained in the core. For instance, the “backout” effect used in this demo is part of the easing plugin. You can download jQuery <a href="http://code.jquery.com/jquery-latest.pack.js">here</a>, Easing plugin <a href="http://gsgd.co.uk/js/jquery.easing.1.1.js">here</a>, and the LavaLamp plugin <a href="/jquery/lavalamp/js/jquery.lavalamp.js">here</a>.</p>
+
+<p>Next, in the document.ready event, fire a call to initialize the menu. You have the option to supply an easing “fx” , the “speed” with which the animation happens and a callback to be executed when a menu-item is clicked. They are optional, the default “fx” being “linear” and the default “speed” being “500” ms.</p>
+
+<p>That’s it. At this point you should have a working version of LavaLamp menu for your site.</p>
+
+<h3 id="bonus">Bonus</h3>
+
+<p>Just with some minor changes in the style sheet, you can get a totally different look n feel for the menu. And yes, the HTML markup and the Javascript remain the same. Click on the image below to experience the demo for this underline-imageless lavalamp.
+Here is one more variation, again with just some minor changes to the style sheet. I know, they don’t look pretty, but all i am saying is that you are limited only by your imagination. Click on the image below to see the demo for this boxed-imageless lavalamp.
+Finally, for your convenience, i have <a href="/jquery/lavalamp/zip/lavalamp-0.2.0.zip">zipped</a> up all the necessary files into a cohesive package. <a href="/jquery/lavalamp/zip/lavalamp-0.2.0.zip">Download it</a>, and open the demo.html to see all the 3 variations in one page.</p>
+
+<p>Feel free to leave a comment with your feedback, suggestions, requests etc.</p>
+
+<h2 id="update">Update</h2>
+
+<p>Based on popular request, LavaLamp Menu has been updated to support jquery 1.2.x versions. <a href="/jquery/lavalamp/zip/lavalamp-0.2.0.zip">Download the zip file</a> for version 0.2.0 of LavaLamp and open the demo.html to check it out for yourself. Since Firefox 3 has some issues with $(document).ready() function, try using $(window).load() instead if you face any problems. Hopefully a future version of Firefox or jQuery will fix the problem.</p>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <!-- Disqus Comments -->
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = 'http://localhost:4000/2007/08/23/lavalamp-for-jquery-lovers.html';
+                    this.page.identifier = '/2007/08/23/lavalamp-for-jquery-lovers';
+                };
+                (function () {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://ganeshji.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                    by Disqus.</a></noscript>
+
+        </article>
+
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="side-bar" class="col-lg-4 widget-area modern-sidebar pb-4">
+    <div class="widget modern-profile">
+        <div class="profile-header"></div>
+        <div class="profile-body">
+            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?d=mp&f=y" alt="Ganesh Marwaha"
+                class="profile-avatar">
+            <h3 class="profile-name">Ganesh Marwaha</h3>
+            <p class="profile-bio">Software Engineer &amp; Head of Engineering for Virtusa. Passionate about Digital
+                Transformation, Microservices, and Developer Experiences.</p>
+            <div class="profile-socials">
+                <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                        class="icon-twitter-1"></i></a>
+                <a target="_blank" href="https://github.com/gmarwaha"><i class="icon-github"></i></a>
+                <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget widget-ad">
+        <h3 class="modern-widget-title">Advertisement</h3>
+        <div class="ad-space">
+            <span>Ad Space</span>
+        </div>
+    </div>
+
+    <div class="widget widget-topics">
+        <h3 class="modern-widget-title">Topics I Blog About</h3>
+        <div class="topic-pills">
+            
+            
+            
+            
+            <a href="/tags/android" class="topic-link">
+                Android <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/apple-pay" class="topic-link">
+                Apple Pay <span class="topic-count">5</span>
+            </a>
+            
+            
+            
+            <a href="/tags/blackberry" class="topic-link">
+                Blackberry <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/gwt" class="topic-link">
+                GWT <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/general" class="topic-link">
+                General <span class="topic-count">14</span>
+            </a>
+            
+            
+            
+            <a href="/tags/google-wallet" class="topic-link">
+                Google Wallet <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/groovy" class="topic-link">
+                Groovy <span class="topic-count">6</span>
+            </a>
+            
+            
+            
+            <a href="/tags/hadoop" class="topic-link">
+                Hadoop <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/heroku" class="topic-link">
+                Heroku <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/hibernate" class="topic-link">
+                Hibernate <span class="topic-count">3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/mobile-payments" class="topic-link">
+                Mobile Payments <span class="topic-count">18</span>
+            </a>
+            
+            
+            
+            <a href="/tags/nfc" class="topic-link">
+                NFC <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/sqlite" class="topic-link">
+                SQLite <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/tomcat" class="topic-link">
+                Tomcat <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/iphone" class="topic-link">
+                iPhone <span class="topic-count">1</span>
+            </a>
+            
+            
+            
+            <a href="/tags/jcarousellite" class="topic-link">
+                jCarouselLite <span class="topic-count">2</span>
+            </a>
+            
+            
+            
+            <a href="/tags/jquery" class="topic-link">
+                jQuery <span class="topic-count">7</span>
+            </a>
+            
+        </div>
+    </div>
+
+    <div class="widget widget-timeline">
+        <h3 class="modern-widget-title">Timeline</h3>
+        <ul class="timeline-list">
+            
+            
+            <li>
+                <a href="/blog/2015/">
+                    2015
+                    <span class="post-count">(1)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2014/">
+                    2014
+                    <span class="post-count">(23)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2012/">
+                    2012
+                    <span class="post-count">(3)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2011/">
+                    2011
+                    <span class="post-count">(15)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2010/">
+                    2010
+                    <span class="post-count">(6)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2009/">
+                    2009
+                    <span class="post-count">(9)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2008/">
+                    2008
+                    <span class="post-count">(4)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2007/">
+                    2007
+                    <span class="post-count">(4)</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/blog/2006/">
+                    2006
+                    <span class="post-count">(1)</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+</aside>
+</div>
+        </div><!-- #main -->
+        <footer id="colophon" class="site-footer mt-auto" role="contentinfo">
+            <div class="container">
+                <div class="row pt-4" id="footer-body">
+                </div>
+            </div>
+            <div class="row mt-3 text-center" id="footer-bottom">
+                &copy; 2026 Ganesh Marwaha
+            </div>
+        </footer>
+    </div><!-- #page -->
+</body>
+
+</html>
