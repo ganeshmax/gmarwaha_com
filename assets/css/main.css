@@ -966,3 +966,19 @@ ul.lavaLamp li.back .left {
     border-radius: 6px;
     background: transparent;
 }
+
+/* =========================================
+   Blog "Continue reading" Button Fix
+   ========================================= */
+.btn.btn-outline-primary.btn-read-more {
+    margin-bottom: 5px;
+    /* Prevent clipping against .article-body zero-padding bottom */
+    color: var(--color-link);
+    border-color: var(--color-link);
+}
+
+.btn.btn-outline-primary.btn-read-more:hover {
+    background-color: var(--color-link);
+    border-color: var(--color-link);
+    color: #fff;
+}
