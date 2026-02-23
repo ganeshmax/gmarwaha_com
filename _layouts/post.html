@@ -47,50 +47,6 @@ layout: default
 
         </article>
 
-        <div class="single-pagination clearfix">
-            <div class="box clearfix">
-                {% if page.previous.url %}
-                <a href="{{ page.previous.url | relative_url }}" class="nav-previous" style="float: left;">
-                    <div class="bgfallback">&nbsp;</div>
-                    <span>&nbsp;</span>
-                    <div class="tab_icon tab_standard"><i class="icon-calendar-3"></i></div>
-                    <div class="bgimage" style="background-image: none;"></div>
-                    <h5><i class="icon-angle-double-left"></i> {{ page.previous.title }}</h5>
-                </a>
-                {% endif %}
-                {% if page.next.url %}
-                <a href="{{ page.next.url | relative_url }}" class="nav-next" style="float:left;">
-                    <div class="bgfallback">&nbsp;</div>
-                    <span>&nbsp;</span>
-                    <div class="tab_icon tab_standard"><i class="icon-calendar-3"></i></div>
-                    <div class="bgimage" style="background-image: none;"></div>
-                    <h5>{{ page.next.title }} <i class="icon-angle-double-right"></i></h5>
-                </a>
-                {% endif %}
-            </div>
-        </div>
-
-        <div class="author-meta box">
-            <div class="author-header">
-                <div class="author-image">
-                    <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"
-                        alt="Ganeshji" />
-                </div>
-            </div>
-            <div class="author-body">
-                <span class="vcard author">
-                    <h2>
-                        <span class="fn">
-                            <a href="#">Ganeshji Marwaha</a>
-                        </span>
-                    </h2>
-                    <p>As the Head of Engineering for Virtusa, a global IT services company, I help my clients design
-                        solutions for Digital Transformation, Cloud-Native Transformation, Open API Strategy,
-                        Microservice Architecture, Devops, CI/CD, and Developer Experiences.</p>
-                </span>
-            </div>
-        </div>
-
     </div>
 
     <!-- Sidebar -->
