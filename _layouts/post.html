@@ -13,8 +13,7 @@ layout: default
                     <div class="tags">
                         <i class="icon-tag"></i>
                         {% for tag in page.tags %}
-                        <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}" class="text-muted">{{ tag }}</a>{% if
-                        forloop.last == false
+                        <a href="/tags/{{ tag | slugify }}" class="text-muted">{{ tag }}</a>{% if forloop.last == false
                         %}, {%
                         endif %}
                         {% endfor %}
