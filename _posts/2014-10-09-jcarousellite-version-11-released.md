@@ -15,7 +15,7 @@ Many of the mods were spread around different websites, GitHub forks, Stack Ove
 Heads up! The plugin still weighs only 2 KB.
 
 
-Given below is a list of items that has changed, leading to the release of version 1.1. Visit the [project page](/projects/jcarousellite/) and [change log](http://www.gmarwaha.com/jquery/jcarousellite/change-log.php) for more details.
+Given below is a list of items that has changed, leading to the release of version 1.1. Visit the [project page]({{ site.baseurl }}/projects/jcarousellite/) and [change log]({{ site.baseurl }}/projects/jcarousellite/#change-log) for more details.
 
 
 - Added a [Github](https://github.com/ganeshmax/jcarousellite) project. Feel free to raise any new defects or feature requests here
@@ -43,11 +43,11 @@ Given below is a list of items that has changed, leading to the release of ver
 - Changes to the project site
 
 
-- Introduced a [Styling page](http://www.gmarwaha.com/jquery/jcarousellite/styling.php) to help you understand the default styling and ways in which you can apply custom styling to your carousel
+- Introduced a [Styling page]({{ site.baseurl }}/projects/jcarousellite/#styling) to help you understand the default styling and ways in which you can apply custom styling to your carousel
 
 - Revamped the [Demo page](/projects/jcarousellite/demo/) to make it cleaner and more beautiful. It is easier to view-source now than it was before
 
-- Updated the styling in [Demo page](/projects/jcarousellite/demo/) to reflect the custom styling in S[tyling page](http://www.gmarwaha.com/jquery/jcarousellite/styling.php)
+- Updated the styling in [Demo page]({{ site.baseurl }}/projects/jcarousellite/demo/) to reflect the custom styling in S[tyling page]({{ site.baseurl }}/projects/jcarousellite/#styling)
 
 
 - Added default options globally. This way you can set the default options using `$.fn.jCarouselLite.options` once instead of passing them for every carousel you create

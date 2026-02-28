@@ -85,4 +85,4 @@ If you have any comments/suggestions/requests, feel free to drop in a comment or
 #### Update
 
 
-Based on popular request, jCarouselLite has been updated to support jquery 1.2.x versions. Goto the [download page](http://www.gmarwaha.com/jquery/jcarousellite/download.php) and download version 1.0.1 to enjoy jquery 1.2.x support. Since Firefox 3 has some issues with $(document).ready() function, try using $(window).load() instead if you face any problems. Hopefully a future version of Firefox or jQuery will fix the problem.
+Based on popular request, jCarouselLite has been updated to support jquery 1.2.x versions. Goto the [download page]({{ site.baseurl }}/projects/jcarousellite/#download) and download version 1.0.1 to enjoy jquery 1.2.x support. Since Firefox 3 has some issues with $(document).ready() function, try using $(window).load() instead if you face any problems. Hopefully a future version of Firefox or jQuery will fix the problem.
