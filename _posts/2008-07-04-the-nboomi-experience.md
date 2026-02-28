@@ -6,7 +6,7 @@ tags: [General]
 original_url: "/2008/07/04/the-nboomi-experience.html"
 ---
 
-![Nboomi](http://www.gmarwaha.com/blog/wp-content/uploads/2008/09/nboomi.JPG)
+![Nboomi](/assets/images/posts/nboomi.JPG)
 I am glad I could finally get back to blogging after a long period of hibernation. Almost an year back, me and three of my friends founded [Triomatrix Webservices Private Limited](http://www.triomatrix.com), an ambitious company aimed at creating web-based services  to innovatively automate businesses in India. Fanatically caught in the clutches of this marathon venture I almost forgot about everything else in life except for the ravishing beauty of our first product – [www.nboomi.com](http://www.nboomi.com).
 
 

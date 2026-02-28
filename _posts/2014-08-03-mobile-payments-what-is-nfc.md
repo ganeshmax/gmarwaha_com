@@ -20,7 +20,7 @@ NFC allows you to share small payloads of data between an NFC tag and an NFC ena
  
 
 
-![](http://www.gmarwaha.com/blog/wp-content/uploads/2014/09/nfc.jpg)
+![](/assets/images/posts/nfc.jpg)
 
 
 [Contactless cards](/2014/05/11/mobile-payments-what-is-a-contactless-chip-card.html), that we discussed in an earlier post, behave like NFC tags and emit NFC style radio frequency signals when provoked by a contactless reader terminal. So, in theory, a mobile phone with an NFC controller can do the same as long as they conform to the protocols defined by payment networks. And that is exactly what is happening when you use a Google or Isis wallet. We will discuss how this happens in practice in an upcoming post on `card-emulation` mode for NFC.
@@ -36,4 +36,4 @@ Second, provisioning a contactless application to an NFC enabled phone is a much
 
 <div class="related-reading">
 <p class="related-reading-title">Mobile Payments Blog Series</p>
-Welcome to the <a href="/2014/01/24/mobile-payments-faq-and-not-so-faq.html">Mobile payments FAQ and not so FAQ</a> series and you are on FAQ #12. The idea behind this series is to share and learn as much as possible about the field of mobile payments. If you like, you can read all of the FAQs on the <a href="http://www.gmarwaha.com/blog/category/mobile-payments/">Mobile Payments</a> category or by visiting the <a href="http://www.gmarwaha.com/blog/mobile-payments-faq/">Table of contents</a> page.</div>
+Welcome to the <a href="/2014/01/24/mobile-payments-faq-and-not-so-faq.html">Mobile payments FAQ and not so FAQ</a> series and you are on FAQ #12. The idea behind this series is to share and learn as much as possible about the field of mobile payments. If you like, you can read all of the FAQs on the <a href="http://www.gmarwaha.com/blog/category/mobile-payments/">Mobile Payments</a> category or by visiting the <a href="/articles/mobile-payments-faq/">Table of contents</a> page.</div>

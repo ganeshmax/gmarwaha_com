@@ -6,7 +6,7 @@ tags: [General]
 original_url: "/2011/01/11/eclipse-use-intellij-idea-key-map.html"
 ---
 
-![Eclipse and IDEA logo](http://www.gmarwaha.com/blog/wp-content/uploads/2011/05/eclipse_idea_logo.png)
+![Eclipse and IDEA logo](/assets/images/posts/eclipse_idea_logo.png)
 
 
 It is not the least easy to switch to [Eclipse](http://eclipse.org/) after years of addiction to [Intellij IDEA](http://www.jetbrains.com/idea/). IDEA is the best IDE I have worked with until now and will continue to remain that way until there is another visionary who attempts to improve the developer pleasure instead of just technical modularity. Eclipse may (or may not) have a better architecture, better design, better modularity, incomparable number of plug-ins and better written code than IDEA, but that doesn’t seem to attract the end developers like me. 

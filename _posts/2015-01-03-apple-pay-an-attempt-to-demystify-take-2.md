@@ -82,8 +82,8 @@ In conclusion, we saw how ApplePay does provisioning and how a payment transact
 <p class="related-reading-title">Related Reading</p>
 <ul>
     <li><a href="/2014/09/24/apple-pay-an-attempt-to-demystify.html">Apple Pay – An Attempt to demystify</a></li>
-    <li><a href="http://www.gmarwaha.com/blog/mobile-payments-faq/">Mobile Payments FAQ and not so FAQ</a></li>
-    <li><a href="http://www.gmarwaha.com/blog/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet</a></li>
+    <li><a href="/articles/mobile-payments-faq/">Mobile Payments FAQ and not so FAQ</a></li>
+    <li><a href="/articles/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet</a></li>
     <li><a href="/2014/05/11/mobile-payments-what-is-a-contactless-chip-card.html">What is a Contactless Chip Card?</a></li>
     <li><a href="/2014/08/03/mobile-payments-what-is-nfc.html">What is NFC?</a></li>
     <li><a href="/2014/08/07/mobile-payments-what-is-nfc-card-emulation-mode.html">What is NFC Card Emulation Mode?</a></li>

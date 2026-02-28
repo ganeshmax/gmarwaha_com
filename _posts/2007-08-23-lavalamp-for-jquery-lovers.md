@@ -5,7 +5,7 @@ date: 2007-08-23 12:00:00 +0000
 tags: [jQuery, jQuery]
 original_url: "/2007/08/23/lavalamp-for-jquery-lovers.html"
 ---
-Click on the above image to land in the [Lava Lamp Demo](http://www.gmarwaha.com/jquery/lavalamp/index.php) page. Then, hover over it and feel for yourself, the nifty effect that Lava Lamp offers. What you just experienced is nothing but the LavaLamp menu packaged as a plugin for the amazing [jQuery javascript library](http://jquery.com). I personally believe that the effect rivals that of flash – Don’t you? Especially considering the fact that it is extremely light weight.
+Click on the above image to land in the [Lava Lamp Demo](/projects/lavalamp/) page. Then, hover over it and feel for yourself, the nifty effect that Lava Lamp offers. What you just experienced is nothing but the LavaLamp menu packaged as a plugin for the amazing [jQuery javascript library](http://jquery.com). I personally believe that the effect rivals that of flash – Don’t you? Especially considering the fact that it is extremely light weight.
 
 
 > 

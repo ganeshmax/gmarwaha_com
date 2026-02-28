@@ -11,7 +11,7 @@ original_url: "/2014/04/21/mobile-payments-what-is-a-contact-chip-card.html"
 Chip cards are standard bank cards that are embedded with a micro computer chip instead of or in addition to a [Magstripe](/2014/04/10/mobile-payments-what-is-a-magnetic-stripe-card.html). It is an evolution in our payment system that will help increase security and reduce fraud in a card-present environment. A cardholder’s confidential account data is more secure on a chip-enabled payment card than on a [MagStripe](/2014/04/10/mobile-payments-what-is-a-magnetic-stripe-card.html) card, as the former supports dynamic authentication, while the latter does not. This prevents fraudsters from easily copying account information and creating counterfeit cards.
 
 
-![](http://www.gmarwaha.com/blog/wp-content/uploads/2014/09/chip-and-contactless-annotated1.png)
+![](/assets/images/posts/chip-and-contactless-annotated1.png)
 
 
 In United States, MagStripe cards are more common-place although a migration towards chip cards is currently underway from all major card networks and Issuing banks. In UK, Chip cards, more specifically the `Chip-and-PIN` variety is ubiquitous while MagStripe cards are almost extinct.
@@ -24,4 +24,4 @@ Contact Chip cards may come as `Chip-and-PIN` or `Chip-and-Signature` cards. Chi
 
 <div class="related-reading">
 <p class="related-reading-title">Mobile Payments Blog Series</p>
-Welcome to the <a href="/2014/01/24/mobile-payments-faq-and-not-so-faq.html">Mobile payments FAQ and not so FAQ</a> series and you are on FAQ #6. The idea behind this series is to share and learn as much as possible about the field of mobile payments. If you like, you can read all of the FAQs on the <a href="http://www.gmarwaha.com/blog/category/mobile-payments/">Mobile Payments</a> category or by visiting the <a href="http://www.gmarwaha.com/blog/mobile-payments-faq/">Table of contents</a> page.</div>
+Welcome to the <a href="/2014/01/24/mobile-payments-faq-and-not-so-faq.html">Mobile payments FAQ and not so FAQ</a> series and you are on FAQ #6. The idea behind this series is to share and learn as much as possible about the field of mobile payments. If you like, you can read all of the FAQs on the <a href="http://www.gmarwaha.com/blog/category/mobile-payments/">Mobile Payments</a> category or by visiting the <a href="/articles/mobile-payments-faq/">Table of contents</a> page.</div>

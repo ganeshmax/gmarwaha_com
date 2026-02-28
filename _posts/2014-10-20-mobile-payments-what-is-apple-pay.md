@@ -17,7 +17,7 @@ ApplePay is a [mobile payment](/2014/07/06/mobile-payments-what-is-mobile-paymen
 With this service you can use your [NFC](/2014/08/03/mobile-payments-what-is-nfc.html) enabled iPhone 6 or iPhone 6 Plus or Apple Watch to purchase `in-store` by just [tapping](/2014/05/11/mobile-payments-what-is-tap-pay.html) your phone against a contactless terminal and placing your fingers on the `Touch ID`. The contactless terminals are not Apple specific; they already exist in the wild and support [contactless cards](/2014/05/11/mobile-payments-what-is-a-contactless-chip-card.html) from Visa (PayWave) and MasterCard (PayPass). Apple just uses the same standard protocols used by the [Contactless cards](/2014/05/11/mobile-payments-what-is-a-contactless-chip-card.html) so as to be compatible with existing infrastructure.
 
 
-![apple-pay-pos](http://www.gmarwaha.com/blog/wp-content/uploads/2014/10/apple-pay-pos.jpg)
+![apple-pay-pos](/assets/images/posts/apple-pay-pos.jpg)
 
 
 To support such `in-store` payments, ApplePay stores the necessary payment data inside a [Secure Element](/2014/09/01/mobile-payments-what-is-a-secure-element.html) embedded in the phone’s hardware itself. When you tap to pay, ApplePay uses [Secure Element](/2014/10/02/apple-pay-vs-google-wallet-the-secure-element.html) based [card-emulation](/2014/08/07/mobile-payments-what-is-nfc-card-emulation-mode.html) to transmit payment data to the contactless terminal. For a more detailed analysis of how ApplePay works behind the scenes, visit my blog post on [Apple Pay – An Attempt to Demystify](/2014/09/24/apple-pay-an-attempt-to-demystify.html).
@@ -41,14 +41,14 @@ Beyond the basics, there are a few more interesting things that are unique to
 Using this service, you can pay for items from within mobile apps that support ApplePay. If you have ever used the `iOS` or `OS-X` keychain to store and auto-fill passwords, this will look very familiar. Participating mobile apps will show a button labelled `Apple Pay`. Checking out is as easy as tapping that button and placing your finger on the Touch ID.
 
 
-![apple-pay-app](http://www.gmarwaha.com/blog/wp-content/uploads/2014/10/apple-pay-app-160x300.png)
+![apple-pay-app](/assets/images/posts/apple-pay-app-160x300.png)
 
 
 
 <div class="related-reading">
 <p class="related-reading-title">Mobile Payments Blog Series</p>
 <ul>
-    <li><a href="http://www.gmarwaha.com/blog/mobile-payments-faq/">Mobile Payments FAQ</a></li>
+    <li><a href="/articles/mobile-payments-faq/">Mobile Payments FAQ</a></li>
     <li><a href="/2014/08/03/mobile-payments-what-is-nfc.html">What is NFC?</a></li>
     <li><a href="/2014/10/17/mobile-payments-what-is-google-wallet.html">What is Google Wallet?</a></li>
     <li><a href="/2014/09/24/apple-pay-an-attempt-to-demystify.html">Apple Pay – An attempt to demystify</a></li>

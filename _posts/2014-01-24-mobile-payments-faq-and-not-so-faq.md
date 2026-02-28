@@ -17,4 +17,4 @@ My goal here is to try and answer these [FAQs](javascript:void(0)) and not so F
 I am confident that this will benefit me and hopefully it will benefit others too. I am also hoping that any expert stumbling across these blogs will offer their valuable thoughts thereby helping the rest of us.
 
 
-Welcome to **Mobile Payments FAQ and not so FAQ** series. View all posts from the [**Table of Contents**](http://www.gmarwaha.com/blog/mobile-payments-faq/) page
+Welcome to **Mobile Payments FAQ and not so FAQ** series. View all posts from the [**Table of Contents**](/articles/mobile-payments-faq/) page

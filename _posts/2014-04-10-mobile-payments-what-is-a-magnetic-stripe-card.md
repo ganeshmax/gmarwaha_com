@@ -11,7 +11,7 @@ original_url: "/2014/04/10/mobile-payments-what-is-a-magnetic-stripe-card.html"
 The most commonly available type of credit and debit card in the United States is a Magnetic Stripe or `MagStripe` card. As shown below, the black band on the back of your card is the magnetic stripe. It stores information by modifying the magnetism of tiny iron-based magnetic particles. The stored data can be read by swiping past a magnetic reading head, which is what you do when you swipe your credit card in a point of sale terminal.
 
 
-![Credit_Card_Mag_Stripe](http://www.gmarwaha.com/blog/wp-content/uploads/2014/09/Credit_Card_Mag_Stripe.jpg)
+![Credit_Card_Mag_Stripe](/assets/images/posts/Credit_Card_Mag_Stripe.jpg)
 
 
 The MagStripe holds your account information encoded in the form of Tracks – `Track 1` and `Track 2`. They both hold similar information. Given below are some details.
@@ -47,4 +47,4 @@ Other than the fact that Track 1 stores your name while Track 2 doesn’t, there
 
 <div class="related-reading">
 <p class="related-reading-title">Mobile Payments Blog Series</p>
-Welcome to the <a href="/2014/01/24/mobile-payments-faq-and-not-so-faq.html">Mobile payments FAQ and not so FAQ</a> series and you are on FAQ #5. The idea behind this series is to share and learn as much as possible about the field of mobile payments. If you like, you can read all of the FAQs on the <a href="http://www.gmarwaha.com/blog/category/mobile-payments/">Mobile Payments</a> category or by visiting the <a href="http://www.gmarwaha.com/blog/mobile-payments-faq/">Table of contents</a> page.</div>
+Welcome to the <a href="/2014/01/24/mobile-payments-faq-and-not-so-faq.html">Mobile payments FAQ and not so FAQ</a> series and you are on FAQ #5. The idea behind this series is to share and learn as much as possible about the field of mobile payments. If you like, you can read all of the FAQs on the <a href="http://www.gmarwaha.com/blog/category/mobile-payments/">Mobile Payments</a> category or by visiting the <a href="/articles/mobile-payments-faq/">Table of contents</a> page.</div>

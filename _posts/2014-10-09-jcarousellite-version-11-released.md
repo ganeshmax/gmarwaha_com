@@ -6,7 +6,7 @@ tags: [jCarouselLite]
 original_url: "/2014/10/09/jcarousellite-version-1-1-released.html"
 ---
 
-It has been quite a while since I worked on updating the [jCarouselLite project](http://www.gmarwaha.com/jquery/jcarousellite/index.php). Meanwhile, the community has shown its love by actively contributing features and defect fixes. It is always a pleasant experience to see such active participation by the community, but there is also a challenge.
+It has been quite a while since I worked on updating the [jCarouselLite project](/projects/jcarousellite/). Meanwhile, the community has shown its love by actively contributing features and defect fixes. It is always a pleasant experience to see such active participation by the community, but there is also a challenge.
 
 
 Many of the mods were spread around different websites, GitHub forks, Stack Overflow answers and comments. Consequently, it was not easy for a new user to start using it. So, I thought I should give some order to this by collecting them all back into the [original project](https://github.com/ganeshmax/jcarousellite) and that is exactly what I have done here… and much more…
@@ -15,7 +15,7 @@ Many of the mods were spread around different websites, GitHub forks, Stack Ove
 Heads up! The plugin still weighs only 2 KB.
 
 
-Given below is a list of items that has changed, leading to the release of version 1.1. Visit the [project page](http://www.gmarwaha.com/jquery/jcarousellite/index.php) and [change log](http://www.gmarwaha.com/jquery/jcarousellite/change-log.php) for more details.
+Given below is a list of items that has changed, leading to the release of version 1.1. Visit the [project page](/projects/jcarousellite/) and [change log](http://www.gmarwaha.com/jquery/jcarousellite/change-log.php) for more details.
 
 
 - Added a [Github](https://github.com/ganeshmax/jcarousellite) project. Feel free to raise any new defects or feature requests here
@@ -45,9 +45,9 @@ Given below is a list of items that has changed, leading to the release of ver
 
 - Introduced a [Styling page](http://www.gmarwaha.com/jquery/jcarousellite/styling.php) to help you understand the default styling and ways in which you can apply custom styling to your carousel
 
-- Revamped the [Demo page](http://www.gmarwaha.com/jquery/jcarousellite/demo.php) to make it cleaner and more beautiful. It is easier to view-source now than it was before
+- Revamped the [Demo page](/projects/jcarousellite/demo/) to make it cleaner and more beautiful. It is easier to view-source now than it was before
 
-- Updated the styling in [Demo page](http://www.gmarwaha.com/jquery/jcarousellite/demo.php) to reflect the custom styling in S[tyling page](http://www.gmarwaha.com/jquery/jcarousellite/styling.php)
+- Updated the styling in [Demo page](/projects/jcarousellite/demo/) to reflect the custom styling in S[tyling page](http://www.gmarwaha.com/jquery/jcarousellite/styling.php)
 
 
 - Added default options globally. This way you can set the default options using `$.fn.jCarouselLite.options` once instead of passing them for every carousel you create

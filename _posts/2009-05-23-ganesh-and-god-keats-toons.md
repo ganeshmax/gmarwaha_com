@@ -13,5 +13,5 @@ I am a die-hard non-vegetarian, especially fond of chicken. While my friend is a
 
 
 [
-![Ganesh and God](http://www.gmarwaha.com/blog/wp-content/uploads/2009/05/ganesh_and_god.jpg)
-](http://www.gmarwaha.com/blog/wp-content/uploads/2009/05/ganesh_and_god.jpg)
+![Ganesh and God](/assets/images/posts/ganesh_and_god.jpg)
+](/assets/images/posts/ganesh_and_god.jpg)

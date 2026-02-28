@@ -14,7 +14,7 @@ Contactless chip cards are standard credit cards with an embedded contactless ch
 Radio frequency waves are the frequencies within the electromagnetic spectrum associated with radio wave propagation. Many wireless communications technologies are based on RF, including radio, television, mobile phones, wireless networks and now, contactless payment cards and devices. Don’t confuse this RF with RFID technologies used in manufacturing, shipping and object tracking. Those are designed to operate over long ranges (in the order of 25 feet) and typically don’t have built in security and privacy. On the other hand, the contactless cards that are used for payments are desgined to operate at a short range and come built-in with security and cryptography capabilities.
 
 
-![](http://www.gmarwaha.com/blog/wp-content/uploads/2014/09/chip-and-contactless-annotated1.png)
+![](/assets/images/posts/chip-and-contactless-annotated1.png)
 
 
 In the image above, the logo marked on the right hand side represents the universal contactless symbol. If you see this logo on your credit card, you can be sure that it supports contactless payments. Similarly, POS devices that support contactless payments prominently display the same logo to advertise their capability for the same.
@@ -30,4 +30,4 @@ Since mobile phones are way more powerful than a plastic card, they can hold as 
 
 <div class="related-reading">
 <p class="related-reading-title">Mobile Payments Blog Series</p>
-Welcome to the <a href="/2014/01/24/mobile-payments-faq-and-not-so-faq.html">Mobile payments FAQ and not so FAQ</a> series and you are on FAQ #7. The idea behind this series is to share and learn as much as possible about the field of mobile payments. If you like, you can read all of the FAQs on the <a href="http://www.gmarwaha.com/blog/category/mobile-payments/">Mobile Payments</a> category or by visiting the <a href="http://www.gmarwaha.com/blog/mobile-payments-faq/">Table of contents</a> page.</div>
+Welcome to the <a href="/2014/01/24/mobile-payments-faq-and-not-so-faq.html">Mobile payments FAQ and not so FAQ</a> series and you are on FAQ #7. The idea behind this series is to share and learn as much as possible about the field of mobile payments. If you like, you can read all of the FAQs on the <a href="http://www.gmarwaha.com/blog/category/mobile-payments/">Mobile Payments</a> category or by visiting the <a href="/articles/mobile-payments-faq/">Table of contents</a> page.</div>

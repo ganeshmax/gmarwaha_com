@@ -84,7 +84,7 @@ Reprinted from my own article [here](http://www.virtusa.com/blog/2014/09/applepa
 <div class="related-reading">
 <p class="related-reading-title">Related Reading</p>
 <ul>
-    <li><a href="http://www.gmarwaha.com/blog/mobile-payments-faq/">Mobile Payments FAQ and not so FAQ</a></li>
+    <li><a href="/articles/mobile-payments-faq/">Mobile Payments FAQ and not so FAQ</a></li>
     <li><a href="/2014/10/02/apple-pay-vs-google-wallet-the-secure-element.html">Apple Pay vs Google Wallet: The Secure Element</a></li>
     <li><a href="/2014/05/11/mobile-payments-what-is-a-contactless-chip-card.html">What is a Contactless Chip Card?</a></li>
     <li><a href="/2014/08/03/mobile-payments-what-is-nfc.html">What is NFC?</a></li>

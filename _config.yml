@@ -1,5 +1,5 @@
-name: Ganesh Marwaha
-description: Software Engineer. Tinkerer.
+name: Ganeshji Marwaha
+description: A Congenial Perspective
 baseurl: ""
 url: "https://gmarwaha.com"
 twitter_username: ganeshmax
@@ -9,4 +9,30 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-seo-tag
+  - jekyll-paginate-v2
+  - jekyll-archives
+
+pagination:
+  enabled: true
+  collection: posts
+  per_page: 20
+  permalink: '/page/:num/'
+  title: ':title - Page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  debug: true
+jekyll-archives:
+  enabled: all
+  layouts:
+    year: autopage_year
+    tag: autopage_tag
+  permalinks:
+    year: '/blog/:year/'
+    tag: '/tags/:name/'
+
+collections:
+  projects:
+    output: true
+  articles:
+    output: true

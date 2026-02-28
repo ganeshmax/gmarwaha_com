@@ -1,0 +1,23 @@
+/* =========================================
+   Typography System
+   - UI Chrome: Inter (clean, modern sans-serif)
+   - Body/Post content: Lora (elegant, readable serif)
+   ========================================= */
+:root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Lora', Georgia, serif;
+    --text-base: 16px;
+    --text-sm: 13px;
+    --text-meta: 12px;
+    --line-height-body: 1.85;
+    --line-height-heading: 1.25;
+    --color-text: #3d4451;
+    --color-muted: #6b7280;
+    --color-heading: #1f2937;
+    --color-link: #5b63d3;
+    --color-link-hover: #3d45b8;
+    --color-code-bg: #f0f1f5;
+    --color-code-text: #3d4451;
+    --color-code-block-bg: #1e2130;
+    --color-code-block-text: #cdd6f4;
+}

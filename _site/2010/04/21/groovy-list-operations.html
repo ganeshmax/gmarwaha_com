@@ -5,21 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Groovy: List Operations | Ganesh Marwaha</title>
+<title>Groovy: List Operations | Ganeshji Marwaha</title>
 <meta name="generator" content="Jekyll v3.9.5" />
 <meta property="og:title" content="Groovy: List Operations" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Anybody who has programmed in Java for sometime would attest to how frustrated they could get while operating on the Collection API. Even simple operations demand unnecessary lines of code increasing the LOC and reducing expressiveness of the intended logic. Fortunately, Java has noticed the pain and has been adding utility classes to the Collections API to improve readability of the code since Java 5. Even better, there are a couple of libraries, Lambdaj and op4j, that implement the powerful Fluent interface that takes readability to the next higher plane." />
 <meta property="og:description" content="Anybody who has programmed in Java for sometime would attest to how frustrated they could get while operating on the Collection API. Even simple operations demand unnecessary lines of code increasing the LOC and reducing expressiveness of the intended logic. Fortunately, Java has noticed the pain and has been adding utility classes to the Collections API to improve readability of the code since Java 5. Even better, there are a couple of libraries, Lambdaj and op4j, that implement the powerful Fluent interface that takes readability to the next higher plane." />
-<link rel="canonical" href="http://localhost:4000/2010/04/21/groovy-list-operations.html" />
-<meta property="og:url" content="http://localhost:4000/2010/04/21/groovy-list-operations.html" />
-<meta property="og:site_name" content="Ganesh Marwaha" />
+<link rel="canonical" href="http://localhost:4001/2010/04/21/groovy-list-operations.html" />
+<meta property="og:url" content="http://localhost:4001/2010/04/21/groovy-list-operations.html" />
+<meta property="og:site_name" content="Ganeshji Marwaha" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2010-04-21T07:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Groovy: List Operations" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/2010/04/21/groovy-list-operations.html","headline":"Groovy: List Operations","dateModified":"2010-04-21T07:00:00-05:00","datePublished":"2010-04-21T07:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2010/04/21/groovy-list-operations.html"},"description":"Anybody who has programmed in Java for sometime would attest to how frustrated they could get while operating on the Collection API. Even simple operations demand unnecessary lines of code increasing the LOC and reducing expressiveness of the intended logic. Fortunately, Java has noticed the pain and has been adding utility classes to the Collections API to improve readability of the code since Java 5. Even better, there are a couple of libraries, Lambdaj and op4j, that implement the powerful Fluent interface that takes readability to the next higher plane.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/2010/04/21/groovy-list-operations.html"},"url":"http://localhost:4001/2010/04/21/groovy-list-operations.html","headline":"Groovy: List Operations","dateModified":"2010-04-21T07:00:00-05:00","datePublished":"2010-04-21T07:00:00-05:00","description":"Anybody who has programmed in Java for sometime would attest to how frustrated they could get while operating on the Collection API. Even simple operations demand unnecessary lines of code increasing the LOC and reducing expressiveness of the intended logic. Fortunately, Java has noticed the pain and has been adding utility classes to the Collections API to improve readability of the code since Java 5. Even better, there are a couple of libraries, Lambdaj and op4j, that implement the powerful Fluent interface that takes readability to the next higher plane.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -40,49 +40,67 @@
 <body class="home blog">
     <div id="page" class="site d-flex flex-column min-vh-100">
         <header id="masthead" role="banner" class="header_normal">
-            <div class="top-banner">
-                <div class="container d-flex justify-content-between align-items-center">
-                    <a class="brand brand-text" href="/" title="Ganesh Marwaha" rel="home">
-                        <h1>Ganesh Marwaha<small>&nbsp;&ndash;&nbsp;Software Engineer. Tinkerer.</small></h1>
-                    </a>
-                    <div class="top-banner-social">
-                        <a target="_blank" href="#"><i class="icon-facebook-1"></i></a>
-                        <a target="_blank" href="https://twitter.com/ganeshmax"><i
-                                class="icon-twitter-1"></i></a>
-                        <a target="_blank" href="#"><i class="icon-gplus-1"></i></a>
-                        <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
-                        <a target="_blank" href="/feed.xml"><i class="icon-rss-1"></i></a>
-                    </div>
-                </div>
+    <div class="top-banner">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="brand brand-text" href="/" title="Ganeshji Marwaha" rel="home">
+                <h1>Ganeshji Marwaha<small>&nbsp;&ndash;&nbsp;A Congenial Perspective</small></h1>
+            </a>
+            <div class="top-banner-social">
+                <a target="_blank" href="#"><i class="icon-facebook-1"></i></a>
+                <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                        class="icon-twitter-1"></i></a>
+                <a target="_blank" href="#"><i class="icon-gplus-1"></i></a>
+                <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+                <a target="_blank" href="/feed.xml"><i class="icon-rss-1"></i></a>
             </div>
+        </div>
+    </div>
 
-            <div class="clean-navigation">
-                <div class="container d-flex align-items-center justify-content-start">
-                    <nav class="clean-nav">
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/blog/">Blog</a></li>
-                            <li class="dropdown" style="position:relative;">
-                                <a href="#">Article Series <span class="caret">&#9660;</span></a>
-                                <ul class="dropdown-menu-clean">
-                                    <li><a href="/mobile-payments-faq/">Mobile Payments FAQ</a></li>
-                                    <li><a href="/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown" style="position:relative;">
-                                <a href="#">Projects <span class="caret">&#9660;</span></a>
-                                <ul class="dropdown-menu-clean">
-                                    <li><a href="/jquery/jcarousellite/">jCarouselLite</a></li>
-                                    <li><a href="/jquery/lavalamp/">Lavalamp</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+    <div class="clean-navigation">
+    <div class="container d-flex align-items-center justify-content-start">
+        <nav class="clean-nav">
+            <ul>
+                
+                
+                <li><a href="/">Home</a></li>
+                
+                
+                
+                <li><a href="/blog/">Blog</a></li>
+                
+                
+                
+                <li class="dropdown" style="position:relative;">
+                    <a href="#">Article Series <span class="caret">&#9660;</span></a>
+                    <ul class="dropdown-menu-clean">
+                        
+                        <li><a href="/articles/mobile-payments-faq/">Mobile Payments FAQ</a></li>
+                        
+                        <li><a href="/articles/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet</a></li>
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <li class="dropdown" style="position:relative;">
+                    <a href="#">Projects <span class="caret">&#9660;</span></a>
+                    <ul class="dropdown-menu-clean">
+                        
+                        <li><a href="/projects/jcarousellite/">jCarouselLite</a></li>
+                        
+                        <li><a href="/projects/lavalamp/">Lavalamp</a></li>
+                        
+                    </ul>
+                </li>
+                
+                
+            </ul>
+        </nav>
+    </div>
+</div>
 
-
-        </header><!-- #masthead .site-header -->
+</header><!-- #masthead .site-header -->
         <div id="main" class="container content flex-grow-1">
             <div id="primary" class="row right_side">
     <div id="content" class="col-lg-8" role="main">
@@ -96,7 +114,7 @@
                     <div class="tags">
                         <i class="icon-tag"></i>
                         
-                        <a href="/tags/Groovy" class="text-muted">Groovy</a>
+                        <a href="/tags/groovy" class="text-muted">Groovy</a>
                         
                     </div>
                     <span class="divider">/</span>
@@ -170,13 +188,24 @@ assert 6 == add(*[1,2,3])
 
             </div>
 
+            <!-- Next/Previous Navigation -->
+            <nav class="post-navigation d-flex justify-content-between mb-5">
+                
+                <a href="/2010/03/12/groovy-no-arg-constructor-is-always-there.html" class="btn btn-outline-secondary btn-sm">&laquo; Groovy: No-arg constructor is always ...</a>
+                
+
+                
+                <a href="/2010/05/10/tomcat-55-and-above-doesnt-need-the-jdk.html" class="btn btn-outline-secondary btn-sm">Tomcat 5.5 and above doesn''t need th... &raquo;</a>
+                
+            </nav>
+
             <hr class="mb-4">
 
             <!-- Disqus Comments -->
             <div id="disqus_thread"></div>
             <script>
                 var disqus_config = function () {
-                    this.page.url = 'http://localhost:4000/2010/04/21/groovy-list-operations.html';
+                    this.page.url = 'http://localhost:4001/2010/04/21/groovy-list-operations.html';
                     this.page.identifier = '/2010/04/21/groovy-list-operations';
                 };
                 (function () {
@@ -404,14 +433,14 @@ assert 6 == add(*[1,2,3])
 </div>
         </div><!-- #main -->
         <footer id="colophon" class="site-footer mt-auto" role="contentinfo">
-            <div class="container">
-                <div class="row pt-4" id="footer-body">
-                </div>
-            </div>
-            <div class="row mt-3 text-center" id="footer-bottom">
-                &copy; 2026 Ganesh Marwaha
-            </div>
-        </footer>
+    <div class="container">
+        <div class="row pt-4" id="footer-body">
+        </div>
+    </div>
+    <div class="row mt-3 text-center" id="footer-bottom">
+        &copy; 2026 Ganeshji Marwaha
+    </div>
+</footer>
     </div><!-- #page -->
 </body>
 

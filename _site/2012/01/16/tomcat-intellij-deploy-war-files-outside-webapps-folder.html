@@ -5,21 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Tomcat &amp; IntelliJ – Deploy war files outside webapps folder | Ganesh Marwaha</title>
+<title>Tomcat &amp; IntelliJ – Deploy war files outside webapps folder | Ganeshji Marwaha</title>
 <meta name="generator" content="Jekyll v3.9.5" />
 <meta property="og:title" content="Tomcat &amp; IntelliJ – Deploy war files outside webapps folder" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="At present I am working on developing an Android application that needs to be supported by a slew of REST services hosted in the cloud. I chose Google App Engine based on its support for Java, Groovy and most importantly Spring. I developed a Spring MVC based REST application and used ContentNegotiatingViewResolver to negotiate content based on request URL extensions. For example, an XML response will be returned if the request URL ends with .xml, a JSON response for .json and an HTML response if he URL doesn’t have any extension. Don’t get me started on Accept Header versus URL extension based content negotiation. That is a rant for another day." />
 <meta property="og:description" content="At present I am working on developing an Android application that needs to be supported by a slew of REST services hosted in the cloud. I chose Google App Engine based on its support for Java, Groovy and most importantly Spring. I developed a Spring MVC based REST application and used ContentNegotiatingViewResolver to negotiate content based on request URL extensions. For example, an XML response will be returned if the request URL ends with .xml, a JSON response for .json and an HTML response if he URL doesn’t have any extension. Don’t get me started on Accept Header versus URL extension based content negotiation. That is a rant for another day." />
-<link rel="canonical" href="http://localhost:4000/2012/01/16/tomcat-intellij-deploy-war-files-outside-webapps-folder.html" />
-<meta property="og:url" content="http://localhost:4000/2012/01/16/tomcat-intellij-deploy-war-files-outside-webapps-folder.html" />
-<meta property="og:site_name" content="Ganesh Marwaha" />
+<link rel="canonical" href="http://localhost:4001/2012/01/16/tomcat-intellij-deploy-war-files-outside-webapps-folder.html" />
+<meta property="og:url" content="http://localhost:4001/2012/01/16/tomcat-intellij-deploy-war-files-outside-webapps-folder.html" />
+<meta property="og:site_name" content="Ganeshji Marwaha" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2012-01-16T06:00:00-06:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Tomcat &amp; IntelliJ – Deploy war files outside webapps folder" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/2012/01/16/tomcat-intellij-deploy-war-files-outside-webapps-folder.html","headline":"Tomcat &amp; IntelliJ – Deploy war files outside webapps folder","dateModified":"2012-01-16T06:00:00-06:00","datePublished":"2012-01-16T06:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2012/01/16/tomcat-intellij-deploy-war-files-outside-webapps-folder.html"},"description":"At present I am working on developing an Android application that needs to be supported by a slew of REST services hosted in the cloud. I chose Google App Engine based on its support for Java, Groovy and most importantly Spring. I developed a Spring MVC based REST application and used ContentNegotiatingViewResolver to negotiate content based on request URL extensions. For example, an XML response will be returned if the request URL ends with .xml, a JSON response for .json and an HTML response if he URL doesn’t have any extension. Don’t get me started on Accept Header versus URL extension based content negotiation. That is a rant for another day.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/2012/01/16/tomcat-intellij-deploy-war-files-outside-webapps-folder.html"},"url":"http://localhost:4001/2012/01/16/tomcat-intellij-deploy-war-files-outside-webapps-folder.html","headline":"Tomcat &amp; IntelliJ – Deploy war files outside webapps folder","dateModified":"2012-01-16T06:00:00-06:00","datePublished":"2012-01-16T06:00:00-06:00","description":"At present I am working on developing an Android application that needs to be supported by a slew of REST services hosted in the cloud. I chose Google App Engine based on its support for Java, Groovy and most importantly Spring. I developed a Spring MVC based REST application and used ContentNegotiatingViewResolver to negotiate content based on request URL extensions. For example, an XML response will be returned if the request URL ends with .xml, a JSON response for .json and an HTML response if he URL doesn’t have any extension. Don’t get me started on Accept Header versus URL extension based content negotiation. That is a rant for another day.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -40,49 +40,67 @@
 <body class="home blog">
     <div id="page" class="site d-flex flex-column min-vh-100">
         <header id="masthead" role="banner" class="header_normal">
-            <div class="top-banner">
-                <div class="container d-flex justify-content-between align-items-center">
-                    <a class="brand brand-text" href="/" title="Ganesh Marwaha" rel="home">
-                        <h1>Ganesh Marwaha<small>&nbsp;&ndash;&nbsp;Software Engineer. Tinkerer.</small></h1>
-                    </a>
-                    <div class="top-banner-social">
-                        <a target="_blank" href="#"><i class="icon-facebook-1"></i></a>
-                        <a target="_blank" href="https://twitter.com/ganeshmax"><i
-                                class="icon-twitter-1"></i></a>
-                        <a target="_blank" href="#"><i class="icon-gplus-1"></i></a>
-                        <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
-                        <a target="_blank" href="/feed.xml"><i class="icon-rss-1"></i></a>
-                    </div>
-                </div>
+    <div class="top-banner">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="brand brand-text" href="/" title="Ganeshji Marwaha" rel="home">
+                <h1>Ganeshji Marwaha<small>&nbsp;&ndash;&nbsp;A Congenial Perspective</small></h1>
+            </a>
+            <div class="top-banner-social">
+                <a target="_blank" href="#"><i class="icon-facebook-1"></i></a>
+                <a target="_blank" href="https://twitter.com/ganeshmax"><i
+                        class="icon-twitter-1"></i></a>
+                <a target="_blank" href="#"><i class="icon-gplus-1"></i></a>
+                <a target="_blank" href="#"><i class="icon-linkedin-1"></i></a>
+                <a target="_blank" href="/feed.xml"><i class="icon-rss-1"></i></a>
             </div>
+        </div>
+    </div>
 
-            <div class="clean-navigation">
-                <div class="container d-flex align-items-center justify-content-start">
-                    <nav class="clean-nav">
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/blog/">Blog</a></li>
-                            <li class="dropdown" style="position:relative;">
-                                <a href="#">Article Series <span class="caret">&#9660;</span></a>
-                                <ul class="dropdown-menu-clean">
-                                    <li><a href="/mobile-payments-faq/">Mobile Payments FAQ</a></li>
-                                    <li><a href="/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown" style="position:relative;">
-                                <a href="#">Projects <span class="caret">&#9660;</span></a>
-                                <ul class="dropdown-menu-clean">
-                                    <li><a href="/jquery/jcarousellite/">jCarouselLite</a></li>
-                                    <li><a href="/jquery/lavalamp/">Lavalamp</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+    <div class="clean-navigation">
+    <div class="container d-flex align-items-center justify-content-start">
+        <nav class="clean-nav">
+            <ul>
+                
+                
+                <li><a href="/">Home</a></li>
+                
+                
+                
+                <li><a href="/blog/">Blog</a></li>
+                
+                
+                
+                <li class="dropdown" style="position:relative;">
+                    <a href="#">Article Series <span class="caret">&#9660;</span></a>
+                    <ul class="dropdown-menu-clean">
+                        
+                        <li><a href="/articles/mobile-payments-faq/">Mobile Payments FAQ</a></li>
+                        
+                        <li><a href="/articles/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet</a></li>
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <li class="dropdown" style="position:relative;">
+                    <a href="#">Projects <span class="caret">&#9660;</span></a>
+                    <ul class="dropdown-menu-clean">
+                        
+                        <li><a href="/projects/jcarousellite/">jCarouselLite</a></li>
+                        
+                        <li><a href="/projects/lavalamp/">Lavalamp</a></li>
+                        
+                    </ul>
+                </li>
+                
+                
+            </ul>
+        </nav>
+    </div>
+</div>
 
-
-        </header><!-- #masthead .site-header -->
+</header><!-- #masthead .site-header -->
         <div id="main" class="container content flex-grow-1">
             <div id="primary" class="row right_side">
     <div id="content" class="col-lg-8" role="main">
@@ -96,7 +114,7 @@
                     <div class="tags">
                         <i class="icon-tag"></i>
                         
-                        <a href="/tags/Tomcat" class="text-muted">Tomcat</a>
+                        <a href="/tags/tomcat" class="text-muted">Tomcat</a>
                         
                     </div>
                     <span class="divider">/</span>
@@ -128,13 +146,24 @@
 
             </div>
 
+            <!-- Next/Previous Navigation -->
+            <nav class="post-navigation d-flex justify-content-between mb-5">
+                
+                <a href="/2011/12/08/no-hadoop-envsh-in-hadoop-023.html" class="btn btn-outline-secondary btn-sm">&laquo; No hadoop-env.sh in Hadoop 0.23</a>
+                
+
+                
+                <a href="/2012/01/18/android-remove-activity-from-history-stack.html" class="btn btn-outline-secondary btn-sm">Android: Remove activity from history... &raquo;</a>
+                
+            </nav>
+
             <hr class="mb-4">
 
             <!-- Disqus Comments -->
             <div id="disqus_thread"></div>
             <script>
                 var disqus_config = function () {
-                    this.page.url = 'http://localhost:4000/2012/01/16/tomcat-intellij-deploy-war-files-outside-webapps-folder.html';
+                    this.page.url = 'http://localhost:4001/2012/01/16/tomcat-intellij-deploy-war-files-outside-webapps-folder.html';
                     this.page.identifier = '/2012/01/16/tomcat-intellij-deploy-war-files-outside-webapps-folder';
                 };
                 (function () {
@@ -362,14 +391,14 @@
 </div>
         </div><!-- #main -->
         <footer id="colophon" class="site-footer mt-auto" role="contentinfo">
-            <div class="container">
-                <div class="row pt-4" id="footer-body">
-                </div>
-            </div>
-            <div class="row mt-3 text-center" id="footer-bottom">
-                &copy; 2026 Ganesh Marwaha
-            </div>
-        </footer>
+    <div class="container">
+        <div class="row pt-4" id="footer-body">
+        </div>
+    </div>
+    <div class="row mt-3 text-center" id="footer-bottom">
+        &copy; 2026 Ganeshji Marwaha
+    </div>
+</footer>
     </div><!-- #page -->
 </body>
 

@@ -5,7 +5,7 @@ date: 2014-10-02 12:00:00 +0000
 tags: [Apple Pay, Google Wallet]
 original_url: "/2014/10/02/apple-pay-vs-google-wallet-the-secure-element.html"
 ---
-Note: You can read all articles in this [series](http://www.gmarwaha.com/blog/apple-pay-vs-google-wallet/) by visiting the [Table of Contents](http://www.gmarwaha.com/blog/apple-pay-vs-google-wallet/)
+Note: You can read all articles in this [series](/articles/apple-pay-vs-google-wallet/) by visiting the [Table of Contents](/articles/apple-pay-vs-google-wallet/)
 
 
 Both [Google Wallet](/2014/10/17/mobile-payments-what-is-google-wallet.html) and [ApplePay](https://www.apple.com/iphone-6/apple-pay/) are trying to solve the same set of problems – mobile payments at the physical POS and inside apps. They have many characteristics that are very similar, but they also differ in significant ways when it comes to implementation and user experience. In this series of blog posts, we will analyze a few similarities and differences one by one. We will start by talking about the `Secure Element` today.
@@ -38,8 +38,8 @@ In the next post, we will discuss how these two services differ when the device
 <div class="related-reading">
 <p class="related-reading-title">Related Reading</p>
 <ul>
-    <li><a href="http://www.gmarwaha.com/blog/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet – Article Series</a></li>
-    <li><a href="http://www.gmarwaha.com/blog/mobile-payments-faq/">Mobile Payments FAQ</a></li>
+    <li><a href="/articles/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet – Article Series</a></li>
+    <li><a href="/articles/mobile-payments-faq/">Mobile Payments FAQ</a></li>
     <li><a href="/2014/09/24/apple-pay-an-attempt-to-demystify.html">Apple Pay – An attempt to demystify</a></li>
     <li><a href="/2014/10/17/mobile-payments-what-is-google-wallet.html">What is Google Wallet?</a></li>
     <li><a href="/2014/10/20/mobile-payments-what-is-apple-pay.html">What is Apple Pay?</a></li>

@@ -5,7 +5,7 @@ date: 2007-08-09 12:00:00 +0000
 tags: [jQuery, jCarouselLite]
 original_url: "/2007/08/09/jcarousel-lite-a-jquery-plugin.html"
 ---
-[jCarousel Lite](http://www.gmarwaha.com/jquery/jcarousellite/index.php) is a [jQuery](http://jquery.com) plugin that carries you on a carousel ride filled with images and HTML content. Put simply, you can navigate images and/or HTML in a carousel-style widget. It is super light weight, at about *2 KB in size*, yet very flexible and customizable to fit most of our needs.
+[jCarousel Lite](/projects/jcarousellite/) is a [jQuery](http://jquery.com) plugin that carries you on a carousel ride filled with images and HTML content. Put simply, you can navigate images and/or HTML in a carousel-style widget. It is super light weight, at about *2 KB in size*, yet very flexible and customizable to fit most of our needs.
 
 **Did I mention that it weighs just 2 KB?**
 
@@ -13,7 +13,7 @@ original_url: "/2007/08/09/jcarousel-lite-a-jquery-plugin.html"
 As if that wasn’t enough, the best part is yet to come… You don’t need any special css file or class name to get this to work. Include the js file. Supply the HTML markup. Then, construct the carousel with just a simple function call.
 
 
-Visit the [project](http://www.gmarwaha.com/jquery/jcarousellite/index.php) page for more information. There you can find a lot of [demos](http://www.gmarwaha.com/jquery/jcarousellite/demo.php) and exhaustive documentation. This blog entry is just a teaser for further exploration.
+Visit the [project](/projects/jcarousellite/) page for more information. There you can find a lot of [demos](/projects/jcarousellite/demo/) and exhaustive documentation. This blog entry is just a teaser for further exploration.
 
 
 Installing and getting it to work is as trivial as following the 3 steps given below…

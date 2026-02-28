@@ -1,0 +1,16 @@
+- title: Home
+  url: /
+- title: Blog
+  url: /blog/
+- title: Article Series
+  sublinks:
+    - title: Mobile Payments FAQ
+      url: /articles/mobile-payments-faq/
+    - title: Apple Pay vs Google Wallet
+      url: /articles/apple-pay-vs-google-wallet/
+- title: Projects
+  sublinks:
+    - title: jCarouselLite
+      url: /projects/jcarousellite/
+    - title: Lavalamp
+      url: /projects/lavalamp/

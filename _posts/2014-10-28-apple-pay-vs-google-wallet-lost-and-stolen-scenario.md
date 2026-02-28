@@ -6,7 +6,7 @@ tags: [Apple Pay, Google Wallet]
 original_url: "/2014/10/28/apple-pay-vs-google-wallet-lost-and-stolen-scenario.html"
 ---
 
-Note: You can read all articles in this [series](http://www.gmarwaha.com/blog/apple-pay-vs-google-wallet/) by visiting the [Table of Contents](http://www.gmarwaha.com/blog/apple-pay-vs-google-wallet/)
+Note: You can read all articles in this [series](/articles/apple-pay-vs-google-wallet/) by visiting the [Table of Contents](/articles/apple-pay-vs-google-wallet/)
 
 
 Both [ApplePay](/2014/10/20/mobile-payments-what-is-apple-pay.html) and [Google Wallet](/2014/10/17/mobile-payments-what-is-google-wallet.html) give very good attention to security. In fact we can even make a blanket statement that almost all mobile wallet services are at least slightly more secure than the traditional [Magnetic Stripe](/2014/04/10/mobile-payments-what-is-a-magnetic-stripe-card.html) cards, but to be honest, that is not a correct comparison. Today, we are trying to disrupt the payment industry through innovation and modern technology. In the process we should strive to achieve unprecedented levels of revolutionary security, not just an evolutionary next step.
@@ -49,9 +49,9 @@ In conclusion, for lost/stolen device scenario both [ApplePay](/2014/10/20/mobi
 <div class="related-reading">
 <p class="related-reading-title">Related Reading</p>
 <ul>
-    <li><a href="http://www.gmarwaha.com/blog/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet – Article Series</a></li>
+    <li><a href="/articles/apple-pay-vs-google-wallet/">Apple Pay vs Google Wallet – Article Series</a></li>
     <li><a href="/2014/10/02/apple-pay-vs-google-wallet-the-secure-element.html">Apple Pay vs Google Wallet – Secure Element</a></li>
-    <li><a href="http://www.gmarwaha.com/blog/mobile-payments-faq/">Mobile Payments FAQ</a></li>
+    <li><a href="/articles/mobile-payments-faq/">Mobile Payments FAQ</a></li>
     <li><a href="/2014/09/24/apple-pay-an-attempt-to-demystify.html">Apple Pay – An attempt to demystify</a></li>
     <li><a href="/2014/10/17/mobile-payments-what-is-google-wallet.html">What is Google Wallet?</a></li>
     <li><a href="/2014/10/20/mobile-payments-what-is-apple-pay.html">What is Apple Pay?</a></li>
