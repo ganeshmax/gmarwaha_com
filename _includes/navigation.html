@@ -8,12 +8,12 @@
                     <a href="#">{{ item.title }} <span class="caret">&#9660;</span></a>
                     <ul class="dropdown-menu-clean">
                         {% for sub in item.sublinks %}
-                        <li><a href="{{ sub.url }}">{{ sub.title }}</a></li>
+                        <li><a href="{{ site.baseurl }}{{ sub.url }}">{{ sub.title }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>
                 {% else %}
-                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
                 {% endif %}
                 {% endfor %}
             </ul>

@@ -30,7 +30,7 @@
             {% for tag in sorted_tags %}
             {% assign tag_name = tag[0] %}
             {% assign tag_posts = tag[1] %}
-            <a href="/tags/{{ tag_name | slugify }}" class="topic-link">
+            <a href="{{ site.baseurl }}/tags/{{ tag_name | slugify }}" class="topic-link">
                 {{ tag_name }} <span class="topic-count">{{ tag_posts.size }}</span>
             </a>
             {% endfor %}
@@ -43,7 +43,7 @@
             {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
             {% for year_group in posts_by_year %}
             <li>
-                <a href="/blog/{{ year_group.name }}/">
+                <a href="{{ site.baseurl }}/blog/{{ year_group.name }}/">
                     {{ year_group.name }}
                     <span class="post-count">({{ year_group.items | size }})</span>
                 </a>

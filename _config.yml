@@ -1,9 +1,9 @@
 name: Ganeshji Marwaha
 description: A Congenial Perspective
-baseurl: ""
-url: "https://gmarwaha.com"
+baseurl: "/gmarwaha_com"
+url: "https://ganeshmax.github.io"
 twitter_username: ganeshmax
-github_username:  gmarwaha
+github_username:  ganeshmax
 
 markdown: kramdown
 plugins:
