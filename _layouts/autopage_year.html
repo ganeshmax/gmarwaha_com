@@ -14,7 +14,8 @@ enabled: true
             {% for post in page.posts %}
             <article class="post type-post status-publish format-standard hentry box mb-4">
                 <header class="article-header border-bottom pb-3 mb-3">
-                    <h1 class="entry-title mb-2"><a href="{{ post.url }}" class="text-dark text-decoration-none">{{
+                    <h1 class="entry-title mb-2"><a href="{{ site.baseurl }}{{ post.url }}"
+                            class="text-dark text-decoration-none">{{
                             post.title }}</a></h1>
                     <div class="post-meta text-muted small d-flex align-items-center gap-2">
                         <time class="entry-date" datetime="{{ post.date | date_to_xmlschema }}"><i
@@ -30,7 +31,8 @@ enabled: true
                             {% endfor %}
                         </div>
                         <span class="divider">/</span>
-                        <a href="{{ post.url }}#disqus_thread" class="text-muted"><i class="icon-comment-empty"></i>
+                        <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" class="text-muted"><i
+                                class="icon-comment-empty"></i>
                             Comments</a>
                     </div>
                 </header>
