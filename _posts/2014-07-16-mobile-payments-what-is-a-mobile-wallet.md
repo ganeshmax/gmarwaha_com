@@ -8,7 +8,7 @@ original_url: "/2014/07/16/mobile-payments-what-is-a-mobile-wallet.html"
 #### What is a Mobile Wallet?
 
 
-Mobile Wallet, like [Mobile Payments](/2014/07/06/mobile-payments-what-is-mobile-payment.html), is an overloaded phrase. It means different things to different people. For the sake of simplicity, let’s define the mobile wallet as an app or a set of apps that helps us to get rid of the physical wallet. That was a pretty slick definition, wasn’t it? To make the above definition a reality, what items should the mobile wallet hold? Let’s make a list.
+Mobile Wallet, like [Mobile Payments]({{ site.baseurl }}/2014/07/06/mobile-payments-what-is-mobile-payment.html), is an overloaded phrase. It means different things to different people. For the sake of simplicity, let’s define the mobile wallet as an app or a set of apps that helps us to get rid of the physical wallet. That was a pretty slick definition, wasn’t it? To make the above definition a reality, what items should the mobile wallet hold? Let’s make a list.
 
 
 - Credit cards & Debit cards
@@ -38,4 +38,4 @@ If a mobile wallet gives us all the above, then we can conveniently get rid of 
 
 <div class="related-reading">
 <p class="related-reading-title">Mobile Payments Blog Series</p>
-Welcome to the <a href="/2014/01/24/mobile-payments-faq-and-not-so-faq.html">Mobile payments FAQ and not so FAQ</a> series and you are on FAQ #11. The idea behind this series is to share and learn as much as possible about the field of mobile payments. If you like, you can read all of the FAQs on the <a href="{{ site.baseurl }}/tags/mobile-payments/">Mobile Payments</a> category or by visiting the <a href="/articles/mobile-payments-faq/">Table of contents</a> page.</div>
+Welcome to the <a href="{{ site.baseurl }}/2014/01/24/mobile-payments-faq-and-not-so-faq.html">Mobile payments FAQ and not so FAQ</a> series and you are on FAQ #11. The idea behind this series is to share and learn as much as possible about the field of mobile payments. If you like, you can read all of the FAQs on the <a href="{{ site.baseurl }}/tags/mobile-payments/">Mobile Payments</a> category or by visiting the <a href="{{ site.baseurl }}/articles/mobile-payments-faq/">Table of contents</a> page.</div>

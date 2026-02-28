@@ -6,7 +6,7 @@ tags: [jQuery]
 original_url: "/2011/08/17/jquery-wait-for-multiple-animations-to-complete-take-2.html"
 ---
 
-In an [earlier blog post](/2009/06/09/jquery-waiting-for-multiple-animations-to-complete.html), I stated the need for a technique that helps determine when multiple animations have completed running, so that we can execute some code at that point. I also examined a technique using a combination of setInterval() based polling and checking for the *:animated* pseudo-class to achieve the result.
+In an [earlier blog post]({{ site.baseurl }}/2009/06/09/jquery-waiting-for-multiple-animations-to-complete.html), I stated the need for a technique that helps determine when multiple animations have completed running, so that we can execute some code at that point. I also examined a technique using a combination of setInterval() based polling and checking for the *:animated* pseudo-class to achieve the result.
 
 
 With the release of version 1.5, jQuery introduced the concept of **Deferred Objects**. It’s a pretty useful beast. You can find the full explanation [here](http://api.jquery.com/category/deferred-object/). In jQuery 1.5, the $.ajax() was enhanced to return a Deferred Object, but $.animate() was cheated without being given that honor. That was corrected with the release of jQuery 1.6 and now you receive a Deferred Object as a return value for $.animate() and its higher-level cousins. 

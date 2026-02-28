@@ -13,5 +13,5 @@ I am a die-hard non-vegetarian, especially fond of chicken. While my friend is a
 
 
 [
-![Ganesh and God](/assets/images/posts/ganesh_and_god.jpg)
-](/assets/images/posts/ganesh_and_god.jpg)
+![Ganesh and God]({{ site.baseurl }}/assets/images/posts/ganesh_and_god.jpg)
+]({{ site.baseurl }}/assets/images/posts/ganesh_and_god.jpg)

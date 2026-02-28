@@ -5,7 +5,7 @@ date: 2007-08-23 12:00:00 +0000
 tags: [jQuery, jQuery]
 original_url: "/2007/08/23/lavalamp-for-jquery-lovers.html"
 ---
-Click on the above image to land in the [Lava Lamp Demo](/projects/lavalamp/) page. Then, hover over it and feel for yourself, the nifty effect that Lava Lamp offers. What you just experienced is nothing but the LavaLamp menu packaged as a plugin for the amazing [jQuery javascript library](http://jquery.com). I personally believe that the effect rivals that of flash – Don’t you? Especially considering the fact that it is extremely light weight.
+Click on the above image to land in the [Lava Lamp Demo]({{ site.baseurl }}/projects/lavalamp/) page. Then, hover over it and feel for yourself, the nifty effect that Lava Lamp offers. What you just experienced is nothing but the LavaLamp menu packaged as a plugin for the amazing [jQuery javascript library](http://jquery.com). I personally believe that the effect rivals that of flash – Don’t you? Especially considering the fact that it is extremely light weight.
 
 
 > 
@@ -144,7 +144,7 @@ This is the easy part. Most of the javascript work is taken care by the Lava Lam
 ```
 
 
-Include a reference to the jQuery library and the LavaLamp plugin. Optionally, include the easing plugin as well. It has many cool effects, that are not contained in the core. For instance, the “backout” effect used in this demo is part of the easing plugin. You can download jQuery [here](http://code.jquery.com/jquery-latest.pack.js), Easing plugin [here](http://gsgd.co.uk/js/jquery.easing.1.1.js), and the LavaLamp plugin [here](/jquery/lavalamp/js/jquery.lavalamp.js).
+Include a reference to the jQuery library and the LavaLamp plugin. Optionally, include the easing plugin as well. It has many cool effects, that are not contained in the core. For instance, the “backout” effect used in this demo is part of the easing plugin. You can download jQuery [here](http://code.jquery.com/jquery-latest.pack.js), Easing plugin [here](http://gsgd.co.uk/js/jquery.easing.1.1.js), and the LavaLamp plugin [here]({{ site.baseurl }}/jquery/lavalamp/js/jquery.lavalamp.js).
 
 
 Next, in the document.ready event, fire a call to initialize the menu. You have the option to supply an easing “fx” , the “speed” with which the animation happens and a callback to be executed when a menu-item is clicked. They are optional, the default “fx” being “linear” and the default “speed” being “500” ms.
@@ -158,7 +158,7 @@ That’s it. At this point you should have a working version of LavaLamp menu fo
 
 Just with some minor changes in the style sheet, you can get a totally different look n feel for the menu. And yes, the HTML markup and the Javascript remain the same. Click on the image below to experience the demo for this underline-imageless lavalamp.
 Here is one more variation, again with just some minor changes to the style sheet. I know, they don’t look pretty, but all i am saying is that you are limited only by your imagination. Click on the image below to see the demo for this boxed-imageless lavalamp.
-Finally, for your convenience, i have [zipped](/jquery/lavalamp/zip/lavalamp-0.2.0.zip) up all the necessary files into a cohesive package. [Download it](/jquery/lavalamp/zip/lavalamp-0.2.0.zip), and open the demo.html to see all the 3 variations in one page.
+Finally, for your convenience, i have [zipped]({{ site.baseurl }}/jquery/lavalamp/zip/lavalamp-0.2.0.zip) up all the necessary files into a cohesive package. [Download it]({{ site.baseurl }}/jquery/lavalamp/zip/lavalamp-0.2.0.zip), and open the demo.html to see all the 3 variations in one page.
 
 
 Feel free to leave a comment with your feedback, suggestions, requests etc.
@@ -167,4 +167,4 @@ Feel free to leave a comment with your feedback, suggestions, requests etc.
 ## Update
 
 
-Based on popular request, LavaLamp Menu has been updated to support jquery 1.2.x versions. [Download the zip file](/jquery/lavalamp/zip/lavalamp-0.2.0.zip) for version 0.2.0 of LavaLamp and open the demo.html to check it out for yourself. Since Firefox 3 has some issues with $(document).ready() function, try using $(window).load() instead if you face any problems. Hopefully a future version of Firefox or jQuery will fix the problem.
+Based on popular request, LavaLamp Menu has been updated to support jquery 1.2.x versions. [Download the zip file]({{ site.baseurl }}/jquery/lavalamp/zip/lavalamp-0.2.0.zip) for version 0.2.0 of LavaLamp and open the demo.html to check it out for yourself. Since Firefox 3 has some issues with $(document).ready() function, try using $(window).load() instead if you face any problems. Hopefully a future version of Firefox or jQuery will fix the problem.

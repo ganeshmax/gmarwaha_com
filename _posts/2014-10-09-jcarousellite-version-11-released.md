@@ -6,7 +6,7 @@ tags: [jCarouselLite]
 original_url: "/2014/10/09/jcarousellite-version-1-1-released.html"
 ---
 
-It has been quite a while since I worked on updating the [jCarouselLite project](/projects/jcarousellite/). Meanwhile, the community has shown its love by actively contributing features and defect fixes. It is always a pleasant experience to see such active participation by the community, but there is also a challenge.
+It has been quite a while since I worked on updating the [jCarouselLite project]({{ site.baseurl }}/projects/jcarousellite/). Meanwhile, the community has shown its love by actively contributing features and defect fixes. It is always a pleasant experience to see such active participation by the community, but there is also a challenge.
 
 
 Many of the mods were spread around different websites, GitHub forks, Stack Overflow answers and comments. Consequently, it was not easy for a new user to start using it. So, I thought I should give some order to this by collecting them all back into the [original project](https://github.com/ganeshmax/jcarousellite) and that is exactly what I have done here… and much more…
@@ -45,7 +45,7 @@ Given below is a list of items that has changed, leading to the release of ver
 
 - Introduced a [Styling page]({{ site.baseurl }}/projects/jcarousellite/#styling) to help you understand the default styling and ways in which you can apply custom styling to your carousel
 
-- Revamped the [Demo page](/projects/jcarousellite/demo/) to make it cleaner and more beautiful. It is easier to view-source now than it was before
+- Revamped the [Demo page]({{ site.baseurl }}/projects/jcarousellite/demo/) to make it cleaner and more beautiful. It is easier to view-source now than it was before
 
 - Updated the styling in [Demo page]({{ site.baseurl }}/projects/jcarousellite/demo/) to reflect the custom styling in S[tyling page]({{ site.baseurl }}/projects/jcarousellite/#styling)
 

@@ -13,5 +13,5 @@ The man in orange is me(Ganesh). The girl in the toon is keat. And with us is Pa
 
 
 [
-![Sensex Plunges](/assets/images/posts/sensex_plunges.jpg)
-](/assets/images/posts/sensex_plunges.jpg)
+![Sensex Plunges]({{ site.baseurl }}/assets/images/posts/sensex_plunges.jpg)
+]({{ site.baseurl }}/assets/images/posts/sensex_plunges.jpg)

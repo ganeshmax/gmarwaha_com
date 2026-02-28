@@ -6,7 +6,7 @@ tags: [iPhone]
 original_url: "/2011/02/28/iphone-sdk-initial-thoughts.html"
 ---
 
-I have been following iPhone since its inception. Initially, when Steve Jobs revealed that there was not going to be any developer SDK, I was just one of the millions to be really upset. Then, one fine day the iPhone SDK was released, the now infamous App Store was released, all are happy and the rest is history. I did try out some examples immediately after the SDK was released but then got busy with other interesting stuff ([like trying out a startup](/2008/07/04/the-nboomi-experience.html)) and didn’t focus much on it – until recently. 
+I have been following iPhone since its inception. Initially, when Steve Jobs revealed that there was not going to be any developer SDK, I was just one of the millions to be really upset. Then, one fine day the iPhone SDK was released, the now infamous App Store was released, all are happy and the rest is history. I did try out some examples immediately after the SDK was released but then got busy with other interesting stuff ([like trying out a startup]({{ site.baseurl }}/2008/07/04/the-nboomi-experience.html)) and didn’t focus much on it – until recently. 
 
 
 A few months ago, my company picked me to get trained on the iOS SDK. Five days of Objective-C and XCode and Interface Builder later, I was coding for the fifth mobile platform in my career. I initially started with BREW, moved on to J2ME (now Java ME), then Blackberry (includes J2ME), then into the Bold and Beautiful Android and now into iOS. 

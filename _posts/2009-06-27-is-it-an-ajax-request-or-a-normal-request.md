@@ -54,9 +54,9 @@ Let us assume that you have designed a beautiful looking web page with tabbed na
 ```
 
 <ul>
-   <li><a href="/tab1.page" rel="#tab1">Tab 1</a></li>
-   <li><a href="/tab2.page" rel="#tab2">Tab 2</a></li>
-   <li><a href="/tab3.page" rel="#tab3">Tab 3</a></li>
+   <li><a href="{{ site.baseurl }}/tab1.page" rel="#tab1">Tab 1</a></li>
+   <li><a href="{{ site.baseurl }}/tab2.page" rel="#tab2">Tab 2</a></li>
+   <li><a href="{{ site.baseurl }}/tab3.page" rel="#tab3">Tab 3</a></li>
 </ul>
 
 <div>

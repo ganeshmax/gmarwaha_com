@@ -20,20 +20,20 @@ NFC allows you to share small payloads of data between an NFC tag and an NFC ena
  
 
 
-![](/assets/images/posts/nfc.jpg)
+![]({{ site.baseurl }}/assets/images/posts/nfc.jpg)
 
 
-[Contactless cards](/2014/05/11/mobile-payments-what-is-a-contactless-chip-card.html), that we discussed in an earlier post, behave like NFC tags and emit NFC style radio frequency signals when provoked by a contactless reader terminal. So, in theory, a mobile phone with an NFC controller can do the same as long as they conform to the protocols defined by payment networks. And that is exactly what is happening when you use a Google or Isis wallet. We will discuss how this happens in practice in an upcoming post on `card-emulation` mode for NFC.
+[Contactless cards]({{ site.baseurl }}/2014/05/11/mobile-payments-what-is-a-contactless-chip-card.html), that we discussed in an earlier post, behave like NFC tags and emit NFC style radio frequency signals when provoked by a contactless reader terminal. So, in theory, a mobile phone with an NFC controller can do the same as long as they conform to the protocols defined by payment networks. And that is exactly what is happening when you use a Google or Isis wallet. We will discuss how this happens in practice in an upcoming post on `card-emulation` mode for NFC.
 
 
-So, can you just replace all of your [contactless](/2014/05/11/mobile-payments-what-is-a-contactless-chip-card.html) credit and debit cards with Google wallet or Isis wallet and call it a day. Not yet. There are a couple of reasons for that.
+So, can you just replace all of your [contactless]({{ site.baseurl }}/2014/05/11/mobile-payments-what-is-a-contactless-chip-card.html) credit and debit cards with Google wallet or Isis wallet and call it a day. Not yet. There are a couple of reasons for that.
 
 
-First and foremost, today, contactless terminals/readers are not plentiful. There are just over 200K contactless terminals across US. The advantage of using your contactless plastic card is that it also comes with a [magstripe](/2014/04/10/mobile-payments-what-is-a-magnetic-stripe-card.html) for backward compatibility with traditional terminals. We do not have that luxury with an NFC enabled phone.
+First and foremost, today, contactless terminals/readers are not plentiful. There are just over 200K contactless terminals across US. The advantage of using your contactless plastic card is that it also comes with a [magstripe]({{ site.baseurl }}/2014/04/10/mobile-payments-what-is-a-magnetic-stripe-card.html) for backward compatibility with traditional terminals. We do not have that luxury with an NFC enabled phone.
 
 
 Second, provisioning a contactless application to an NFC enabled phone is a much more complicated process involving a larger ecosystem of participants like `SP TSM`, `SE TSM`, `MNO`, Issuing banks and the complexity involved with security, key management and `over-the-air` provisioning cannot be discounted either. Technically, these have been solved, but not all Issuing banks are ready to invest in it yet. That said, the industry is slowly, yet steadily moving towards a digital wallet. So, it is going to happen sooner rather than later, but don’t hold your breath.
 
 <div class="related-reading">
 <p class="related-reading-title">Mobile Payments Blog Series</p>
-Welcome to the <a href="/2014/01/24/mobile-payments-faq-and-not-so-faq.html">Mobile payments FAQ and not so FAQ</a> series and you are on FAQ #12. The idea behind this series is to share and learn as much as possible about the field of mobile payments. If you like, you can read all of the FAQs on the <a href="{{ site.baseurl }}/tags/mobile-payments/">Mobile Payments</a> category or by visiting the <a href="/articles/mobile-payments-faq/">Table of contents</a> page.</div>
+Welcome to the <a href="{{ site.baseurl }}/2014/01/24/mobile-payments-faq-and-not-so-faq.html">Mobile payments FAQ and not so FAQ</a> series and you are on FAQ #12. The idea behind this series is to share and learn as much as possible about the field of mobile payments. If you like, you can read all of the FAQs on the <a href="{{ site.baseurl }}/tags/mobile-payments/">Mobile Payments</a> category or by visiting the <a href="{{ site.baseurl }}/articles/mobile-payments-faq/">Table of contents</a> page.</div>
