@@ -40,7 +40,8 @@ enabled: true
                         style="display: -webkit-box; -webkit-line-clamp: 4; line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">
                         {{ post.excerpt | strip_html }}
                     </div>
-                    <a href="{{ post.url }}" class="btn btn-outline-primary btn-sm btn-read-more">Continue reading
+                    <a href="{{ site.baseurl }}{{ post.url }}"
+                        class="btn btn-outline-primary btn-sm btn-read-more">Continue reading
                         &rarr;</a>
                 </div>
             </article>
