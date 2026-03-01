@@ -17,13 +17,49 @@
   --color-heading: #1f2937;
   --color-link: #5b63d3;
   --color-link-hover: #3d45b8;
+  /* ---- Layout Theme Variables ---- */
+  --color-bg: #f4f5f7;
+  --color-bg-alt: #ffffff;
+  --color-bg-element: #FFF;
+  --color-bg-banner: #2B333E;
+  --color-bg-nav-hover: #f8f9fa;
+  --color-border: #e1e4e8;
+  --color-border-alt: #eee;
+  /* Code Block Specific (assuming these remain consistent or need tweaking) */
   --color-code-bg: #f0f1f5;
   --color-code-text: #3d4451;
   --color-code-block-bg: #1e2130;
   --color-code-block-text: #cdd6f4; }
 
+/* =========================================
+   Blue Theme (Modern Accents)
+   ========================================= */
+:root[data-theme="blue"] {
+  /* Keep typography consistent */
+  --color-text: #334155;
+  /* Slate text */
+  --color-muted: #64748b;
+  /* Slate muted */
+  --color-heading: #0f172a;
+  /* Slate dark */
+  --color-link: #2563eb;
+  /* Modern blue link */
+  --color-link-hover: #1d4ed8;
+  /* Theme Layout colors */
+  --color-bg: #f0f4f8;
+  /* Very light blue-grey background */
+  --color-bg-alt: #ffffff;
+  --color-bg-element: #ffffff;
+  --color-bg-banner: #0f172a;
+  /* Deep slate blue banner */
+  --color-bg-nav-hover: #e0f2fe;
+  /* Light blue on hover */
+  --color-border: #cbd5e1;
+  /* Slate border */
+  --color-border-alt: #e2e8f0; }
+
 body {
-  background-color: #f4f5f7;
+  background-color: var(--color-bg);
   font-family: var(--font-sans);
   font-size: var(--text-base);
   color: var(--color-text);
@@ -34,7 +70,7 @@ body {
 
 /* Base Top Banner */
 #masthead .top-banner {
-  background: #2B333E;
+  background: var(--color-bg-banner);
   padding: 15px 0;
   color: #fff; }
 
@@ -66,8 +102,8 @@ body {
 
 /* Navigation */
 .clean-navigation {
-  background: #ffffff;
-  border-bottom: 1px solid #e1e4e8;
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
   padding: 15px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); }
 
@@ -98,7 +134,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #fff;
+  background: var(--color-bg-element);
   padding: 12px 0;
   /* Slight negative margin closes the gap between nav bar and menu
      so the hover state isn't lost when the mouse moves downward */
@@ -108,7 +144,7 @@ body {
   border-radius: 6px;
   min-width: 200px;
   z-index: 1000;
-  border: 1px solid #eee; }
+  border: 1px solid var(--color-border-alt); }
 
 .clean-nav li.dropdown:hover .dropdown-menu-clean {
   display: block !important; }
@@ -125,7 +161,7 @@ body {
   letter-spacing: normal; }
 
 .dropdown-menu-clean li a:hover {
-  background: #f8f9fa;
+  background: var(--color-bg-nav-hover);
   color: var(--color-link) !important; }
 
 .caret {
@@ -138,8 +174,8 @@ body {
 
 /* Content Container Boxes */
 .box {
-  background: #FFF;
-  border: 1px solid #e1e4e8;
+  background: var(--color-bg-element);
+  border: 1px solid var(--color-border);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
   border-radius: 8px;
   margin-bottom: 30px;
@@ -150,8 +186,8 @@ body {
 
 /* Sidebar Specifics */
 .widget {
-  background: #FFF;
-  border: 1px solid #e1e4e8;
+  background: var(--color-bg-element);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   margin-bottom: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); }
@@ -163,7 +199,7 @@ body {
 
 .modern-profile .profile-header {
   height: 80px;
-  background: #e5e7eb;
+  background: var(--color-border);
   border-radius: 8px 8px 0 0; }
 
 .modern-profile .profile-body {
@@ -175,9 +211,9 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 4px solid #fff;
+  border: 4px solid var(--color-bg-element);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: #e1e4e8;
+  background-color: var(--color-border);
   /* base background fallback */
   margin-bottom: 15px; }
 
@@ -202,21 +238,21 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #f4f5f7;
+  background: var(--color-bg);
   color: #555;
   text-decoration: none;
   margin: 0 5px;
   transition: all 0.2s; }
 
 .modern-profile .social-links a:hover {
-  background: #e1e4e8;
+  background: var(--color-border);
   color: #2E3641; }
 
 /* Ad Widget */
 .widget-ad .ad-space {
   height: 250px;
-  background: #f8f9fa;
-  border: 2px dashed #ddd;
+  background: var(--color-bg-nav-hover);
+  border: 2px dashed var(--color-border-alt);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -228,7 +264,7 @@ body {
 
 /* Footer Specifics */
 footer.site-footer {
-  background: #1f2937;
+  background: var(--color-bg-banner);
   color: #9ca3af;
   padding: 30px 0;
   margin-top: 40px;
@@ -269,7 +305,7 @@ footer.site-footer a {
 
 .post-meta {
   font-size: 13px;
-  color: #888; }
+  color: var(--color-muted); }
 
 .post-meta ul {
   list-style: none;
@@ -311,7 +347,7 @@ footer.site-footer a {
   color: var(--color-code-text);
   padding: 2px 6px;
   border-radius: 4px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--color-border);
   font-style: normal;
   white-space: nowrap; }
 
@@ -353,9 +389,9 @@ footer.site-footer a {
 .related-reading {
   margin-top: 3em;
   padding: 22px 26px;
-  background: #f4f5f7;
+  background: var(--color-bg);
   border-radius: 8px;
-  border-left: 4px solid #c1c7d0; }
+  border-left: 4px solid var(--color-border); }
 
 .related-reading .related-reading-title {
   font-family: var(--font-sans);
@@ -377,7 +413,7 @@ footer.site-footer a {
 .related-reading ul li::before {
   content: '→';
   margin-right: 8px;
-  color: #9ca3af;
+  color: var(--color-border);
   font-style: normal;
   font-family: var(--font-sans); }
 
@@ -419,11 +455,11 @@ footer.site-footer a {
   transition: all 0.2s ease; }
 
 .widget-topics .topic-link:hover {
-  background: #e1e4e8;
+  background: var(--color-border);
   color: #2E3641; }
 
 .widget-topics .topic-count {
-  background: #e1e4e8;
+  background: var(--color-bg);
   color: #666;
   padding: 2px 6px;
   border-radius: 10px;
@@ -440,7 +476,7 @@ footer.site-footer a {
 .widget-timeline .timeline-list li {
   margin-bottom: 8px;
   padding-bottom: 8px;
-  border-bottom: 1px dashed #e1e4e8; }
+  border-bottom: 1px dashed var(--color-border); }
 
 .widget-timeline .timeline-list li:last-child {
   margin-bottom: 0;
@@ -475,7 +511,7 @@ footer.site-footer a {
   margin-bottom: 15px;
   margin-top: 0;
   padding-bottom: 10px;
-  border-bottom: 2px solid #e1e4e8; }
+  border-bottom: 2px solid var(--color-border); }
 
 /* ---- Article Series Index Pages ---- */
 .series-page h3 {
@@ -488,7 +524,7 @@ footer.site-footer a {
   margin-top: 2.5em;
   margin-bottom: 14px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #e1e4e8; }
+  border-bottom: 2px solid var(--color-border); }
 
 .series-toc {
   list-style: none;
@@ -502,7 +538,7 @@ footer.site-footer a {
   align-items: center;
   gap: 14px;
   padding: 11px 0;
-  border-bottom: 1px solid #f0f1f5;
+  border-bottom: 1px solid var(--color-bg);
   font-family: var(--font-sans);
   font-size: 15px; }
 
@@ -544,9 +580,9 @@ footer.site-footer a {
   letter-spacing: 0.7px;
   padding: 2px 8px;
   border-radius: 20px;
-  background: #f0f1f5;
-  color: #9ca3af;
-  border: 1px solid #e1e4e8;
+  background: var(--color-code-bg);
+  color: var(--color-border);
+  border: 1px solid var(--color-border);
   flex-shrink: 0; }
 
 .series-note {
@@ -558,8 +594,8 @@ footer.site-footer a {
 
 /* ---- Project Pages ---- */
 .project-callout {
-  background: #f4f5f7;
-  border: 1px solid #e1e4e8;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
   border-radius: 6px;
   padding: 12px 18px;
   font-family: var(--font-sans);
@@ -577,7 +613,7 @@ footer.site-footer a {
   margin-top: 2.2em;
   margin-bottom: 0.8em;
   padding-bottom: 8px;
-  border-bottom: 2px solid #e1e4e8; }
+  border-bottom: 2px solid var(--color-border); }
 
 .project-page h3 {
   font-family: var(--font-sans);
@@ -596,7 +632,7 @@ footer.site-footer a {
   margin-top: 1em; }
 
 .project-table th {
-  background: #f4f5f7;
+  background: var(--color-bg);
   color: #555;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -604,11 +640,11 @@ footer.site-footer a {
   font-weight: 700;
   padding: 10px 14px;
   text-align: left;
-  border-bottom: 2px solid #e1e4e8; }
+  border-bottom: 2px solid var(--color-border); }
 
 .project-table td {
   padding: 9px 14px;
-  border-bottom: 1px solid #f0f1f5;
+  border-bottom: 1px solid var(--color-bg);
   color: var(--color-text);
   vertical-align: top; }
 
@@ -625,8 +661,8 @@ footer.site-footer a {
 .download-card {
   flex: 1;
   min-width: 180px;
-  background: #f4f5f7;
-  border: 1px solid #e1e4e8;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 16px 20px;
   display: flex;
@@ -703,17 +739,17 @@ footer.site-footer a {
   border: 1px solid #dbeafe; }
 
 .noimage-badge {
-  background: #f3f4f6;
-  color: #4b5563;
-  border: 1px solid #e5e7eb; }
+  background: var(--color-bg-nav-hover);
+  color: var(--color-text);
+  border: 1px solid var(--color-border); }
 
 /* =============================================
    jCarouselLite Demo Styles
    ============================================= */
 .custom-container {
   margin: 25px 0;
-  background: #fdfdfd;
-  border: 1px solid #eee;
+  background: var(--color-bg-element);
+  border: 1px solid var(--color-border-alt);
   border-radius: 8px;
   padding: 25px;
   display: flex;
@@ -723,8 +759,8 @@ footer.site-footer a {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02); }
 
 .custom-container .carousel {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: var(--color-bg-element);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   padding: 5px;
   overflow: hidden; }
@@ -743,14 +779,14 @@ footer.site-footer a {
 
 .custom-container .carousel img {
   display: block;
-  border: 1px solid #eee;
+  border: 1px solid var(--color-border-alt);
   max-width: none;
   /* prevent bootstrap from overriding width */ }
 
 .custom-container .prev,
 .custom-container .next {
   text-decoration: none !important;
-  color: #9ca3af;
+  color: var(--color-border);
   font-size: 48px;
   line-height: 1;
   transition: color 0.15s, transform 0.15s;
@@ -770,8 +806,8 @@ footer.site-footer a {
    ============================================= */
 .lavalamp-demo-container {
   margin: 25px 0 40px;
-  background: #fdfdfd;
-  border: 1px solid #eee;
+  background: var(--color-bg-element);
+  border: 1px solid var(--color-border-alt);
   border-radius: 8px;
   padding: 30px;
   display: flex;
@@ -883,3 +919,28 @@ ul.lavaLamp li.back .left {
   background-color: var(--color-link);
   border-color: var(--color-link);
   color: #fff; }
+
+/* ---- Social Icons Workaround for missing Fontello glyphs ---- */
+.icon-stack-overflow,
+.icon-leetcode {
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-color: currentColor;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  vertical-align: middle !important;
+  margin-top: -3px;
+  /* Visual alignment fix */ }
+
+.icon-stack-overflow {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='black' d='M290.7 311L95 269.7 86.8 309l195.7 41.3 8.2-39.3zM102.6 113.8L292.7 209l18.2-36.4L120.7 77.4l-18.1 36.4zM262.2 379.1L79.3 379.1l0 40.2 182.9 0 0-40.2zm-12.4-107.2L73.1 202.9l24.2-32.3 176.7 132.3-24.2 32.3zM342.7 305.5L342.7 448c0 17.7-14.3 32-32 32L73.3 480c-17.7 0-32-14.3-32-32L41.3 305.5l-41.3 0L0 448c0 44.2 35.8 80 80 80l224 0c44.2 0 80-35.8 80-80L384 305.5l-41.3 0zM175.2 32L347 165.8l25.4-33L200.6 0l-25.4 33z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='black' d='M290.7 311L95 269.7 86.8 309l195.7 41.3 8.2-39.3zM102.6 113.8L292.7 209l18.2-36.4L120.7 77.4l-18.1 36.4zM262.2 379.1L79.3 379.1l0 40.2 182.9 0 0-40.2zm-12.4-107.2L73.1 202.9l24.2-32.3 176.7 132.3-24.2 32.3zM342.7 305.5L342.7 448c0 17.7-14.3 32-32 32L73.3 480c-17.7 0-32-14.3-32-32L41.3 305.5l-41.3 0L0 448c0 44.2 35.8 80 80 80l224 0c44.2 0 80-35.8 80-80L384 305.5l-41.3 0zM175.2 32L347 165.8l25.4-33L200.6 0l-25.4 33z'/%3E%3C/svg%3E"); }
+
+.icon-leetcode {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226a1.374 1.374 0 1 0-.008 1.952l5.415-5.793L19.883 7.89a1.377 1.377 0 0 0 1.946.004 1.377 1.377 0 0 0-.004-1.948L14.445.438A1.374 1.374 0 0 0 13.483 0zM4.054 7.69a1.377 1.377 0 0 0-1.377 1.377v6.866a1.377 1.377 0 0 0 1.377 1.377 1.377 1.377 0 0 0 1.377-1.377V9.067a1.377 1.377 0 0 0-1.377-1.377zm15.892 0a1.377 1.377 0 0 0-1.377 1.377v6.866a1.377 1.377 0 0 0 1.377 1.377 1.377 1.377 0 0 0 1.377-1.377V9.067a1.377 1.377 0 0 0-1.377-1.377zm-7.946 7.946a1.377 1.377 0 0 0-1.377 1.377 1.377 1.377 0 0 0 1.377 1.377 1.377 1.377 0 0 0 1.377-1.377 1.377 1.377 0 0 0-1.377-1.377zM4.054 20.254a1.377 1.377 0 0 0-1.377 1.377v1.377a1.377 1.377 0 0 0 1.377 1.377 1.377 1.377 0 0 0 1.377-1.377v-1.377a1.377 1.377 0 0 0-1.377-1.377zm15.892 0a1.377 1.377 0 0 0-1.377 1.377v1.377a1.377 1.377 0 0 0 1.377 1.377 1.377 1.377 0 0 0 1.377-1.377v-1.377a1.377 1.377 0 0 0-1.377-1.377zM12 20.254a1.377 1.377 0 0 0-1.377 1.377v1.377a1.377 1.377 0 0 0 1.377 1.377 1.377 1.377 0 0 0 1.377-1.377v-1.377A1.377 1.377 0 0 0 12 20.254z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226a1.374 1.374 0 1 0-.008 1.952l5.415-5.793L19.883 7.89a1.377 1.377 0 0 0 1.946.004 1.377 1.377 0 0 0-.004-1.948L14.445.438A1.374 1.374 0 0 0 13.483 0zM4.054 7.69a1.377 1.377 0 0 0-1.377 1.377v6.866a1.377 1.377 0 0 0 1.377 1.377 1.377 1.377 0 0 0 1.377-1.377V9.067a1.377 1.377 0 0 0-1.377-1.377zm15.892 0a1.377 1.377 0 0 0-1.377 1.377v6.866a1.377 1.377 0 0 0 1.377 1.377 1.377 1.377 0 0 0 1.377-1.377V9.067a1.377 1.377 0 0 0-1.377-1.377zm-7.946 7.946a1.377 1.377 0 0 0-1.377 1.377 1.377 1.377 0 0 0 1.377 1.377 1.377 1.377 0 0 0 1.377-1.377 1.377 1.377 0 0 0-1.377-1.377zM4.054 20.254a1.377 1.377 0 0 0-1.377 1.377v1.377a1.377 1.377 0 0 0 1.377 1.377 1.377 1.377 0 0 0 1.377-1.377v-1.377a1.377 1.377 0 0 0-1.377-1.377zm15.892 0a1.377 1.377 0 0 0-1.377 1.377v1.377a1.377 1.377 0 0 0 1.377 1.377 1.377 1.377 0 0 0 1.377-1.377v-1.377a1.377 1.377 0 0 0-1.377-1.377zM12 20.254a1.377 1.377 0 0 0-1.377 1.377v1.377a1.377 1.377 0 0 0 1.377 1.377 1.377 1.377 0 0 0 1.377-1.377v-1.377A1.377 1.377 0 0 0 12 20.254z'/%3E%3C/svg%3E"); }

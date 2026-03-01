@@ -16,8 +16,47 @@
     --color-heading: #1f2937;
     --color-link: #5b63d3;
     --color-link-hover: #3d45b8;
+    /* ---- Layout Theme Variables ---- */
+    --color-bg: #f4f5f7;
+    --color-bg-alt: #ffffff;
+    --color-bg-element: #FFF;
+    --color-bg-banner: #2B333E;
+    --color-bg-nav-hover: #f8f9fa;
+    --color-border: #e1e4e8;
+    --color-border-alt: #eee;
+
+    /* Code Block Specific (assuming these remain consistent or need tweaking) */
     --color-code-bg: #f0f1f5;
     --color-code-text: #3d4451;
     --color-code-block-bg: #1e2130;
     --color-code-block-text: #cdd6f4;
+}
+
+/* =========================================
+   Blue Theme (Modern Accents)
+   ========================================= */
+:root[data-theme="blue"] {
+    /* Keep typography consistent */
+    --color-text: #334155;
+    /* Slate text */
+    --color-muted: #64748b;
+    /* Slate muted */
+    --color-heading: #0f172a;
+    /* Slate dark */
+    --color-link: #2563eb;
+    /* Modern blue link */
+    --color-link-hover: #1d4ed8;
+
+    /* Theme Layout colors */
+    --color-bg: #f0f4f8;
+    /* Very light blue-grey background */
+    --color-bg-alt: #ffffff;
+    --color-bg-element: #ffffff;
+    --color-bg-banner: #0f172a;
+    /* Deep slate blue banner */
+    --color-bg-nav-hover: #e0f2fe;
+    /* Light blue on hover */
+    --color-border: #cbd5e1;
+    /* Slate border */
+    --color-border-alt: #e2e8f0;
 }

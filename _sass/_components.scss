@@ -32,7 +32,7 @@
 
 .post-meta {
     font-size: 13px;
-    color: #888;
+    color: var(--color-muted);
 }
 
 .post-meta ul {
@@ -80,7 +80,7 @@
     color: var(--color-code-text);
     padding: 2px 6px;
     border-radius: 4px;
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--color-border);
     font-style: normal;
     white-space: nowrap;
 }
@@ -126,9 +126,9 @@
 .related-reading {
     margin-top: 3em;
     padding: 22px 26px;
-    background: #f4f5f7;
+    background: var(--color-bg);
     border-radius: 8px;
-    border-left: 4px solid #c1c7d0;
+    border-left: 4px solid var(--color-border);
 }
 
 .related-reading .related-reading-title {
@@ -153,7 +153,7 @@
 .related-reading ul li::before {
     content: '→';
     margin-right: 8px;
-    color: #9ca3af;
+    color: var(--color-border);
     font-style: normal;
     font-family: var(--font-sans);
 }
@@ -201,12 +201,12 @@
 }
 
 .widget-topics .topic-link:hover {
-    background: #e1e4e8;
+    background: var(--color-border);
     color: #2E3641;
 }
 
 .widget-topics .topic-count {
-    background: #e1e4e8;
+    background: var(--color-bg);
     color: #666;
     padding: 2px 6px;
     border-radius: 10px;
@@ -225,7 +225,7 @@
 .widget-timeline .timeline-list li {
     margin-bottom: 8px;
     padding-bottom: 8px;
-    border-bottom: 1px dashed #e1e4e8;
+    border-bottom: 1px dashed var(--color-border);
 }
 
 .widget-timeline .timeline-list li:last-child {
@@ -265,7 +265,7 @@
     margin-bottom: 15px;
     margin-top: 0;
     padding-bottom: 10px;
-    border-bottom: 2px solid #e1e4e8;
+    border-bottom: 2px solid var(--color-border);
 }
 
 /* ---- Article Series Index Pages ---- */
@@ -279,7 +279,7 @@
     margin-top: 2.5em;
     margin-bottom: 14px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #e1e4e8;
+    border-bottom: 2px solid var(--color-border);
 }
 
 .series-toc {
@@ -295,7 +295,7 @@
     align-items: center;
     gap: 14px;
     padding: 11px 0;
-    border-bottom: 1px solid #f0f1f5;
+    border-bottom: 1px solid var(--color-bg);
     font-family: var(--font-sans);
     font-size: 15px;
 }
@@ -343,9 +343,9 @@
     letter-spacing: 0.7px;
     padding: 2px 8px;
     border-radius: 20px;
-    background: #f0f1f5;
-    color: #9ca3af;
-    border: 1px solid #e1e4e8;
+    background: var(--color-code-bg);
+    color: var(--color-border);
+    border: 1px solid var(--color-border);
     flex-shrink: 0;
 }
 
@@ -359,8 +359,8 @@
 
 /* ---- Project Pages ---- */
 .project-callout {
-    background: #f4f5f7;
-    border: 1px solid #e1e4e8;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
     border-radius: 6px;
     padding: 12px 18px;
     font-family: var(--font-sans);
@@ -379,7 +379,7 @@
     margin-top: 2.2em;
     margin-bottom: 0.8em;
     padding-bottom: 8px;
-    border-bottom: 2px solid #e1e4e8;
+    border-bottom: 2px solid var(--color-border);
 }
 
 .project-page h3 {
@@ -401,7 +401,7 @@
 }
 
 .project-table th {
-    background: #f4f5f7;
+    background: var(--color-bg);
     color: #555;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -409,12 +409,12 @@
     font-weight: 700;
     padding: 10px 14px;
     text-align: left;
-    border-bottom: 2px solid #e1e4e8;
+    border-bottom: 2px solid var(--color-border);
 }
 
 .project-table td {
     padding: 9px 14px;
-    border-bottom: 1px solid #f0f1f5;
+    border-bottom: 1px solid var(--color-bg);
     color: var(--color-text);
     vertical-align: top;
 }
@@ -434,8 +434,8 @@
 .download-card {
     flex: 1;
     min-width: 180px;
-    background: #f4f5f7;
-    border: 1px solid #e1e4e8;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 16px 20px;
     display: flex;
@@ -524,9 +524,9 @@
 }
 
 .noimage-badge {
-    background: #f3f4f6;
-    color: #4b5563;
-    border: 1px solid #e5e7eb;
+    background: var(--color-bg-nav-hover);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
 }
 
 /* =============================================
@@ -534,8 +534,8 @@
    ============================================= */
 .custom-container {
     margin: 25px 0;
-    background: #fdfdfd;
-    border: 1px solid #eee;
+    background: var(--color-bg-element);
+    border: 1px solid var(--color-border-alt);
     border-radius: 8px;
     padding: 25px;
     display: flex;
@@ -546,8 +546,8 @@
 }
 
 .custom-container .carousel {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--color-bg-element);
+    border: 1px solid var(--color-border);
     border-radius: 4px;
     padding: 5px;
     overflow: hidden;
@@ -570,7 +570,7 @@
 
 .custom-container .carousel img {
     display: block;
-    border: 1px solid #eee;
+    border: 1px solid var(--color-border-alt);
     max-width: none;
     /* prevent bootstrap from overriding width */
 }
@@ -578,7 +578,7 @@
 .custom-container .prev,
 .custom-container .next {
     text-decoration: none !important;
-    color: #9ca3af;
+    color: var(--color-border);
     font-size: 48px;
     line-height: 1;
     transition: color 0.15s, transform 0.15s;
@@ -601,8 +601,8 @@
    ============================================= */
 .lavalamp-demo-container {
     margin: 25px 0 40px;
-    background: #fdfdfd;
-    border: 1px solid #eee;
+    background: var(--color-bg-element);
+    border: 1px solid var(--color-border-alt);
     border-radius: 8px;
     padding: 30px;
     display: flex;
@@ -736,9 +736,9 @@ ul.lavaLamp li.back .left {
 /* ---- Social Icons Workaround for missing Fontello glyphs ---- */
 .icon-stack-overflow,
 .icon-leetcode {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
+    display: inline-block !important;
+    width: 1em !important;
+    height: 1em !important;
     background-color: currentColor;
     -webkit-mask-size: contain;
     mask-size: contain;
@@ -746,9 +746,11 @@ ul.lavaLamp li.back .left {
     mask-repeat: no-repeat;
     -webkit-mask-position: center;
     mask-position: center;
-    vertical-align: middle;
-    margin-top: -3px; /* Visual alignment fix */
+    vertical-align: middle !important;
+    margin-top: -3px;
+    /* Visual alignment fix */
 }
+
 
 .icon-stack-overflow {
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='black' d='M290.7 311L95 269.7 86.8 309l195.7 41.3 8.2-39.3zM102.6 113.8L292.7 209l18.2-36.4L120.7 77.4l-18.1 36.4zM262.2 379.1L79.3 379.1l0 40.2 182.9 0 0-40.2zm-12.4-107.2L73.1 202.9l24.2-32.3 176.7 132.3-24.2 32.3zM342.7 305.5L342.7 448c0 17.7-14.3 32-32 32L73.3 480c-17.7 0-32-14.3-32-32L41.3 305.5l-41.3 0L0 448c0 44.2 35.8 80 80 80l224 0c44.2 0 80-35.8 80-80L384 305.5l-41.3 0zM175.2 32L347 165.8l25.4-33L200.6 0l-25.4 33z'/%3E%3C/svg%3E");
